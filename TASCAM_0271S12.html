@@ -1,0 +1,1137 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    <title>Tascam 0271S12</title>
+
+    <style>
+    body { margin: 0; }
+    #title, #subtitle, #info, #summary { text-align: center; }
+    #summary { margin: 0 10%; }
+    #chapter { margin-top: 1em; }
+
+    #edit-bar {
+        margin-top: 2em; display: flex; justify-content: space-between; flex-wrap: wrap;
+        position: -webkit-sticky; position: sticky; top: 0; left: 0;
+        background: white; z-index: 999;
+        font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+        -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; text-size-adjust: 100%;
+    }
+    #edit-bar-spacer { flex-grow: 1; }
+    .button {
+        background-color: #f5f5f5; color: #363636;
+        border: 1px solid #dbdbdb; border-radius: 4px; box-shadow: none;
+        margin: 0.5em 1.5em; padding: 5px 12px;
+        cursor:pointer;font-size: 0.9em;
+        justify-content:center; text-align:center; white-space:nowrap;
+        display: inline-flex; position: relative; vertical-align: top;
+        user-select: none; text-decoration: none;
+    }
+    .button:hover{border-color:#b5b5b5;color:#363636;background-color:#eee;}
+    .button:active{border-color:#4a4a4a;color:#363636;background-color:#e8e8e8;}
+    .button.export-option { margin: 0.5em 0.2em 0.5em auto; }
+    .button.export-buttons-shown { margin-left: 0.2em; margin-left: auto; }
+
+    span.active { font-weight: bold; }
+    span.listened { font-weight: bold; font-style: italic; }
+    #transcript.edit-mode { border-style: dashed; padding: 10px; }
+    #transcript span { cursor: pointer; }
+    #transcript.edit-mode span { cursor: text; }
+    .transcript-base { margin: 1.5em; max-width: 1200px;}
+
+    @media all and (max-width: 900px) {
+      .button.export-buttons-shown { margin: 0.5em; margin-left: auto; }
+      .button.export-option { margin: 0.5em; margin-left: auto; }
+    }
+
+    @media all and (max-width: 340px) {
+      .button { margin: 0.2em; }
+    }
+
+    @media print {
+        #edit-bar { display: none; }
+        .button { display: none; }
+        span { background: white; }
+        #transcript { border-style: none !important; padding: 0px !important; }
+    }
+    </style>
+</head>
+
+<body>
+
+
+<div id="metadata">
+<h1 id="title">Tascam 0271S12</h1>
+<h4 id="subtitle"></h4>
+
+<p id="info">
+<br>
+<br>
+<a href="" target="_blank"></a>
+</p>
+
+<p id="summary">
+
+</p>
+
+
+</div>
+
+<div id="edit-bar">
+    <a class="button" id="edit-transcript" onclick="enableEdit();" title="Enable/disable edit mode.">Edit Transcript</a>
+    <a class="button" id="toggle-rename-speaker" onclick="toggleRenameSpeaker();" title="Toggels between renaming speakers and editing speaker." style="display: none;"></a>
+    <a class="button" id="toggle-styling" onclick="removeStyling();" title="Words with low recognition confidence will be highlighted in red.">Remove Highlighting</a>
+    <a class="button" id="add-audio-file" onclick="addAudioFile();" title="Add audio file which should be played along the transcript.">Add Audio File</a>
+    <a class="button" id="toggle-play-on-click" title="Enable/disable click on word for audio playback." style="display: none;">Stop Play-on-click</a>
+
+    <div id="edit-bar-spacer"></div>
+
+    <a class="button export-option" id="save-changes" onclick="saveChanges();" style="display: none;" title="Save transcript editor with current changes for further editing or sharing.">Save Editor</a>
+    <a class="button export-option" id="export-html" onclick="exportHTML();" style="display: none;" title="Export transcript as HTML for Word, Wordpress, etc.">Export HTML</a>
+    <a class="button export-option" id="export-pdf" onclick="window.print(); hideExportButtons();" style="display: none;" title="Export transcript as PDF or to printer.">Export PDF</a>
+    <a class="button export-option" id="export-webvtt" onclick="exportWebVTT();" style="display: none;" title="Export transcript as WebVTT for web players.">Export WebVTT</a>
+    <a class="button" id="show-export-buttons" onclick="showExportButtons();">Export...</a>
+    <a class="button" id="show-help" href="https://auphonic.com/help/algorithms/speech_recognition.html#auphonic-transcript-editor" target="_blank" title="Show transcript editor help.">?</a>
+
+    <audio id="audio-player" preload="auto" style="display: none;">
+        <source src="https://auphonic.com/engine/download/audio-result/gHHKGJedFoXYNtoZSvvvsK/TASCAM_0271S12.wav?ms=408618">
+    </audio>
+</div>
+
+<div id="transcript" class="transcript-base">
+
+<h2 id="chapter">Transcript</h2>
+<br>
+
+<small style="opacity: 0.5;">[0:15]</small> <span data-start="00:00:15.321" data-end="00:00:19.237"><span title="0:15">Hello.</span> <span title="0:18">Hi everyone.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[0:22]</small> <span data-start="00:00:22.171" data-end="00:00:28.825"><span title="0:22">You can continue enjoying your lunch,</span> <span title="0:27">but I will interrupt because it is that time,</span> </span><span data-start="00:00:28.897" data-end="00:00:34.874"><span title="0:29">to have a conversation with Geraldine Brooks,</span> <span title="0:33">who I am going to introduce.</span> </span><br>
+<span data-start="00:00:35.291" data-end="00:00:39.731"><span title="0:35">And I might embarrass you by, you know,</span> <span title="0:38">talking about all your many accomplishments,</span> </span><span data-start="00:00:39.997" data-end="00:00:40.546"><span title="0:40">but I hope you don't mind.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[0:43]</small> <span data-start="00:00:42.691" data-end="00:00:47.964"><span title="0:43">Australian-born Geraldine Brooks</span> <span title="0:44">is an author and journalist who grew up</span> <span title="0:46">in Sydney's western suburbs.</span> </span><br>
+<span data-start="00:00:48.531" data-end="00:00:54.130"><span title="0:49">In 1982, she won a scholarship</span> <span title="0:51">to the journalism master's program</span> <span title="0:52">at Columbia University in New York.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[0:55]</small> <span data-start="00:00:55.091" data-end="00:00:59.531"><span title="0:55">Later, she worked for the Wall Street Journal</span> <span title="0:58">where she covered crises in the Middle East,</span> </span><span data-start="00:00:59.531" data-end="00:01:00.810"><span title="1:00">Africa, and the Balkans.</span> </span><br>
+<span data-start="00:01:01.491" data-end="00:01:07.093"><span title="1:01">In 2006, she was awarded the Pulitzer Prize</span> <span title="1:06">in fiction for her novel, March.</span> </span><br>
+<span data-start="00:01:08.051" data-end="00:01:13.071"><span title="1:08">Her novels, Caleb's Crossing and People of the Book</span> <span title="1:11">were both New York Times bestsellers,</span> </span><span data-start="00:01:13.571" data-end="00:01:18.454"><span title="1:14">and Year of Wonders, People of the Book,</span> <span title="1:16">and The Secret Chord are international bestsellers,</span> </span><span data-start="00:01:18.634" data-end="00:01:21.326"><span title="1:19">translated into more than 25 languages.</span> </span><br>
+<span data-start="00:01:22.011" data-end="00:01:27.285"><span title="1:22">She's also the author of the acclaimed non-fiction works,</span> <span title="1:25">Nine Parts of Desire and Foreign Correspondence.</span> </span><br>
+<span data-start="00:01:28.051" data-end="00:01:34.370"><span title="1:28">In 2011, she presented Australia's prestigious</span> <span title="1:31">Boyer Lectures, later published as The Idea of Home.</span> </span><br>
+<span data-start="00:01:34.505" data-end="00:01:39.493"><span title="1:35">In 2016, she was appointed officer in the Order of Australia</span> <span title="1:38">for her services to literature.</span> </span><br>
+<span data-start="00:01:40.195" data-end="00:01:43.877"><span title="1:40">Geraldine Brooks divides her time between Sydney</span> <span title="1:42">in Massachusetts and has two sons.</span> </span><br>
+<span data-start="00:01:44.039" data-end="00:01:52.294"><span title="1:44">Please make Geraldine feel very welcome.</span> <span title="1:46">How was that?</span> <span title="1:52">Was that?</span> </span><br>
+<span data-start="00:01:52.771" data-end="00:02:02.891"><span title="1:53">That was, yeah.</span> <span title="1:56">We were just talking earlier about how hard it</span> <span title="1:59">is to earn up to your resume.</span> </span><br>
+<span data-start="00:02:03.178" data-end="00:02:08.611"><span title="2:03">But what a beautiful spot.</span> <span title="2:05">Aren't we lucky to be here on such a gorgeous day</span> </span><span data-start="00:02:08.611" data-end="00:02:16.451"><span title="2:09">and this wonderful wine and food and company</span> <span title="2:13">and thank you to our hosts and to the Wheeler Center,</span> </span><span data-start="00:02:16.978" data-end="00:02:21.047"><span title="2:17">and I couldn't, I can't think of a place on the planet</span> <span title="2:20">I'd rather be right now.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[2:25]</small> <span data-start="00:02:24.971" data-end="00:02:29.411"><span title="2:25">So I thought we might start this conversation</span> <span title="2:28">with a bit of a reading.</span> </span><br>
+<span data-start="00:02:29.411" data-end="00:02:32.075"><span title="2:29">If that's okay with you, I thought, you know,</span> <span title="2:32" style="background: rgba(209, 72, 54, 0.15);">could read a little bit of the book.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[2:34]</small> <span data-start="00:02:34.379" data-end="00:02:43.184"><span title="2:34">I was just thinking 150 pages would be...</span> <span title="2:37">Seriously.</span> <span title="2:39">I'm going to read from a very early section,</span> </span><span data-start="00:02:43.184" data-end="00:02:45.830"><span title="2:43">so I don't have to explain it.</span> </span><br>
+<span data-start="00:02:47.082" data-end="00:02:56.795"><span title="2:47">This is a novel that takes place in three time periods,</span> <span title="2:50">but the historical spine of the book is in the 1850s in Kentucky.</span> </span><br>
+<span data-start="00:02:57.506" data-end="00:03:02.184"><span title="2:58">And this is a section titled Warfield's Jarrett.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[3:04]</small> <span data-start="00:03:04.344" data-end="00:03:08.147"><span title="3:04">The Meadows, Lexington, Kentucky, 1850.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[3:10]</small> <span data-start="00:03:10.384" data-end="00:03:17.014"><span title="3:10">She was no one's notion of an easy mare,</span> <span title="3:15">not mean, but nervous,</span> </span><span data-start="00:03:17.824" data-end="00:03:21.335"><span title="3:18">which could come to the same thing</span> <span title="3:20">if you didn't account for it.</span> </span><br>
+<span data-start="00:03:22.560" data-end="00:03:26.704"><span title="3:23">Jarrett knew how to approach her, steady and deliberate.</span> </span><br>
+<span data-start="00:03:28.144" data-end="00:03:34.614"><span title="3:28">You shouldn't hesitate or show uncertainty,</span> <span title="3:32">but if you were too high-handed, she'd make you pay.</span> </span><br>
+<span data-start="00:03:35.046" data-end="00:03:39.160"><span title="3:35">She could snake around and have a piece of your arm</span> <span title="3:38">or kick out and crack a shin.</span> </span><br>
+<span data-start="00:03:40.465" data-end="00:03:48.585"><span title="3:40">Dr. Alicia Warfield had bred her himself</span> <span title="3:44">and named her for his daughter-in-law, Alice Carneel.</span> </span><br>
+<span data-start="00:03:49.593" data-end="00:03:55.634"><span title="3:50">There were jokes around the barn about what he meant by that</span> <span title="3:53">and what he might have been trying to say to his son.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[3:57]</small> <span data-start="00:03:57.416" data-end="00:04:01.989"><span title="3:57">But Alice Carneil never hurt Jarrett.</span> <span title="4:01">No horse ever had.</span> </span><br>
+<span data-start="00:04:03.142" data-end="00:04:08.264"><span title="4:03">Look at him, Dr. Warfield would say,</span> <span title="4:06">lifting one of Jarrett's long, skinny arms.</span> </span><br>
+<span data-start="00:04:08.885" data-end="00:04:11.019"><span title="4:09">He's half-cult himself.</span> </span><br>
+<span data-start="00:04:11.937" data-end="00:04:17.644"><span title="4:12">Jarrett took it as a compliment for what would be the use</span> <span title="4:16">in taking it otherwise.</span> </span><br>
+<span data-start="00:04:18.518" data-end="00:04:22.794"><span title="4:19">And it was true he had a feel for horses deep in the grain.</span> </span><br>
+<span data-start="00:04:24.104" data-end="00:04:31.094"><span title="4:24">The first bed he could remember was in a horse stall.</span> <span title="4:28">He shared straw with the two geldings in the carriage house,</span> </span><span data-start="00:04:31.504" data-end="00:04:36.828"><span title="4:32">while his mother slept in the mansion,</span> <span title="4:35">nursemaid to the mistress's infant.</span> </span><br>
+<span data-start="00:04:38.264" data-end="00:04:45.299"><span title="4:38">Jarrett barely saw her.</span> <span title="4:41">His first language had been the subtle gestures</span> <span title="4:44">and sounds of horses.</span> </span><br>
+<span data-start="00:04:46.064" data-end="00:04:51.205"><span title="4:46">He'd been slow to master human speech,</span> <span title="4:49">but he could interpret the horses,</span> </span><span data-start="00:04:51.864" data-end="00:04:57.795"><span title="4:52">their moods, their alliances, their simple wants,</span> <span title="4:57">their many fears.</span> </span><br>
+<span data-start="00:04:58.664" data-end="00:05:05.518"><span title="4:59">He came to believe that horses lived with a world of fear.</span> <span title="5:04">And when you grasped that,</span> </span><span data-start="00:05:06.224" data-end="00:05:09.083"><span title="5:06">you had a clear idea how to be with them.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[5:11]</small> <span data-start="00:05:11.001" data-end="00:05:21.389"><span title="5:11">Thank you. That sets us up very nicely. Because, you know, the book is about a lot of things.</span> </span><br>
+<span data-start="00:05:21.606" data-end="00:05:32.507"><span title="5:22">But at the heart of it, it's a story of this racehorse, Lexington. And I heard that you had overheard the story at a lunch. Is that true?</span> </span><br>
+<span data-start="00:05:32.588" data-end="00:05:38.809"><span title="5:33">Yes, that's right.</span> <span title="5:34">So I'd recently published the novel Caleb's Crossing.</span> </span><br>
+<span data-start="00:05:39.203" data-end="00:05:44.483"><span title="5:39">And a lot of the research for that,</span> <span title="5:41">I got help from Plymouth Peltuxet Museum, which</span> </span><span data-start="00:05:44.483" data-end="00:05:50.449"><span title="5:44">is a living history museum about first contact</span> <span title="5:48">with the first English settlers in the Wampanoag.</span> </span><br>
+<span data-start="00:05:50.603" data-end="00:05:56.043"><span title="5:51">And they had asked me to come back for a donor's lunch.</span> <span title="5:54">And I thought I was there to be chum in the water,</span> </span><span data-start="00:05:56.043" data-end="00:06:01.243"><span title="5:56">you know, to sit next to somebody with a deep pocket</span> <span title="5:59">and tell them how great the museum was</span> </span><span data-start="00:06:01.243" data-end="00:06:02.908"><span title="6:01">and how helpful it was.</span> </span><br>
+<span data-start="00:06:03.003" data-end="00:06:08.462"><span title="6:03">But they'd actually asked me there</span> <span title="6:05">to pitch me another idea for a novel.</span> </span><br>
+<span data-start="00:06:08.603" data-end="00:06:12.630"><span title="6:09">And you get a lot of people saying,</span> <span title="6:11">I've got an idea for you.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[6:16]</small> <span data-start="00:06:15.683" data-end="00:06:19.123"><span title="6:16">And this was one of those cases.</span> <span title="6:17">They wanted me to write about a young woman,</span> </span><span data-start="00:06:19.391" data-end="00:06:24.360"><span title="6:19">from the plantation, which would have been fine,</span> <span title="6:21">except that was the book I'd just published.</span> </span><br>
+<span data-start="00:06:24.763" data-end="00:06:26.872"><span title="6:25">So I'm sitting there, nodding and smiling politely.</span> </span><br>
+<span data-start="00:06:27.376" data-end="00:06:33.283"><span title="6:27">But across the table three places down,</span> <span title="6:31">there was a guy with quite a resonant voice</span> </span><span data-start="00:06:33.283" data-end="00:06:35.127"><span title="6:33">from the Smithsonian Institution.</span> </span><br>
+<span data-start="00:06:35.643" data-end="00:06:40.443"><span title="6:36">And he was telling his lunch companion</span> <span title="6:38">this wonderful story about how he just delivered,</span> </span><span data-start="00:06:40.618" data-end="00:06:47.154"><span title="6:41">a skeleton that had been forgotten in an attic</span> <span title="6:45">in the Natural History Museum in Washington,</span> </span><span data-start="00:06:47.563" data-end="00:06:54.163"><span title="6:48">and then rediscovered and taken to the International</span> <span title="6:50">Museum of the Horse, where the story of the greatest race horse</span> </span><span data-start="00:06:54.163" data-end="00:06:59.403"><span title="6:54">of the 19th century in America could be told in full again.</span> </span><br>
+<span data-start="00:06:59.403" data-end="00:07:06.523"><span title="6:59">And this horse was not only the fastest and the bravest</span> <span title="7:02">horse of the era, but also the foundational studsire</span> </span><span data-start="00:07:06.523" data-end="00:07:11.478"><span title="7:07">that was responsible for Kentucky becoming the center</span> <span title="7:10">of the thoroughbred industry.</span> </span><br>
+<span data-start="00:07:12.003" data-end="00:07:15.835"><span title="7:12">And then he gets to the bit about what</span> <span title="7:14">happened during the Civil War with this horse.</span> </span><br>
+<span data-start="00:07:16.763" data-end="00:07:18.167"><span title="7:17" style="background: rgba(209, 72, 54, 0.16);">And I'm like, could you just?</span> </span><br>
+<span data-start="00:07:19.112" data-end="00:07:23.282"><span title="7:19">Hold it on that Puritan girl. I just need to hear about this horse.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[7:24]</small> <span data-start="00:07:24.423" data-end="00:07:29.362"><span title="7:24">That was the idea. And that was it. And so in that moment, do you then have an idea? Do you then go,</span> </span><span data-start="00:07:29.672" data-end="00:07:33.291"><span title="7:30">I think that's going to be my next novel? Was that just instantaneous like that?</span> </span><br>
+<span data-start="00:07:33.579" data-end="00:07:39.682"><span title="7:34">It was pretty instantaneous because the backstory is I had accidentally acquired a horse.</span> </span><br>
+<span data-start="00:07:39.682" data-end="00:07:49.122"><span title="7:40">And the horse crazy thing that happens to most girls at nine happened to me at 53.</span> </span><br>
+<span data-start="00:07:49.122" data-end="00:07:55.202"><span title="7:49">I had my first riding lesson and I became obsessed with my horse and caring for my horse</span> </span><span data-start="00:07:55.202" data-end="00:07:58.776"><span title="7:55">and becoming a better rider and I wasn't getting any work done.</span> </span><br>
+<span data-start="00:07:59.362" data-end="00:08:06.282"><span title="7:59">And so this idea came along at an opportune moment so I could combine my day job with</span> <span title="8:05">my new interest.</span> </span><br>
+<span data-start="00:08:06.590" data-end="00:08:11.882"><span title="8:07">You're right.</span> <span title="8:07">I mean, one of the things that I really loved about the book, and this is something that,</span> </span><span data-start="00:08:11.928" data-end="00:08:15.962"><span title="8:12">goes across your work, is just your attention to the historical detail.</span> </span><br>
+<span data-start="00:08:15.962" data-end="00:08:20.282"><span title="8:16">And just learning so much about horse racing, I had no idea.</span> </span><br>
+<span data-start="00:08:20.553" data-end="00:08:26.082"><span title="8:21">How much research did you have to do to sort of understand that period of America, but</span> </span><span data-start="00:08:26.082" data-end="00:08:28.538"><span title="8:26">also the horse racing industry at that time?</span> </span><br>
+<span data-start="00:08:28.682" data-end="00:08:35.922"><span title="8:29">Yeah, well, I didn't know anything about that either.</span> <span title="8:32">And it is so different, you know, and it was the national obsession.</span> </span><br>
+<span data-start="00:08:35.922" data-end="00:08:43.082"><span title="8:36">You can't overstate how involved people in the US</span> <span title="8:41">were in thoroughbred racing.</span> </span><br>
+<span data-start="00:08:43.082" data-end="00:08:49.022"><span title="8:43">They were so interested in it that there</span> <span title="8:46">were three newspapers just devoted to horse racing,</span> </span><span data-start="00:08:49.022" data-end="00:08:50.485"><span title="8:49">and they had huge circulation.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[8:51]</small> <span data-start="00:08:51.142" data-end="00:08:54.716"><span title="8:51">And it cut across North and South,</span> <span title="8:53">and it cut across black and white.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[8:55]</small> <span data-start="00:08:55.499" data-end="00:08:57.219"><span title="8:56">And it cut across class.</span> </span><br>
+<span data-start="00:08:57.682" data-end="00:09:03.642"><span title="8:58">So it was, I don't know, it was like cricket</span> <span title="9:01">if everybody played test cricket, because everybody</span> </span><span data-start="00:09:03.642" data-end="00:09:05.735"><span title="9:04">had a horse.</span> <span title="9:04" style="background: rgba(209, 72, 54, 0.22);">So they all had an opinion.</span> </span><br>
+<span data-start="00:09:05.842" data-end="00:09:10.842"><span title="9:06" style="background: rgba(209, 72, 54, 0.24);">And I didn't know.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[9:13]</small> <span data-start="00:09:13.018" data-end="00:09:19.850"><span title="9:13">The most salient thing that I quickly discovered</span> <span title="9:16">was that this national obsession and this huge industry,</span> </span><span data-start="00:09:20.175" data-end="00:09:24.127"><span title="9:20">from which people drew so much prestige and wealth,</span> </span><span data-start="00:09:24.964" data-end="00:09:32.088"><span title="9:25">was built on the skills, expertise, and plundered labor</span> <span title="9:30">of enslaved black horsemen.</span> </span><br>
+<span data-start="00:09:32.088" data-end="00:09:40.583"><span title="9:32">And so I knew that I was walking into something very different</span> <span title="9:39">to what I had expected.</span> </span><br>
+<span data-start="00:09:41.548" data-end="00:09:46.191"><span title="9:42">Was that how the character of Jarrett came to you?</span> <span title="9:44">Was that through learning that history?</span> </span><br>
+<span data-start="00:09:46.308" data-end="00:09:53.897"><span title="9:46">Learning that history and that, you know,</span> <span title="9:49">the first trainer of Lexington was a formerly enslaved trainer,</span> </span><span data-start="00:09:54.059" data-end="00:10:02.377"><span title="9:54">called Harry Lewis, who was one of the greatest trainers</span> <span title="9:57">of the era and very respected and quite famous</span> <span title="10:01">for his skills.</span> </span><br>
+<span data-start="00:10:03.028" data-end="00:10:05.168"><span title="10:03">And he did have a son.</span> </span><br>
+<span data-start="00:10:06.068" data-end="00:10:11.442"><span title="10:06">I learned later that his son was named Lou,</span> <span title="10:10">but also did work with the horses.</span> </span><br>
+<span data-start="00:10:11.830" data-end="00:10:16.205"><span title="10:12">But there's a portrait of Lexington in his old age.</span> </span><br>
+<span data-start="00:10:16.608" data-end="00:10:22.299"><span title="10:17">And it's supposed to be the greatest painting</span> <span title="10:19">by this particular equestrian artist, Thomas Scott, who,</span> </span><span data-start="00:10:22.688" data-end="00:10:23.974"><span title="10:23">also appears in the book.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[10:25]</small> <span data-start="00:10:24.968" data-end="00:10:32.139"><span title="10:25">And it says, Lexington being led out by Black Jarrett,</span> <span title="10:31">his groom.</span> </span><br>
+<span data-start="00:10:32.688" data-end="00:10:39.568"><span title="10:33">And so I wanted to know who that Jarrett was.</span> <span title="10:36">and I went back to the records of the horse farm.</span> </span><br>
+<span data-start="00:10:39.568" data-end="00:10:44.085"><span title="10:40">And I could find him, he existed,</span> <span title="10:42">but all I could find was what he got paid,</span> </span><span data-start="00:10:44.688" data-end="00:10:53.808"><span title="10:45">after the Emancipation Proclamation</span> <span title="10:47">when the property owner started paying</span> <span title="10:50">his enslaved employees they became.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[10:55]</small> <span data-start="00:10:55.208" data-end="00:10:59.010"><span title="10:55">But nothing about what it was like to be him</span> <span title="10:58">or what he was like.</span> </span><br>
+<span data-start="00:10:59.704" data-end="00:11:04.178"><span title="11:00">But I do know from spending time with horses</span> <span title="11:02">that it's not the owner and it's not the trainer,</span> </span><span data-start="00:11:04.848" data-end="00:11:08.292"><span title="11:05">And it's not the jockey, it's the groom.</span> </span><br>
+<span data-start="00:11:08.490" data-end="00:11:12.703"><span title="11:08">It's the one that has the most intense relationship</span> <span title="11:12" style="background: rgba(209, 72, 54, 0.20);">with the horse.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[11:14]</small> <span data-start="00:11:14.044" data-end="00:11:18.574"><span title="11:14">Just out of curiosity, how much was he paid at Emancipation?</span> </span><br>
+<span data-start="00:11:18.574" data-end="00:11:22.506"><span title="11:19">I can't remember exactly, but not a lot.</span> </span><br>
+<span data-start="00:11:22.614" data-end="00:11:25.441"><span title="11:23">Yeah, very small amounts of money.</span> </span><br>
+<span data-start="00:11:26.503" data-end="00:11:25.441"><span title="11:26">Yep.</span> </span><br>
+<span data-start="00:11:26.534" data-end="00:11:31.934"><span title="11:27">So you've got the horse, you've got Jarrett,</span> <span title="11:31">and then you get to the structure.</span> </span><br>
+<span data-start="00:11:31.934" data-end="00:11:35.983"><span title="11:32">And something you do very well in the book</span> <span title="11:34">is that you move between time periods.</span> </span><br>
+<span data-start="00:11:36.094" data-end="00:11:40.334"><span title="11:36">And I wonder if that was something</span> <span title="11:38">that you decided early on that you wanted</span> </span><span data-start="00:11:40.334" data-end="00:11:44.031"><span title="11:40">to move between the 1850s, the 1950s, and 2019?</span> </span><br>
+<span data-start="00:11:44.334" data-end="00:11:51.294"><span title="11:44">I knew that I was going to have a contemporary story</span> <span title="11:48">at the Smithsonian because I was so fascinated by the science</span> </span><span data-start="00:11:51.294" data-end="00:11:52.583"><span title="11:51">around the skeleton.</span> </span><br>
+<span data-start="00:11:53.174" data-end="00:11:59.374"><span title="11:53">And this is something that I love as a novelist</span> <span title="11:58">and as a journalist.</span> </span><br>
+<span data-start="00:11:59.374" data-end="00:12:06.320"><span title="11:59">I loved it too, which is the license</span> <span title="12:02">you have to poke into other people's business,</span> </span><span data-start="00:12:06.614" data-end="00:12:09.214"><span title="12:07">and to ask people about what they do.</span> </span><br>
+<span data-start="00:12:09.214" data-end="00:12:13.134"><span title="12:09">And I was fascinated</span> <span title="12:10">by the Smithsonian scientists.</span> <span title="12:12">So I knew that there was going</span> </span><span data-start="00:12:13.134" data-end="00:12:14.567"><span title="12:13">to be a contemporary story.</span> </span><br>
+<span data-start="00:12:14.974" data-end="00:12:21.654"><span title="12:15">But when I went to the Smithsonian</span> <span title="12:18">to learn about osteoprep</span> <span title="12:20">and how you deal with burns</span> </span><span data-start="00:12:21.654" data-end="00:12:26.214"><span title="12:22">and what you can learn from burns,</span> <span title="12:24">they said, you know, there's</span> <span title="12:25">a portrait of that horse</span> </span><span data-start="00:12:26.214" data-end="00:12:28.664"><span title="12:26">in the Smithsonian collection.</span> <span title="12:28">Would you like to see it?</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[12:30]</small> <span data-start="00:12:29.534" data-end="00:12:35.534"><span title="12:30">And it wasn't on display.</span> <span title="12:31">It was in the study center.</span> <span title="12:32">So we go to this back room,</span> </span><span data-start="00:12:35.534" data-end="00:12:38.422"><span title="12:36">and there is the portrait</span> <span title="12:38">of Lexington.</span> </span><br>
+<span data-start="00:12:39.094" data-end="00:12:44.706"><span title="12:39">It's a lovely little</span> <span title="12:41">conventional 19th century</span> <span title="12:43">equestrian oil painting.</span> </span><br>
+<span data-start="00:12:45.201" data-end="00:12:50.846"><span title="12:45">But it had</span> <span title="12:46">this extraordinary provenance,</span> <span title="12:48">because it had come</span> <span title="12:48">to the Smithsonian in a bequest,</span> </span><span data-start="00:12:51.494" data-end="00:12:57.054"><span title="12:51">that included only edgy</span> <span title="12:54">contemporary art of the post</span> <span title="12:56">World War II period.</span> </span><br>
+<span data-start="00:12:57.054" data-end="00:13:03.534"><span title="12:57">It came with Picasso's</span> <span title="12:59">and de Kooning's</span> <span title="13:00">and Brigid Riley's.</span> <span title="13:02">And this was the only</span> </span><span data-start="00:13:03.534" data-end="00:13:05.942"><span title="13:04">conventional 19th century</span> <span title="13:05">painting.</span> </span><br>
+<span data-start="00:13:06.334" data-end="00:13:12.774"><span title="13:06">And they had belonged</span> <span title="13:07">to a feminist art gallery owner and great dealer</span> </span><span data-start="00:13:12.774" data-end="00:13:20.814"><span title="13:13">who had backed avant-garde artists her whole career.</span> </span><br>
+<span data-start="00:13:21.254" data-end="00:13:22.921"><span title="13:21">So why did she have this?</span> </span><br>
+<span data-start="00:13:23.614" data-end="00:13:28.988"><span title="13:24">So I was so intrigued by that.</span> <span title="13:25">So that led to the novel having an unexpected third strand.</span> </span><br>
+<span data-start="00:13:29.699" data-end="00:13:31.500"><span title="13:30">And would that be Martha?</span> <span title="13:31" style="background: rgba(209, 72, 54, 0.22);">Yes.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[13:33]</small> <span data-start="00:13:32.724" data-end="00:13:37.910"><span title="13:33">So did you ever get to the bottom of that?</span> <span title="13:36">No.</span> <span title="13:36">So you still don't know why?</span> </span><br>
+<span data-start="00:13:38.360" data-end="00:13:41.717"><span title="13:38">Unfortunately, the only person who</span> <span title="13:40">might have had some insight into that,</span> </span><span data-start="00:13:42.159" data-end="00:13:44.967"><span title="13:42">died before I could get to him, which was her son.</span> </span><br>
+<span data-start="00:13:45.741" data-end="00:13:51.215"><span title="13:46">But I did find out that her mother had</span> <span title="13:48">been a famous competitive equestrian who had died,</span> </span><span data-start="00:13:51.755" data-end="00:13:54.816"><span title="13:52">in a freak equestrian accident.</span> </span><br>
+<span data-start="00:13:55.334" data-end="00:14:00.019"><span title="13:55">And so I worked with that to explain her fascination.</span> <span title="14:00">Wow.</span> </span><br>
+<span data-start="00:14:00.631" data-end="00:14:05.006"><span title="14:01">So the two other central characters in the book,</span> <span title="14:03">Theo and Jess.</span> </span><br>
+<span data-start="00:14:05.354" data-end="00:14:11.812"><span title="14:05">What can you tell me about how these characters came to you</span> <span title="14:09">and how they just worked through the book?</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[14:13]</small> <span data-start="00:14:12.622" data-end="00:14:18.654"><span title="14:13">So Jess is this Smithsonian scientist</span> <span title="14:16">who's in charge of the osteoporep lab.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[14:19]</small> <span data-start="00:14:19.455" data-end="00:14:23.954"><span title="14:19">And there was so much to research</span> <span title="14:23">for all the other characters,</span> </span><span data-start="00:14:23.954" data-end="00:14:26.306"><span title="14:24">I decided to give myself a bit of a break.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[14:27]</small> <span data-start="00:14:26.999" data-end="00:14:33.734"><span title="14:27">So I just based her on myself.</span> <span title="14:29">I thought, there were moments when I was reading the book and I was sort of thinking, is this</span> </span><span data-start="00:14:33.734" data-end="00:14:34.734"><span title="14:34">you?</span> </span><br>
+<span data-start="00:14:35.236" data-end="00:14:48.634"><span title="14:35">I'm afraid so, for better and for worse.</span> <span title="14:41">I was a very strange and nerdy child growing up in the western suburbs and I'm kind of</span> </span><span data-start="00:14:48.634" data-end="00:14:55.654"><span title="14:49">socially awkward and have committed my share of unintentional microaggressions.</span> </span><br>
+<span data-start="00:14:56.103" data-end="00:15:11.654"><span title="14:56" style="background: rgba(209, 72, 54, 0.16);">So I just, so yes, she's me.</span> <span title="15:03" style="background: rgba(209, 72, 54, 0.16);">And then I, originally the Theo character was some dude from Kentucky.</span> </span><br>
+<span data-start="00:15:11.654" data-end="00:15:24.343"><span title="15:12" style="background: rgba(209, 72, 54, 0.16);">And then I realized that I couldn't leave the story of race and injustice in the 19th</span> <span title="15:22" style="background: rgba(209, 72, 54, 0.16);">century.</span> </span><br>
+<span data-start="00:15:20.049" data-end="00:15:26.549"><span title="15:20">And pretend that that was something from the past,</span> <span title="15:23">that if I was going to have a contemporary story,</span> </span><span data-start="00:15:27.026" data-end="00:15:36.838"><span title="15:27">it had to also be about the resonance of enslavement</span> <span title="15:33">and how these are the unfinished issues,</span> </span><span data-start="00:15:37.010" data-end="00:15:44.219"><span title="15:37">and the, you know, the, I think, most urgent issue</span> <span title="15:42">to be addressed in American society.</span> </span><br>
+<span data-start="00:15:44.219" data-end="00:15:50.738"><span title="15:44">So suddenly, the dude from Kentucky</span> <span title="15:48">turns out to be a Nigerian American named Thea.</span> </span><br>
+<span data-start="00:15:50.899" data-end="00:15:51.818"><span title="15:51">Wow.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[15:54]</small> <span data-start="00:15:53.637" data-end="00:15:57.769"><span title="15:54">And race is a big part of this book.</span> <span title="15:56">And I wonder when you were writing,</span> </span><span data-start="00:15:58.192" data-end="00:16:04.139"><span title="15:58">you know, a lot has changed in the world in the last decade</span> <span title="16:02">or so, one would argue, particularly around conversations</span> </span><span data-start="00:16:04.139" data-end="00:16:08.619"><span title="16:04">to do with race and, you know, how art, you know,</span> </span><span data-start="00:16:08.670" data-end="00:16:10.210"><span title="16:09">talks about these sorts of issues.</span> </span><br>
+<span data-start="00:16:10.255" data-end="00:16:14.139"><span title="16:10">Did you, were you apprehensive at any moment to sort of have,</span> </span><span data-start="00:16:14.139" data-end="00:16:18.039"><span title="16:14">because you don't just have one character,</span> <span title="16:16">You've got two characters that are black.</span> </span><br>
+<span data-start="00:16:18.039" data-end="00:16:22.819"><span title="16:18">Were you apprehensive about writing about an experience</span> <span title="16:21">that was removed from your own,</span> </span><span data-start="00:16:22.819" data-end="00:16:25.046"><span title="16:23">given the cultural moment that we're living through?</span> </span><br>
+<span data-start="00:16:25.865" data-end="00:16:26.171"><span title="16:26">Yeah, petrified.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[16:27]</small> <span data-start="00:16:27.440" data-end="00:16:32.779"><span title="16:27">Yeah, I actually thought about giving up doing the book</span> <span title="16:31">because I couldn't in good conscience</span> </span><span data-start="00:16:32.779" data-end="00:16:35.579"><span title="16:33">erase the black horseman again.</span> </span><br>
+<span data-start="00:16:35.579" data-end="00:16:39.440"><span title="16:36">There's a way to write this story</span> <span title="16:37">and just center the white owners,</span> </span><span data-start="00:16:40.059" data-end="00:16:43.653"><span title="16:40">who are very interesting characters, really fascinating.</span> </span><br>
+<span data-start="00:16:44.199" data-end="00:16:52.619"><span title="16:44">Could have done that, but I thought that that would be</span> <span title="16:48">a betrayal again of these really important people.</span> </span><br>
+<span data-start="00:16:53.619" data-end="00:17:02.639"><span title="16:54">And also by then I was so interested in the strange niche</span> <span title="16:59">in the brutal system of enslavement that they occupied.</span> </span><br>
+<span data-start="00:17:03.219" data-end="00:17:08.941"><span title="17:03">And the ambiguity of their position where they</span> <span title="17:06">had an expertise that was so highly valued,</span> </span><span data-start="00:17:09.661" data-end="00:17:12.713"><span title="17:10">that put them in a category where they had,</span> </span><span data-start="00:17:13.865" data-end="00:17:18.681"><span title="17:14">some opportunities that were not available</span> <span title="17:16">to other enslaved people to travel, for example,</span> </span><span data-start="00:17:18.915" data-end="00:17:27.476"><span title="17:19">across state lines to acquire property in their own right</span> <span title="17:23">and eventually in many cases buy their own freedom.</span> </span><br>
+<span data-start="00:17:28.299" data-end="00:17:30.600"><span title="17:28">And so I wanted to explore that.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[17:32]</small> <span data-start="00:17:31.859" data-end="00:17:37.659"><span title="17:32">And then I just couldn't pretend</span> <span title="17:36">that it was a story that was over,</span> </span><span data-start="00:17:37.659" data-end="00:17:43.739"><span title="17:38">so it had to bleed into the present.</span> <span title="17:41">And I just had to get on my big old pants</span> </span><span data-start="00:17:43.739" data-end="00:17:46.327"><span title="17:44">and realize I might be walking into a bandsaw.</span> </span><br>
+<span data-start="00:17:46.659" data-end="00:17:51.699"><span title="17:47">But if I was going to do the book,</span> <span title="17:51">then it had to be done that way.</span> </span><br>
+<span data-start="00:17:51.699" data-end="00:17:54.179"><span title="17:52">And I did get a lot of advice from black friends.</span> </span><br>
+<span data-start="00:17:54.465" data-end="00:18:02.495"><span title="17:54">And I think the most salient piece of advice</span> <span title="17:57">was from Marlon James, who's a really remarkably brilliant,</span> </span><span data-start="00:18:02.739" data-end="00:18:04.854"><span title="18:03">Jamaican-American novelist.</span> </span><br>
+<span data-start="00:18:05.379" data-end="00:18:10.966"><span title="18:05">And he said, you know, when they talk about appropriation,</span> <span title="18:10" style="background: rgba(209, 72, 54, 0.19);">and I read those novels.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[18:12]</small> <span data-start="00:18:12.497" data-end="00:18:19.467"><span title="18:12">The appropriation's the least bad thing in the book.</span> <span title="18:16">Generally, they're just really lazy work.</span> </span><br>
+<span data-start="00:18:19.467" data-end="00:18:23.287"><span title="18:19">And he said, if you're going to do it, just do the work.</span> <span title="18:22">So I tried to do the work.</span> </span><br>
+<span data-start="00:18:23.287" data-end="00:18:28.647"><span title="18:23">And I'm sure if I haven't done it adequately,</span> <span title="18:25">I will hear about it.</span> </span><br>
+<span data-start="00:18:28.701" data-end="00:18:33.580"><span title="18:29">And so what did that entail?</span> <span title="18:31">I mean, what did doing the work mean?</span> </span><br>
+<span data-start="00:18:33.643" data-end="00:18:41.767"><span title="18:34">For the historical section, just really diving deep</span> <span title="18:38">into letters and archives and everything</span> </span><span data-start="00:18:41.767" data-end="00:18:50.612"><span title="18:42">I could find where you could hear a voice or the echo</span> <span title="18:46">of a voice and try and get a sense of the strange position,</span> </span><span data-start="00:18:50.936" data-end="00:18:59.047"><span title="18:51">of these men who had a certain amount of privilege,</span> <span title="18:55">but also the precarity of their situation, where</span> </span><span data-start="00:18:59.047" data-end="00:19:04.863"><span title="18:59">no matter how skilled and how valued they were,</span> <span title="19:02">they could still be ripped away from their family at any minute.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[19:06]</small> <span data-start="00:19:05.538" data-end="00:19:09.157"><span title="19:06">And sent to another part of the country</span> <span title="19:07">and just trying to reflect that as best I could.</span> </span><br>
+<span data-start="00:19:09.447" data-end="00:19:17.763"><span title="19:09">And then in the contemporary, just imposing on my friends,</span> <span title="19:16">basically, just asking them.</span> </span><br>
+<span data-start="00:19:18.407" data-end="00:19:25.407"><span title="19:18">And then from the conversations, writing something,</span> <span title="19:22">and then asking them if they would read it.</span> </span><br>
+<span data-start="00:19:25.407" data-end="00:19:30.609"><span title="19:25">And mostly, they'd say, that's shit.</span> <span title="19:29">You don't get it.</span> </span><br>
+<span data-start="00:19:30.887" data-end="00:19:37.649"><span title="19:31">So this of all books, I have relied on early readers</span> <span title="19:37">more than any other.</span> </span><br>
+<span data-start="00:19:38.153" data-end="00:19:45.607"><span title="19:38">You were.</span> <span title="19:39">I mean, you talked about how apprehensive you were approaching</span> <span title="19:44">the subject of race.</span> </span><br>
+<span data-start="00:19:45.778" data-end="00:19:52.917"><span title="19:46">But I wonder, did you also have a moment,</span> <span title="19:49">and this could be asked of your other work as well,</span> </span><span data-start="00:19:53.087" data-end="00:19:57.887"><span title="19:53">where you sort of go, you're an Australian telling</span> <span title="19:57">the American experience.</span> </span><br>
+<span data-start="00:19:57.887" data-end="00:20:02.167"><span title="19:58">Have you sort of questioned that,</span> <span title="19:59">if you are the right person to be talking</span> </span><span data-start="00:20:02.167" data-end="00:20:03.666"><span title="20:02">about these sorts of stories?</span> </span><br>
+<span data-start="00:20:04.215" data-end="00:20:10.525"><span title="20:04">I have a really privileged position</span> <span title="20:06" style="background: rgba(209, 72, 54, 0.14);">in America in that regard, I realized that with March.</span> </span><br>
+<span data-start="00:20:10.976" data-end="00:20:12.236"><span title="20:11" style="background: rgba(209, 72, 54, 0.24);">Because when March came out.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[20:15]</small> <span data-start="00:20:14.801" data-end="00:20:19.922"><span title="20:15">Exactly the same reception in the north and the south.</span> <span title="20:18">And if I'd been an American writer,</span> </span><span data-start="00:20:19.922" data-end="00:20:23.768"><span title="20:20">I would have been put in a pigeon hole,</span> <span title="20:22">I would have been a Yankee or I would have been a southerner,</span> </span><span data-start="00:20:24.062" data-end="00:20:28.802"><span title="20:24">and that would have meant half my audience</span> <span title="20:26">was not interested in what I had to say.</span> </span><br>
+<span data-start="00:20:28.802" data-end="00:20:33.472"><span title="20:29">So as an Australian, I think that that's a great advantage.</span> <span title="20:33">So.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[20:35]</small> <span data-start="00:20:35.182" data-end="00:20:42.042"><span title="20:35">I mean, one of the things that I think the book does well</span> <span title="20:39">and hopefully Marlon James might agree with this is,</span> </span><span data-start="00:20:42.375" data-end="00:20:50.422"><span title="20:42">You know, you get to the humanity of your central characters in a way that is refreshing,</span> </span><span data-start="00:20:50.422" data-end="00:20:52.818"><span title="20:50">particularly when you write about Jarrett and Theo.</span> </span><br>
+<span data-start="00:20:53.702" data-end="00:21:01.382"><span title="20:54">And one of the things that's heartbreaking about Jarrett's story is based on what you talk about,</span> </span><span data-start="00:21:01.382" data-end="00:21:04.962"><span title="21:01">which is this real life experience of these African American, you know,</span> </span><span data-start="00:21:05.262" data-end="00:21:08.622"><span title="21:05">horsemen who have been largely erased from history.</span> </span><br>
+<span data-start="00:21:08.622" data-end="00:21:14.234"><span title="21:09">And here you're reimagining what that experience</span> <span title="21:12">would have been like for someone.</span> </span><br>
+<span data-start="00:21:14.502" data-end="00:21:20.734"><span title="21:14">And it feels like reparative in some way,</span> <span title="21:19">this sense that Jarrett.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[21:22]</small> <span data-start="00:21:22.222" data-end="00:21:27.189"><span title="21:22">And the people that symbolize Jarrett,</span> <span title="21:25">gets an opportunity to have their story heard.</span> </span><br>
+<span data-start="00:21:27.302" data-end="00:21:34.085"><span title="21:27">And I appreciated how you foregrounded his experience.</span> <span title="21:31">And I wonder if that was deliberate on your part.</span> </span><br>
+<span data-start="00:21:34.182" data-end="00:21:43.822"><span title="21:34">I kind of, you know, there's quite a lot of my son in Jarrett.</span> </span><br>
+<span data-start="00:21:43.822" data-end="00:21:47.120"><span title="21:44">My son spent his first five years in Ethiopia,</span> </span><span data-start="00:21:47.382" data-end="00:21:49.442"><span title="21:47">before he came home to us.</span> </span><br>
+<span data-start="00:21:49.542" data-end="00:21:53.016"><span title="21:50">And he is a very self-contained guy.</span> </span><br>
+<span data-start="00:21:53.742" data-end="00:22:03.090"><span title="21:54">And there's a lot going on under the surface with him.</span> <span title="21:58">And so my tenderness towards Jarrett,</span> </span><span data-start="00:22:03.462" data-end="00:22:09.274"><span title="22:03">is to a large extent because I see so much of Bizu in him.</span> </span><br>
+<span data-start="00:22:09.905" data-end="00:22:17.385"><span title="22:10">And then I also wanted to give Jarrett everything</span> <span title="22:15">that I've learned about horses as well.</span> </span><br>
+<span data-start="00:22:17.862" data-end="00:22:21.142"><span title="22:18">So it's that kind of relationship</span> <span title="22:20">that he has with the horse, where</span> </span><span data-start="00:22:21.142" data-end="00:22:26.361"><span title="22:21">a horse can be the receptacle of all the affection,</span> </span><span data-start="00:22:26.919" data-end="00:22:31.393"><span title="22:27">that you can't safely express to other people.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[22:33]</small> <span data-start="00:22:33.082" data-end="00:22:38.302"><span title="22:33">And I just really love him.</span> <span title="22:36">So, you know, to the extent that you fall in love</span> </span><span data-start="00:22:38.302" data-end="00:22:44.212"><span title="22:38">with your characters, I just really love this boy</span> <span title="22:42">and who becomes a man, of course.</span> </span><br>
+<span data-start="00:22:44.752" data-end="00:22:48.422"><span title="22:45">Yeah.</span> <span title="22:46">There's a lot that I wanna ask you about the book,</span> <span title="22:47">but I also don't wanna spoil it</span> </span><span data-start="00:22:48.422" data-end="00:22:49.578"><span title="22:48">in case anyone hasn't read it.</span> </span><br>
+<span data-start="00:22:49.703" data-end="00:22:53.781"><span title="22:50" style="background: rgba(209, 72, 54, 0.13);">But there's a love story in the book.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[22:55]</small> <span data-start="00:22:54.673" data-end="00:22:58.976"><span title="22:55">But then there are other love stories that I think are love stories, but aren't explicitly love stories.</span> </span><br>
+<span data-start="00:22:59.165" data-end="00:23:05.563"><span title="22:59">And that's the relationship between Jarrett and Lexington.</span> <span title="23:02">And also the relationship between Theo and Clancy.</span> </span><br>
+<span data-start="00:23:05.638" data-end="00:23:10.211"><span title="23:06">Because I thought that was that was I correct? Yeah. Yeah.</span> </span><br>
+<span data-start="00:23:10.490" data-end="00:23:18.123"><span title="23:10">For those that haven't read the book, Clancy is Theo's dog.</span> <span title="23:14">And that relationship is just it's just a joy to read.</span> </span><br>
+<span data-start="00:23:18.123" data-end="00:23:21.603"><span title="23:18">And then I don't want to ruin it. But, you know, but but yeah.</span> </span><br>
+<span data-start="00:23:21.603" data-end="00:23:26.163"><span title="23:22">And I wonder if that was also deliberate on your part,</span> <span title="23:24">you know, to talk about the relationships,</span> </span><span data-start="00:23:26.550" data-end="00:23:32.284"><span title="23:27">that we have with animals.</span> <span title="23:30">I think it's one of the most important themes in the book.</span> </span><br>
+<span data-start="00:23:33.003" data-end="00:23:39.000"><span title="23:33">And the theoclancy thing, I didn't plan it.</span> <span title="23:38">It just grew.</span> </span><br>
+<span data-start="00:23:39.443" data-end="00:23:44.123"><span title="23:39">It just grew.</span> <span title="23:40">And you know, animals are incredibly important to me.</span> </span><br>
+<span data-start="00:23:44.123" data-end="00:23:51.243"><span title="23:44">I get an immense amount of sustenance,</span> <span title="23:48">not just from the ones who consent to live with me,</span> </span><span data-start="00:23:51.243" data-end="00:23:52.764"><span title="23:51">like my dog and my horse.</span> </span><br>
+<span data-start="00:23:53.548" data-end="00:24:01.163"><span title="23:54">But the biodiversity all around</span> <span title="23:56">me, so a lot of people have been</span> <span title="24:00">laughing at me recently,</span> </span><span data-start="00:24:01.163" data-end="00:24:05.809"><span title="24:01">because I spent a lot of money</span> <span title="24:03">building a high verniculum,</span> <span title="24:05">which is a house for snakes.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[24:09]</small> <span data-start="00:24:09.443" data-end="00:24:14.460"><span title="24:09">In Massachusetts, snakes need</span> <span title="24:12">to get below the frost line</span> <span title="24:14">in winter.</span> </span><br>
+<span data-start="00:24:15.363" data-end="00:24:20.221"><span title="24:15">And how they do that often</span> <span title="24:17">is by going into people's</span> <span title="24:18">basements, where everybody goes,</span> </span><span data-start="00:24:20.283" data-end="00:24:22.904"><span title="24:20">and kills them and that's not good.</span> </span><br>
+<span data-start="00:24:22.963" data-end="00:24:28.665"><span title="24:23">So I built this thing where outside,</span> <span title="24:26">where they can go down under the frost line,</span> </span><span data-start="00:24:28.963" data-end="00:24:31.573"><span title="24:29">and have a nice winter.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[24:34]</small> <span data-start="00:24:33.523" data-end="00:24:39.180"><span title="24:34">And I get a lot of grief from people.</span> <span title="24:36">I mean, if you've ever tried to call up,</span> </span><span data-start="00:24:39.423" data-end="00:24:44.293"><span title="24:39">the equivalent of wires in the US</span> <span title="24:43">and say I've got a sick skunk,</span> </span><span data-start="00:24:45.212" data-end="00:24:46.563"><span title="24:45">they go, you've got what?</span> </span><br>
+<span data-start="00:24:46.563" data-end="00:24:50.100"><span title="24:47" style="background: rgba(209, 72, 54, 0.12);">Nobody wants to help a skunk, I learned.</span> </span><br>
+<span data-start="00:24:51.072" data-end="00:24:51.922"><span title="24:51">Yeah.</span> <span title="24:52">Wow.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[24:56]</small> <span data-start="00:24:56.202" data-end="00:25:03.542"><span title="24:56">So yes, the human-animal bond and our incredible</span> <span title="25:01">responsibilities, which we are not meeting</span> </span><span data-start="00:25:03.542" data-end="00:25:05.089"><span title="25:04">to the species of this planet.</span> </span><br>
+<span data-start="00:25:05.582" data-end="00:25:10.571"><span title="25:06">And if we don't straighten up with this,</span> <span title="25:09">we're going to be very lonely.</span> </span><br>
+<span data-start="00:25:11.462" data-end="00:25:18.942"><span title="25:11">And then we're going to be gone.</span> <span title="25:13">So yeah.</span> <span title="25:16">I should let the audience know, actually, that Geraldine</span> </span><span data-start="00:25:18.942" data-end="00:25:20.239"><span title="25:19">will be taking some questions.</span> </span><br>
+<span data-start="00:25:20.502" data-end="00:25:23.822"><span title="25:20">So I will open up the floor to you.</span> <span title="25:22">So if you've got any questions,</span> </span><span data-start="00:25:23.822" data-end="00:25:27.262"><span title="25:24">feel free to put your hand up</span> <span title="25:25">and someone with a microphone will come to you.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[25:29]</small> <span data-start="00:25:28.982" data-end="00:25:33.462"><span title="25:29">I wanted to find out,</span> <span title="25:31">were there any bits in the writing process of this book</span> </span><span data-start="00:25:33.462" data-end="00:25:35.957"><span title="25:33">that were particularly challenging?</span> <span title="25:35">Oh yeah.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[25:38]</small> <span data-start="00:25:37.822" data-end="00:25:42.682"><span title="25:38">Tremendous number.</span> <span title="25:39">Some of them to do with the ending,</span> <span title="25:40">which I don't wanna talk about, but.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[25:45]</small> <span data-start="00:25:45.077" data-end="00:25:54.382"><span title="25:45">Challenging, you know, the research was,</span> <span title="25:50">It was a joy, but it was also challenging.</span> </span><br>
+<span data-start="00:25:54.736" data-end="00:26:00.762"><span title="25:55">But I think the biggest challenge was,</span> <span title="25:57">it was to me the book that was least clear to me</span> </span><span data-start="00:26:00.762" data-end="00:26:05.098"><span title="26:01">about how it was gonna work in the end,</span> <span title="26:03">because I knew I had these three strands.</span> </span><br>
+<span data-start="00:26:06.394" data-end="00:26:12.768"><span title="26:06">But the braid wasn't actually,</span> <span title="26:08">it wasn't braiding till quite late in the writing process.</span> </span><br>
+<span data-start="00:26:13.416" data-end="00:26:17.026"><span title="26:13">It did not come clear to me how I was gonna connect them.</span> </span><br>
+<span data-start="00:26:17.593" data-end="00:26:24.885"><span title="26:18">And so you had to just take it on trust</span> <span title="26:20">and keep writing and keep writing</span> <span title="26:23">and hope that something would emerge,</span> </span><span data-start="00:26:24.930" data-end="00:26:27.873"><span title="26:25">but it came quite late, so it's such a relief.</span> </span><br>
+<span data-start="00:26:28.702" data-end="00:26:32.902"><span title="26:29">Now I see it and then I could do it.</span> <span title="26:31">Yeah, right.</span> <span title="26:32">And you were also writing this</span> </span><span data-start="00:26:32.902" data-end="00:26:37.262"><span title="26:33">during the Trump presidency.</span> <span title="26:34">Oh!</span> <span title="26:35">Not that we wanna go back there again.</span> </span><br>
+<span data-start="00:26:37.262" data-end="00:26:40.981"><span title="26:37">No, no, but I started it in 2016.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[26:43]</small> <span data-start="00:26:42.763" data-end="00:26:49.047"><span title="26:43">No, it was so hard to focus because you'd get up</span> <span title="26:47">And what did he do today?</span> </span><br>
+<span data-start="00:26:49.422" data-end="00:26:57.742"><span title="26:49">And he just tossed your equilibrium right out the window.</span> <span title="26:54">And it wasn't like I was doing anything productive about it.</span> </span><br>
+<span data-start="00:26:57.742" data-end="00:27:03.351"><span title="26:58">It wasn't like I was going and chaining myself</span> <span title="27:00">to a detention center to save children being,</span> </span><span data-start="00:27:03.722" data-end="00:27:05.242"><span title="27:04">torn away from their parents.</span> </span><br>
+<span data-start="00:27:05.302" data-end="00:27:11.363"><span title="27:05">I wasn't.</span> <span title="27:06">I was just doomscrolling and getting all upset</span> <span title="27:09">and then not getting much writing done.</span> </span><br>
+<span data-start="00:27:11.642" data-end="00:27:17.134"><span title="27:12">Well, that's one way to put it.</span> <span title="27:14">or I could also argue that you wrote a book that, you know.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[27:19]</small> <span data-start="00:27:18.642" data-end="00:27:25.982"><span title="27:19">That showed how much of history is still present in America</span> <span title="27:23">and still hasn't been fully grappled with and dealt with</span> </span><span data-start="00:27:25.982" data-end="00:27:30.782"><span title="27:26">and that still has those, you know, horrible consequences.</span> </span><br>
+<span data-start="00:27:30.782" data-end="00:27:36.273"><span title="27:31">Yeah, no, I mean, it did fuel, you know,</span> <span title="27:34" style="background: rgba(209, 72, 54, 0.19);">a certain amount of the anger that...</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[27:38]</small> <span data-start="00:27:37.533" data-end="00:27:41.845"><span title="27:38">I put into the book, yeah.</span> <span title="27:40">It was also during a pandemic.</span> </span><br>
+<span data-start="00:27:42.383" data-end="00:27:47.480"><span title="27:42">The pandemic actually, you know,</span> <span title="27:45">I don't want to say this when so many people suffered so much,</span> </span><span data-start="00:27:47.886" data-end="00:27:52.103"><span title="27:48">but the pandemic came for me.</span> </span><br>
+<span data-start="00:27:52.103" data-end="00:27:58.157"><span title="27:52">The other thing that happened is I lost my husband</span> <span title="27:55">of 35 years suddenly,</span> </span><span data-start="00:27:58.783" data-end="00:28:02.143"><span title="27:59">three years ago in the middle of writing this book.</span> <span title="28:01">And he loved this book.</span> </span><br>
+<span data-start="00:28:02.143" data-end="00:28:06.079"><span title="28:02">He was really, he was a great advocate</span> <span title="28:04">because he loved this period of history.</span> </span><br>
+<span data-start="00:28:06.503" data-end="00:28:09.518"><span title="28:06">And he was always bringing me bits from the archives</span> <span title="28:09">that he thought.</span> </span><br>
+<span data-start="00:28:09.943" data-end="00:28:13.083"><span title="28:10">And we traveled together because he was researching a book.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[28:14]</small> <span data-start="00:28:14.023" data-end="00:28:18.376"><span title="28:14">He wrote nonfiction and it intersected.</span> <span title="28:17">So he had a really interesting trip,</span> </span><span data-start="00:28:18.503" data-end="00:28:24.543"><span title="28:18">to Kentucky with our younger son as well,</span> <span title="28:22">who was quite nervous about going</span> </span><span data-start="00:28:24.543" data-end="00:28:26.303"><span title="28:25">into the South at the time.</span> </span><br>
+<span data-start="00:28:26.303" data-end="00:28:35.063"><span title="28:26">Anyway, of course, when he just suddenly had a heart attack out</span> <span title="28:33">of the blue, we had no idea.</span> </span><br>
+<span data-start="00:28:35.063" data-end="00:28:44.223"><span title="28:35">He had a heart condition and that was a year,</span> <span title="28:41">just gone at least.</span> </span><br>
+<span data-start="00:28:44.223" data-end="00:28:49.983"><span title="28:44">And so, I don't know, how did we get onto that?</span> <span title="28:49">We're talking about the pandemic.</span> </span><br>
+<span data-start="00:28:49.983" data-end="00:28:57.783"><span title="28:50">Oh, the pandemic.</span> <span title="28:51">So what happened then was after he died,</span> <span title="28:55">there's this incredible pressure on you</span> </span><span data-start="00:28:57.783" data-end="00:29:00.309"><span title="28:58">to be normal as quickly as possible.</span> </span><br>
+<span data-start="00:29:00.503" data-end="00:29:06.682"><span title="29:00">And it's so stressful.</span> <span title="29:04">And then the world went sideways and nothing was normal.</span> </span><br>
+<span data-start="00:29:07.543" data-end="00:29:12.923"><span title="29:08">And I didn't have to pretend that anything was normal.</span> <span title="29:11">And the boys and I just huddled</span> </span><span data-start="00:29:12.923" data-end="00:29:17.494"><span title="29:13">and it was actually a very therapeutic time for us.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[29:19]</small> <span data-start="00:29:19.016" data-end="00:29:22.698"><span title="29:19">So sorry about your loss.</span> <span title="29:20">You write very beautifully in the book,</span> </span><span data-start="00:29:23.238" data-end="00:29:25.830"><span title="29:23">about your husband's influence on your work,</span> </span><span data-start="00:29:26.003" data-end="00:29:28.135"><span title="29:26">and in particular the research for this book.</span> </span><br>
+<span data-start="00:29:29.377" data-end="00:29:38.091"><span title="29:29">I'm curious, have you ever thought about writing a book based in Australia that looks at Australian history?</span> <span title="29:37" style="background: rgba(209, 72, 54, 0.28);">Yes, I have.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[29:42]</small> <span data-start="00:29:42.458" data-end="00:29:47.913"><span title="29:42">I got very far down the track on a book about Jane Franklin</span> <span title="29:47">in Tasmania.</span> </span><br>
+<span data-start="00:29:49.028" data-end="00:29:58.977"><span title="29:49">And I came upon two intractable problems with it.</span> <span title="29:54">One was her diary, which was incredibly detailed.</span> </span><br>
+<span data-start="00:29:59.908" data-end="00:30:05.791"><span title="30:00">She wrote everything down, so there wasn't much room for me</span> <span title="30:05">to imagine.</span> </span><br>
+<span data-start="00:30:06.028" data-end="00:30:14.668"><span title="30:06">And then her relationship with Methina,</span> <span title="30:10">who was this Aboriginal child that you could say adopted,</span> </span><span data-start="00:30:14.988" data-end="00:30:18.232"><span title="30:15">or you could say stolen, but in any case,</span> </span><span data-start="00:30:18.602" data-end="00:30:22.734"><span title="30:19">brought into her family and treated as her daughter,</span> </span><span data-start="00:30:23.508" data-end="00:30:28.711"><span title="30:24">and then abandoned into a system</span> <span title="30:27">that she knew was brutalizing.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[30:30]</small> <span data-start="00:30:30.148" data-end="00:30:37.902"><span title="30:30">And I could not come up with anything.</span> <span title="30:34">You have to be able to understand your characters,</span> </span><span data-start="00:30:37.992" data-end="00:30:40.567"><span title="30:38">as they understand themselves, right?</span> </span><br>
+<span data-start="00:30:40.928" data-end="00:30:46.590"><span title="30:41">Nobody gets up in the morning and says, gee, I'm a creep,</span> <span title="30:44">and I'm gonna do evil things today.</span> </span><br>
+<span data-start="00:30:47.436" data-end="00:30:52.117"><span title="30:47">Nobody looks in the mirror and says that.</span> <span title="30:49">They all have a story that they tell themselves.</span> </span><br>
+<span data-start="00:30:52.684" data-end="00:30:57.969"><span title="30:53">And if you as a novelist can't access that,</span> <span title="30:55">then you can't really write them, and I couldn't access it.</span> </span><br>
+<span data-start="00:30:58.653" data-end="00:31:01.968"><span title="30:59">Was it because she'd left so many journals</span> <span title="31:01">and she'd written about experience</span> </span><span data-start="00:31:01.968" data-end="00:31:03.964"><span title="31:02">so you couldn't sort of imagine her life?</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[31:05]</small> <span data-start="00:31:05.089" data-end="00:31:10.908"><span title="31:05">Both the fact that I, as somebody who wants to stick close to the truth, I had to sort</span> </span><span data-start="00:31:10.908" data-end="00:31:16.540"><span title="31:11">of stick close to the personality that was emerging there, but it was mainly the methena,</span> </span><span data-start="00:31:16.846" data-end="00:31:19.124"><span title="31:17">question that I couldn't answer it.</span> </span><br>
+<span data-start="00:31:19.628" data-end="00:31:24.348"><span title="31:20">And if you can't answer it, how can you possibly write it?</span> <span title="31:23">And it's so painful.</span> </span><br>
+<span data-start="00:31:24.348" data-end="00:31:31.889"><span title="31:24">I mean, it's just, it's unbearably painful.</span> <span title="31:28">And so I have a couple of other ideas.</span> </span><br>
+<span data-start="00:31:32.148" data-end="00:31:37.101"><span title="31:32">The trouble with our history is it's so sad.</span> </span><br>
+<span data-start="00:31:37.428" data-end="00:31:45.014"><span title="31:37">You know, we really, until fairly recent times,</span> <span title="31:43">this was a very sad place.</span> </span><br>
+<span data-start="00:31:45.188" data-end="00:31:49.975"><span title="31:45">And OK, American history is sad, but it's not my sad.</span> </span><br>
+<span data-start="00:31:50.268" data-end="00:31:54.458"><span title="31:50">I don't know.</span> <span title="31:51">I understand that.</span> <span title="31:52">I'm not making sense.</span> <span title="31:53">You are making complete sense.</span> </span><br>
+<span data-start="00:31:55.151" data-end="00:32:01.353"><span title="31:55">Just to your point about sticking to the facts</span> <span title="31:58">as much as possible, I wonder when you were riding a horse,</span> </span><span data-start="00:32:01.908" data-end="00:32:05.788"><span title="32:02">how much did you rely on the historical archive</span> <span title="32:05">and then at what point did you go,</span> </span><span data-start="00:32:05.788" data-end="00:32:11.388"><span title="32:06">okay, I've got it from here</span> <span title="32:07">and I'm just gonna use my imagination to continue?</span> </span><br>
+<span data-start="00:32:11.388" data-end="00:32:13.822"><span title="32:11">I kept everything I could.</span> </span><br>
+<span data-start="00:32:15.019" data-end="00:32:18.179"><span title="32:15">All the things that were on the record.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[32:20]</small> <span data-start="00:32:19.748" data-end="00:32:24.868"><span title="32:20">And I've quoted it in the afterword,</span> <span title="32:22">Mark Twain said, fiction must be plausible,</span> </span><span data-start="00:32:24.868" data-end="00:32:26.812"><span title="32:25">truth needn't be, or words to that effect.</span> </span><br>
+<span data-start="00:32:27.468" data-end="00:32:35.076"><span title="32:27" style="background: rgba(209, 72, 54, 0.10);">And truth is, it's so much more unlikely.</span> <span title="32:33" style="background: rgba(209, 72, 54, 0.10);">And so everything in this book that seems unlikely,</span> </span><span data-start="00:32:35.348" data-end="00:32:36.624"><span title="32:35" style="background: rgba(209, 72, 54, 0.10);">those are the true things.</span> </span><br>
+<span data-start="00:32:37.237" data-end="00:32:41.413"><span title="32:37" style="background: rgba(209, 72, 54, 0.34);">So I didn't.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[32:43]</small> <span data-start="00:32:43.340" data-end="00:32:49.550"><span title="32:43">OK, so I made some suppositions about the sexual preferences</span> <span title="32:49">of the painter.</span> </span><br>
+<span data-start="00:32:49.550" data-end="00:32:53.567"><span title="32:50">There's no actual evidence that he was gay.</span> </span><br>
+<span data-start="00:32:53.710" data-end="00:32:58.050"><span title="32:54">It's just, to me, the way he lived his life</span> <span title="32:57">suggests that to me.</span> </span><br>
+<span data-start="00:32:58.150" data-end="00:33:04.070"><span title="32:58">So I did give him a gay relationship for which</span> <span title="33:02">there is no actual evidence.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[33:08]</small> <span data-start="00:33:07.710" data-end="00:33:14.524"><span title="33:08">Apart from that, and then I made up a connection that</span> <span title="33:12">explains Martha Jackson and the painting.</span> </span><br>
+<span data-start="00:33:15.199" data-end="00:33:19.340"><span title="33:15">But apart from that, it's pretty close to what we know to be true.</span> </span><br>
+<span data-start="00:33:20.168" data-end="00:33:20.420"><span title="33:20">Yeah.</span> <span title="33:20">Great.</span> </span><br>
+<span data-start="00:33:21.249" data-end="00:33:24.290"><span title="33:21">Just letting the audience know that I'm now</span> <span title="33:23">opening it up for questions.</span> </span><br>
+<span data-start="00:33:24.940" data-end="00:33:27.690"><span title="33:25">If you've got a question for Geraldine,</span> <span title="33:26">please feel free to put your hand up.</span> </span><br>
+<span data-start="00:33:28.009" data-end="00:33:30.854"><span title="33:28">And also letting you know that Geraldine will</span> <span title="33:30">be doing a book signing.</span> </span><br>
+<span data-start="00:33:30.970" data-end="00:33:33.015"><span title="33:31">And the book seller is Antipodes.</span> </span><br>
+<span data-start="00:33:33.570" data-end="00:33:41.170"><span title="33:34">And they're just stationed back there.</span> <span title="33:36">While we get a mic to the lady over there.</span> </span><br>
+<span data-start="00:33:41.170" data-end="00:33:43.565"><span title="33:41">We could repeat the question also.</span> </span><br>
+<span data-start="00:33:43.630" data-end="00:33:46.122"><span title="33:44">I've got a very quick question before we get to that.</span> <span title="33:45">And it's about the stopwatch.</span> </span><br>
+<span data-start="00:33:46.370" data-end="00:33:49.849"><span title="33:46">Is it true that Lexington is the reason</span> <span title="33:49">why the stopwatch exists?</span> </span><br>
+<span data-start="00:33:50.092" data-end="00:33:53.549"><span title="33:50">So they had stopwatches,</span> <span title="33:51">but they didn't have a mass produced one.</span> </span><br>
+<span data-start="00:33:54.278" data-end="00:33:58.095"><span title="33:54">And they made the mass produced one</span> <span title="33:56">because people were so obsessed with this horse.</span> </span><br>
+<span data-start="00:33:58.527" data-end="00:34:04.856"><span title="33:59">They wanted to be able to clock his times themselves.</span> <span title="34:02">That was how fast he was.</span> <span title="34:03">Yes. Wow.</span> <span title="34:04">Wow.</span> </span><br>
+<span data-start="00:34:05.459" data-end="00:34:08.591"><span title="34:05">Yeah.</span> <span title="34:06">Remarkable.</span> <span title="34:07">Yeah.</span> <span title="34:08">Would you like to ask your question?</span> </span><br>
+<span data-start="00:34:08.826" data-end="00:34:09.159"><span title="34:09">Yeah. I'm just curious to know.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[34:12]</small> <span data-start="00:34:12.499" data-end="00:34:22.970"><span title="34:12">There's a microphone.</span> <span title="34:15">Hi there. You were talking about sad, you know, anyone who is involved with writing</span> </span><span data-start="00:34:22.970" data-end="00:34:30.410"><span title="34:23">any narrative there is an emotional connection and I'm curious to know how do you balance</span> </span><span data-start="00:34:30.410" data-end="00:34:36.210"><span title="34:30">that for yourself when you're writing and you're connecting to whether it's sad or</span> </span><span data-start="00:34:36.210" data-end="00:34:43.277"><span title="34:36">or whether it's frustration, the emotion that is apparent</span> <span title="34:41">to you as you're writing those stories.</span> </span><br>
+<span data-start="00:34:43.670" data-end="00:34:51.019"><span title="34:44">You have to use it, you have to use that strong emotion</span> <span title="34:49">and that fuels the work.</span> </span><br>
+<span data-start="00:34:51.850" data-end="00:34:59.750"><span title="34:52">Yeah, and it is draining, you know, some days you just get</span> <span title="34:55">to the end of the page and you're just, you know.</span> </span><br>
+<span data-start="00:34:59.750" data-end="00:35:04.750"><span title="35:00">But it's kind of the cost of doing business in a way.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[35:10]</small> <span data-start="00:35:10.221" data-end="00:35:18.986"><span title="35:10">I'm in the middle of reading March very late.</span> <span title="35:14">And I, what I find so extraordinary Geraldine</span> </span><span data-start="00:35:18.986" data-end="00:35:23.986"><span title="35:19">is your ability to write through a man's voice.</span> </span><br>
+<span data-start="00:35:25.346" data-end="00:35:31.818"><span title="35:25">I've never come across that with another writer.</span> <span title="35:29">And I'm thinking about your.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[35:34]</small> <span data-start="00:35:33.510" data-end="00:35:37.867"><span title="35:34">The need in Australia for men to be written very differently.</span> </span><br>
+<span data-start="00:35:38.839" data-end="00:35:46.896"><span title="35:39">And I'd really love to encourage you to approach writing here.</span> </span><br>
+<span data-start="00:35:47.426" data-end="00:36:00.426"><span title="35:47">I think we need so desperately for men to be written with that kind of extraordinary,</span> </span><span data-start="00:36:00.426" data-end="00:36:06.575"><span title="36:00">deep generosity and so that we can all perceive men here differently.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[36:08]</small> <span data-start="00:36:08.106" data-end="00:36:13.006"><span title="36:08">That is such an interesting point because I've just been rereading almost all of Tim</span> </span><span data-start="00:36:13.006" data-end="00:36:22.006"><span title="36:13">Winton. So you have a problem with his portrayal of Aussie masculinity? Yes, yeah, interesting.</span> </span><br>
+<span data-start="00:36:22.239" data-end="00:36:35.968"><span title="36:22">I, you know, that first person male voice in March, that was really hard and it's not,</span> </span><span data-start="00:36:36.157" data-end="00:36:45.046"><span title="36:36">an experience I'm dying to repeat. But I'll tell you what I did learn is that when you're</span> </span><span data-start="00:36:45.046" data-end="00:36:54.166"><span title="36:45">trying to capture a male voice, there are so many more of them on the record. So I was,</span> </span><span data-start="00:36:54.449" data-end="00:36:59.246"><span title="36:54">spoiled for choice with him because all these Victorian men banging on at length in their</span> </span><span data-start="00:36:59.246" data-end="00:37:00.940"><span title="36:59">their journals and their letters.</span> </span><br>
+<span data-start="00:37:01.526" data-end="00:37:08.726"><span title="37:02">And their poor wives are working so hard,</span> <span title="37:06">they don't have time to write down their experience.</span> </span><br>
+<span data-start="00:37:08.726" data-end="00:37:15.218"><span title="37:09">So when you're looking for a female journal in America,</span> <span title="37:13">you can't find one before 1750.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[37:16]</small> <span data-start="00:37:16.446" data-end="00:37:20.358"><span title="37:16">And if you're writing in 1665, good luck.</span> <span title="37:20">No.</span> </span><br>
+<span data-start="00:37:21.126" data-end="00:37:28.991"><span title="37:21">She was up before dawn, and she was never done,</span> <span title="37:26">and if she was even allowed to become literate.</span> </span><br>
+<span data-start="00:37:29.531" data-end="00:37:37.446"><span title="37:30">But the men, tons of them.</span> <span title="37:33">So you kind of spoiled the choice</span> <span title="37:35">on where you can hear their voices</span> </span><span data-start="00:37:37.446" data-end="00:37:39.326"><span title="37:37">because their voices are very loud.</span> </span><br>
+<span data-start="00:37:40.100" data-end="00:37:44.349"><span title="37:40">I agree, but I think this is the particular difference.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[37:47]</small> <span data-start="00:37:46.807" data-end="00:37:50.056"><span title="37:47">Of you as a woman writing</span> <span title="37:50" style="background: rgba(209, 72, 54, 0.28);">because the whole society is.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[37:54]</small> <span data-start="00:37:54.377" data-end="00:38:00.067"><span title="37:54">Well, it's an interesting point and I will think about it like I'm not racing to my desk.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[38:02]</small> <span data-start="00:38:01.939" data-end="00:38:05.747"><span title="38:02">I'm sure there are other writers that will also fall that void. That's a lot to put on your plate.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[38:08]</small> <span data-start="00:38:08.493" data-end="00:38:12.467"><span title="38:08">I'm interested in this idea of the voices that you foreground because that's something that I</span> </span><span data-start="00:38:12.467" data-end="00:38:17.187"><span title="38:12">actually really enjoyed in Horse because again going back to the voices that are historically</span> </span><span data-start="00:38:17.187" data-end="00:38:21.387"><span title="38:17">erased, you know, people of color, black people, women.</span> </span><br>
+<span data-start="00:38:21.816" data-end="00:38:27.627"><span title="38:22">And your book deliberately focuses on the experiences of women and black men.</span> </span><br>
+<span data-start="00:38:27.866" data-end="00:38:30.667"><span title="38:28">And I also and I wonder if that was also a deliberate choice,</span> </span><span data-start="00:38:30.667" data-end="00:38:33.384"><span title="38:31">because you were very much aware of the historical erasures.</span> </span><br>
+<span data-start="00:38:33.843" data-end="00:38:38.187"><span title="38:34">Yeah, no. Hearing the unheard, you know, has always been really important to me.</span> </span><br>
+<span data-start="00:38:38.525" data-end="00:38:43.387"><span title="38:39">It started in my journalism.</span> <span title="38:40">So my my.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[38:45]</small> <span data-start="00:38:45.249" data-end="00:38:50.387"><span title="38:45">Time as a correspondent in the Middle East or West Asia or whatever we're calling it,</span> </span><span data-start="00:38:51.011" data-end="00:38:57.987"><span title="38:51">today. Everything changed for me when I started to talk to the women instead of the men because.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[39:00]</small> <span data-start="00:39:00.387" data-end="00:39:06.819"><span title="39:00">Nobody else was bothering to do that. And their stories were so much more powerful and,</span> </span><span data-start="00:39:07.485" data-end="00:39:16.064"><span title="39:07">powerful and to me gave you so much more insight into the cultures.</span> </span><br>
+<span data-start="00:39:16.109" data-end="00:39:25.967"><span title="39:16">And so seeking out the unheard has been a kind of a mission and it has carried on in</span> <span title="39:25">the fiction.</span> </span><br>
+<span data-start="00:39:26.542" data-end="00:39:34.587"><span title="39:27">I always want to find what was it like to be the person who didn't have the chance to</span> <span title="39:33">write it down.</span> </span><br>
+<span data-start="00:39:34.587" data-end="00:39:38.867"><span title="39:35">And I think about it even with my own forebears in this country.</span> </span><br>
+<span data-start="00:39:38.867" data-end="00:39:45.258"><span title="39:39">On my mother's side, came here in 1860.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[39:46]</small> <span data-start="00:39:46.347" data-end="00:39:54.918"><span title="39:46">And they were both illiterate.</span> <span title="39:51">So I know that because they signed their name with a cross.</span> </span><br>
+<span data-start="00:39:55.427" data-end="00:40:01.827"><span title="39:55">And so I feel like there's a duty there</span> <span title="39:59">because we don't know what it was like for that great, great</span> </span><span data-start="00:40:01.827" data-end="00:40:08.827"><span title="40:02">grandmother of mine to come from Ireland and find herself out behind Yass in that kind</span> </span><span data-start="00:40:08.827" data-end="00:40:15.227"><span title="40:09">of dry, very different landscape. What was her life like? And I don't really know because</span> </span><span data-start="00:40:15.227" data-end="00:40:22.227"><span title="40:15">she didn't have a chance to write it down. But I like to think that she can see her great-great-granddaughters,</span> </span><span data-start="00:40:22.227" data-end="00:40:32.227"><span title="40:22" style="background: rgba(209, 72, 54, 0.19);">daughters, my sister with her PhD, and the great privilege that we've had to be educated.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[40:34]</small> <span data-start="00:40:34.294" data-end="00:40:36.976"><span title="40:34" style="background: rgba(209, 72, 54, 0.17);">We've got a couple of hands up.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[40:40]</small> <span data-start="00:40:40.055" data-end="00:40:44.545"><span title="40:40">Geraldine, I'm just wondering if you could amplify on some of the comments you made.</span> </span><br>
+<span data-start="00:40:44.545" data-end="00:40:48.625"><span title="40:45">I heard you on the ABC during the week and you were talking about American,</span> </span><span data-start="00:40:48.625" data-end="00:40:54.465"><span title="40:49">contemporary American society and you know we shake our heads at what's happening there,</span> </span><span data-start="00:40:54.465" data-end="00:41:01.745"><span title="40:54">the Roe vs Wade stuff and just how you see American society evolving and is the democracy...</span> </span><br>
+<span data-start="00:41:01.745" data-end="00:41:16.765"><span title="41:02">I think it's tragic what's going on there.</span> <span title="41:10">I really see the country pulling apart and I see two Americas emerging and it's not so</span> </span><span data-start="00:41:16.765" data-end="00:41:26.905"><span title="41:17">clear cut as there are very progressive pockets in Texas, Houston and Austin, just as progressive</span> </span><span data-start="00:41:26.905" data-end="00:41:38.291"><span title="41:27">as Massachusetts, but they're embedded in a troglodyte mentality, a very theocratic,</span> </span><span data-start="00:41:38.426" data-end="00:41:46.985"><span title="41:38">and authoritarian society is emerging in certain parts of the United States and because of</span> </span><span data-start="00:41:46.985" data-end="00:41:51.308"><span title="41:47">Trump in the Supreme Court.</span> </span><br>
+<span data-start="00:41:51.425" data-end="00:42:02.265"><span title="41:51">The overturning row, the Dobbs decision, is going to cause so much pain. And I'm vexed</span> </span><span data-start="00:42:02.265" data-end="00:42:08.638"><span title="42:02">with my side of politics because we should have been more prepared for this. Anyway.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[42:09]</small> <span data-start="00:42:08.961" data-end="00:42:15.145"><span title="42:09">I'm very proud of my son because he took time off work and put up three billboards in Jackson,</span> </span><span data-start="00:42:15.145" data-end="00:42:20.511"><span title="42:15">Mississippi, right around the pink house, which was the last abortion provider in Mississippi.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[42:21]</small> <span data-start="00:42:21.265" data-end="00:42:26.345"><span title="42:21" style="background: rgba(209, 72, 54, 0.18);">That say pregnant, you still have a choice,</span> <span title="42:24" style="background: rgba(209, 72, 54, 0.18);">and then directs women to information</span> </span><span data-start="00:42:26.345" data-end="00:42:28.585"><span title="42:26" style="background: rgba(209, 72, 54, 0.18);">about how they can safely get abortion pills.</span> </span><br>
+<span data-start="00:42:28.585" data-end="00:42:34.585"><span title="42:29" style="background: rgba(209, 72, 54, 0.18);">So, really proud of him.</span> <span title="42:31" style="background: rgba(209, 72, 54, 0.18);">Ha ha ha.</span> <span title="42:32" style="background: rgba(209, 72, 54, 0.38);">Thank you.</span> <span title="42:33" style="background: rgba(209, 72, 54, 0.40);">Thank you.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[42:37]</small> <span data-start="00:42:36.959" data-end="00:42:40.729"><span title="42:37">Thanks Geraldine for coming today. That was actually my question as well but just as an,</span> </span><span data-start="00:42:40.848" data-end="00:42:48.536"><span title="42:41">extension of that I wondered what you think is the way forward. How does America heal from this point?</span> </span><br>
+<span data-start="00:42:48.850" data-end="00:42:55.129"><span title="42:49">I you know it's it's it's a bit of a catastrophe because I'm a big supporter of Joe Biden but I</span> </span><span data-start="00:42:55.129" data-end="00:43:02.249"><span title="42:55">see that he is crumbling under the pressures that he is under and I don't see anybody immediately</span> </span><span data-start="00:43:02.249" data-end="00:43:09.329"><span title="43:02">standing behind him who can pick up the ball and run with it as fast as it needs to be</span> <span title="43:08">run with right now.</span> </span><br>
+<span data-start="00:43:09.329" data-end="00:43:14.009"><span title="43:09">So I'm really concerned that things are going to get a lot worse, that we're going to have</span> </span><span data-start="00:43:14.009" data-end="00:43:17.397"><span title="43:14">a disastrous shellacking in the midterm elections.</span> </span><br>
+<span data-start="00:43:18.049" data-end="00:43:26.489"><span title="43:18">And then climate is, you know, nothing good will happen.</span> <span title="43:23">It will go the other way.</span> </span><br>
+<span data-start="00:43:26.489" data-end="00:43:32.049"><span title="43:26">The white supremacists will be even more enabled than they already are.</span> </span><br>
+<span data-start="00:43:32.049" data-end="00:43:35.653"><span title="43:32">And it looks very bleak to me.</span> </span><br>
+<span data-start="00:43:35.929" data-end="00:43:42.558"><span title="43:36">Are there any hopes on the side of the Democrats, like an Amy Klobuchar?</span> </span><br>
+<span data-start="00:43:42.769" data-end="00:43:45.574"><span title="43:43">She could do it.</span> <span title="43:44">She's got the name recognition.</span> <span title="43:45">She's tough.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[43:46]</small> <span data-start="00:43:46.339" data-end="00:43:52.262"><span title="43:46">She's not that likable.</span> <span title="43:51">I mean, shouldn't be about that.</span> </span><br>
+<span data-start="00:43:52.839" data-end="00:43:57.929"><span title="43:53">But unfortunately, not that I think DeSantis is likable, but DeSantis really scares me</span> </span><span data-start="00:43:57.929" data-end="00:44:02.894"><span title="43:58">because he's everything that Trump is only smarter.</span> </span><br>
+<span data-start="00:44:02.984" data-end="00:44:09.329"><span title="44:03">And there's this tendency on that side of politics</span> <span title="44:07">towards embracing an authoritarianism</span> </span><span data-start="00:44:09.329" data-end="00:44:12.289"><span title="44:09">that is so anti-democratic.</span> </span><br>
+<span data-start="00:44:12.289" data-end="00:44:21.849"><span title="44:12">The way that the Fox News bloviators are extolling</span> <span title="44:16">Viktor Orban all the time and how great Hungary is, what?</span> </span><br>
+<span data-start="00:44:21.849" data-end="00:44:31.129"><span title="44:22">And I blame Murdoch for a lot of this.</span> <span title="44:24" style="background: rgba(209, 72, 54, 0.17);">So, you know, we've got some something to account for this country unleashing that on the world.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[44:33]</small> <span data-start="00:44:32.674" data-end="00:44:36.129"><span title="44:33" style="background: rgba(209, 72, 54, 0.20);">And we've gone into a very depressing place here.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[44:44]</small> <span data-start="00:44:43.585" data-end="00:44:47.543"><span title="44:44">And just to welcome the newest Kennedy to Australia.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[44:50]</small> <span data-start="00:44:50.303" data-end="00:44:57.063"><span title="44:50">The ambassador, what do you think,</span> <span title="44:52">is there any hope that maybe she can bring to Australia?</span> </span><br>
+<span data-start="00:44:58.303" data-end="00:45:02.223"><span title="44:58">I think she's gonna be great.</span> </span><br>
+<span data-start="00:45:02.223" data-end="00:45:11.723"><span title="45:02">And I have to say that she's a friend of mine</span> <span title="45:07">and she has an unbelievably good sense of humor,</span> </span><span data-start="00:45:11.723" data-end="00:45:15.323"><span title="45:12">sense of humor, which is crucial to being in Australia.</span> </span><br>
+<span data-start="00:45:15.323" data-end="00:45:20.203"><span title="45:15">And I just emailed her this morning to say that I was on the ABC Breakfast, wedged between</span> </span><span data-start="00:45:20.203" data-end="00:45:26.403"><span title="45:20">a piece on her arrival and a piece on mating a kinder's.</span> </span><br>
+<span data-start="00:45:26.403" data-end="00:45:35.212"><span title="45:26">And welcome to Australia.</span> <span title="45:32">You know what's so great about her is that she really gets it on climate.</span> </span><br>
+<span data-start="00:45:35.563" data-end="00:45:36.959"><span title="45:36">She's a big environmentalist.</span> </span><br>
+<span data-start="00:45:37.443" data-end="00:45:40.992"><span title="45:37">Her son is a ferocious environmental campaigner.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[45:42]</small> <span data-start="00:45:42.483" data-end="00:45:51.039"><span title="45:42">And she was, I think she did a couple of wonderful things</span> <span title="45:48">in Japan in terms of getting the American apology,</span> </span><span data-start="00:45:51.083" data-end="00:45:55.288"><span title="45:51">for Hiroshima and also speaking out</span> <span title="45:54">against the dolphin slaughter,</span> </span><span data-start="00:45:56.523" data-end="00:45:58.923"><span title="45:57">which the State Department did not want her to do.</span> </span><br>
+<span data-start="00:45:58.923" data-end="00:46:01.940"><span title="45:59">So she's very much her own person</span> <span title="46:01">and I think that that's great.</span> </span><br>
+<span data-start="00:46:03.323" data-end="00:46:07.803"><span title="46:03">And so I'm very optimistic and I'm glad</span> <span title="46:06">she's got a better government to work with.</span> </span><br>
+<span data-start="00:46:07.803" data-end="00:46:12.503"><span title="46:08">Because I would have been really embarrassed</span> <span title="46:09">if she had to come here with Scotty from marketing.</span> <span title="46:12">Yeah.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[46:16]</small> <span data-start="00:46:16.483" data-end="00:46:24.365"><span title="46:16">Slightly more superficial question.</span> <span title="46:21">Just wondering, a more rightly question, what's your process?</span> </span><br>
+<span data-start="00:46:24.734" data-end="00:46:30.963"><span title="46:25">Do you generally find the characters first?</span> <span title="46:28">Or do you generally find the structure, the story first?</span> </span><br>
+<span data-start="00:46:31.396" data-end="00:46:31.900"><span title="46:31">Or does it vary?</span> </span><br>
+<span data-start="00:46:32.443" data-end="00:46:38.403"><span title="46:32">And also one of the things that endlessly fascinates people</span> <span title="46:37">is the daily life of a writer.</span> </span><br>
+<span data-start="00:46:38.403" data-end="00:46:46.883"><span title="46:38">And how do you structure your life,</span> <span title="46:42">with all these speaking engagements and other?</span> </span><br>
+<span data-start="00:46:47.683" data-end="00:46:54.183"><span title="46:48">Oh, well, this is a weird, this is the thing.</span> <span title="46:51">You're alone in your room for five,</span> </span><span data-start="00:46:54.183" data-end="00:46:58.283"><span title="46:54">or in this case, seven years,</span> <span title="46:56">and you'd go nowhere and see nobody.</span> </span><br>
+<span data-start="00:46:58.556" data-end="00:47:07.363"><span title="46:59" style="background: rgba(209, 72, 54, 0.14);">And then all of a sudden, oh, look, people.</span> <span title="47:03" style="background: rgba(209, 72, 54, 0.14);">So it's a kind of a little bit schizoid existence</span> </span><span data-start="00:47:07.363" data-end="00:47:11.348"><span title="47:07" style="background: rgba(209, 72, 54, 0.14);">in that regard, but it's nice too,</span> <span title="47:10" style="background: rgba(209, 72, 54, 0.14);">because it's good to get out.</span> </span><br>
+<span data-start="00:47:11.798" data-end="00:47:15.057"><span title="47:12" style="background: rgba(209, 72, 54, 0.51);">My...</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[47:17]</small> <span data-start="00:47:16.605" data-end="00:47:25.499"><span title="47:17">My usual modus operandi is to hear a voice.</span> <span title="47:23">You find that story that intrigues you.</span> </span><br>
+<span data-start="00:47:25.935" data-end="00:47:30.895"><span title="47:26">And then you ask yourself, who is going to be willing?</span> <span title="47:29">We were talking about this earlier.</span> </span><br>
+<span data-start="00:47:30.895" data-end="00:47:35.393"><span title="47:31">Who is going to be willing to rise up out of the grave</span> <span title="47:35">and speak to me?</span> </span><br>
+<span data-start="00:47:35.855" data-end="00:47:37.193"><span title="47:36">And whose voice will I hear?</span> </span><br>
+<span data-start="00:47:37.815" data-end="00:47:39.633"><span title="47:38">And that will be the voice of the novel.</span> </span><br>
+<span data-start="00:47:40.775" data-end="00:47:49.695"><span title="47:41">In this case, the horse was not going to speak to me.</span> <span title="47:45">So I had to have it, you know, this is the most close</span> </span><span data-start="00:47:49.695" data-end="00:47:51.735"><span title="47:50">third person book I've ever written.</span> </span><br>
+<span data-start="00:47:51.735" data-end="00:47:56.975"><span title="47:52">Usually I like to write in first person</span> <span title="47:54">and it's in that voice that I can hear in my head.</span> </span><br>
+<span data-start="00:47:57.061" data-end="00:47:59.465"><span title="47:57">And until I can hear it, I can't start.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[48:01]</small> <span data-start="00:48:00.770" data-end="00:48:06.432"><span title="48:01">But how she sounds tells me who she is</span> <span title="48:04">and who she is tells me how she'll act,</span> </span><span data-start="00:48:06.895" data-end="00:48:10.474"><span title="48:07">and that sets the plot in motion.</span> <span title="48:09">So that's how it usually works.</span> </span><br>
+<span data-start="00:48:11.335" data-end="00:48:20.335"><span title="48:11">And then the daily life, it used to be really easy</span> <span title="48:18">to answer that question because it was all</span> </span><span data-start="00:48:20.335" data-end="00:48:22.215"><span title="48:20">about the school bus in America.</span> </span><br>
+<span data-start="00:48:22.215" data-end="00:48:28.135"><span title="48:22">They have this very nanny state thing</span> <span title="48:24">where they send a bus to pick up your kid and take them away</span> </span><span data-start="00:48:28.135" data-end="00:48:29.028"><span title="48:28">and bring them back.</span> </span><br>
+<span data-start="00:48:29.815" data-end="00:48:34.115"><span title="48:30">And so that was my workday between the bus leaving</span> <span title="48:33">and the bus returning.</span> </span><br>
+<span data-start="00:48:34.115" data-end="00:48:35.591"><span title="48:34">So that was six hours.</span> </span><br>
+<span data-start="00:48:36.075" data-end="00:48:41.755"><span title="48:36">And I got used to writing.</span> <span title="48:38">And if I wasn't quite finished, that,</span> </span><span data-start="00:48:41.991" data-end="00:48:44.944"><span title="48:42">was good because then I'd start with A Head of Steam</span> <span title="48:44">the next day.</span> </span><br>
+<span data-start="00:48:45.763" data-end="00:48:54.315"><span title="48:46">But now my youngest is 19, and there is no more school bus.</span> <span title="48:52">And I had to find a structure of my own.</span> </span><br>
+<span data-start="00:48:54.315" data-end="00:49:01.806"><span title="48:54">So the new structure is get up, feed the horses,</span> <span title="48:59">muck out the stalls, make a cup of coffee, read a poem,</span> </span><span data-start="00:49:02.373" data-end="00:49:08.195"><span title="49:02">get to work, and sit there until it's time</span> <span title="49:06">to make dinner, essentially.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[49:10]</small> <span data-start="00:49:10.222" data-end="00:49:25.784"><span title="49:10">It's incredibly varied. It depends how good I am about not being tempted to go online.</span> <span title="49:21">Look at dog videos.</span> </span><br>
+<span data-start="00:49:26.067" data-end="00:49:29.758"><span title="49:26">I wanted to ask you about that. What do you do to stay disciplined?</span> </span><br>
+<span data-start="00:49:29.874" data-end="00:49:34.784"><span title="49:30">And what do you do in the days when you just don't have anything coming out of you?</span> </span><br>
+<span data-start="00:49:34.784" data-end="00:49:38.764"><span title="49:35">Do you still sit in front of your computer?</span> <span title="49:37">You have to do something.</span> </span><br>
+<span data-start="00:49:38.764" data-end="00:49:46.034"><span title="49:39">So I've got really good about writing badly</span> <span title="49:43">because it's better to write badly than not write at all.</span> </span><br>
+<span data-start="00:49:46.704" data-end="00:49:50.884"><span title="49:47">And to accept that you won't be able</span> <span title="49:49">to produce good stuff every day,</span> </span><span data-start="00:49:50.884" data-end="00:49:53.703"><span title="49:51">but you don't have any excuse to not produce,</span> </span><span data-start="00:49:54.164" data-end="00:50:02.616"><span title="49:54">any more than a hairdresser has an excuse not to cut hair</span> <span title="49:58">or a metal press operator has an excuse not to go to work</span> <span title="50:02">and press metal.</span> </span><br>
+<span data-start="00:50:02.924" data-end="00:50:08.684"><span title="50:03">Yeah, but I feel like when the writing comes to you, that's when it's probably, you know,</span> </span><span data-start="00:50:08.684" data-end="00:50:11.684"><span title="50:09">more inspired.</span> <span title="50:10">I mean, I hear what you're saying.</span> <span title="50:11">Oh, yeah, yeah, totally.</span> </span><br>
+<span data-start="00:50:11.684" data-end="00:50:12.797"><span title="50:12">It's absolutely true.</span> </span><br>
+<span data-start="00:50:13.164" data-end="00:50:15.804"><span title="50:13">And this is very good advice for me, but I'm very procrastinating.</span> </span><br>
+<span data-start="00:50:15.804" data-end="00:50:17.893"><span title="50:16">Do we have any more questions?</span> </span><br>
+<span data-start="00:50:18.004" data-end="00:50:24.086"><span title="50:18">Yeah, there's a gentleman way over the back.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[50:27]</small> <span data-start="00:50:26.764" data-end="00:50:34.084"><span title="50:27">A question to a racing journalist.</span> <span title="50:30">You mention in the book that 19th century horses,</span> </span><span data-start="00:50:34.313" data-end="00:50:38.562"><span title="50:34">for particular reasons, were probably more stronger</span> <span title="50:37">than race horses today.</span> </span><br>
+<span data-start="00:50:39.102" data-end="00:50:46.340"><span title="50:39">How would Lexington compare to the great Australian legends</span> <span title="50:46">like Farlap?</span> </span><br>
+<span data-start="00:50:47.084" data-end="00:50:54.044"><span title="50:47">Yeah, so I am not sure, because I</span> <span title="50:50">don't know that Farlap was ever tried over four miles.</span> </span><br>
+<span data-start="00:50:54.044" data-end="00:51:01.977"><span title="50:54">And to be able to run four miles three times in one day,</span> <span title="50:59">It's a very different kind of race horse.</span> </span><br>
+<span data-start="00:51:02.524" data-end="00:51:05.684"><span title="51:03">And also, they didn't start them as young as we start them now.</span> </span><br>
+<span data-start="00:51:05.684" data-end="00:51:07.180"><span title="51:06">They were much more sensible about that.</span> </span><br>
+<span data-start="00:51:07.944" data-end="00:51:13.959"><span title="51:08">So I can't really answer that.</span> <span title="51:10">I know people who could, though, because to research this book,</span> </span><span data-start="00:51:14.924" data-end="00:51:19.450"><span title="51:15">I had talked to a lot of vets who specialize</span> <span title="51:17">in the biomechanics of the horse.</span> </span><br>
+<span data-start="00:51:19.804" data-end="00:51:22.964"><span title="51:20">And I can put you onto them if you really</span> <span title="51:22">want a definitive answer.</span> </span><br>
+<span data-start="00:51:23.222" data-end="00:51:26.964"><span title="51:23">And I wasn't a racing journalist.</span> </span><br>
+<span data-start="00:51:26.964" data-end="00:51:33.044"><span title="51:27">I was the lowly cadet who schlepped along to the races</span> <span title="51:31">to take down all the details.</span> </span><br>
+<span data-start="00:51:33.044" data-end="00:51:39.282"><span title="51:33">I didn't get to write a single word of prose</span> <span title="51:36" style="background: rgba(209, 72, 54, 0.23);">whole four months I did that job.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[51:44]</small> <span data-start="00:51:44.459" data-end="00:51:49.749"><span title="51:44">Thank you Geraldine. Your books have such a rich historical sweep, but given that we're in such</span> </span><span data-start="00:51:49.749" data-end="00:51:55.589"><span title="51:50">turbulent contemporary times historically, are there any stories now that speak to you that you</span> </span><span data-start="00:51:55.589" data-end="00:52:03.109"><span title="51:56">would like to research and pick up? If I did I'd do it as a journalist. Is there non-fiction that</span> </span><span data-start="00:52:03.109" data-end="00:52:11.870"><span title="52:03">you would like to go back to? Yeah, you know, I feel like if it's about now you can find out,</span> </span><span data-start="00:52:12.006" data-end="00:52:13.572"><span title="52:12">You know, you don't have to make it up.</span> </span><br>
+<span data-start="00:52:14.130" data-end="00:52:20.963"><span title="52:14">Just go and do the work and do the reporting.</span> <span title="52:17">So yeah, you know, sometimes I get very tempted to do that.</span> </span><br>
+<span data-start="00:52:21.674" data-end="00:52:24.189"><span title="52:22">And then usually I take a hot bath and the urge passes.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[52:27]</small> <span data-start="00:52:27.408" data-end="00:52:30.189"><span title="52:27">You mentioned that you were rereading Tim Winton.</span> <span title="52:30">I'm curious.</span> </span><br>
+<span data-start="00:52:30.189" data-end="00:52:36.708"><span title="52:30">Is that for any particular reason or?</span> <span title="52:32">Yes, it was.</span> <span title="52:34">There's a series of books called Writers on Writers.</span> </span><br>
+<span data-start="00:52:37.509" data-end="00:52:44.630"><span title="52:38">And so I was asked to contribute to that series</span> <span title="52:43">and I chose to write about Tim Linton.</span> </span><br>
+<span data-start="00:52:45.189" data-end="00:52:45.701"><span title="52:45">Fantastic.</span> </span><br>
+<br>
+
+<small style="opacity: 0.5;">[52:47]</small> <span data-start="00:52:47.269" data-end="00:52:52.516"><span title="52:47">I could sit up here and talk to you all afternoon,</span> <span title="52:50">but unfortunately we're out of time.</span> </span><br>
+<span data-start="00:52:52.687" data-end="00:52:59.109"><span title="52:53">Thank you all for joining us.</span> <span title="52:56">Geraldine will be signing some books shortly.</span> </span><br>
+<span data-start="00:52:59.109" data-end="00:53:03.291"><span title="52:59">So if you could all join me in again thanking</span> <span title="53:02">Geraldine Brooks. And thank you.</span> </span><br>
+<span data-start="00:53:03.589" data-end="00:53:12.669"><span title="53:04" style="background: rgba(209, 72, 54, 0.72);">Applause.</span> </span>
+<br>
+</div>
+
+
+<script type="text/javascript">
+
+function getBgAlpha(element) {
+    var currentColor = getComputedStyle(element).getPropertyValue('background-color');
+    var parts = currentColor.match(/[\d.]+/g);
+    var alpha = "0"
+
+    try {
+        alpha = parts[3];
+    }
+    catch(err) {
+        // on edge we don't get a color if RGBA is completely 0
+    }
+
+    return alpha;
+}
+
+function removeStyling() {
+    var elements = document.getElementsByTagName('span');
+    var newColorBase = 'rgba(255, 255, 255, ';
+    for (var i=0; i<elements.length; i++) {
+        var currentAlpha = getBgAlpha(elements[i]);
+        var newColor = newColorBase + currentAlpha + ')';
+        elements[i].style = 'background: ' + newColor + ';';
+    }
+
+    try {
+        var button = document.getElementById('toggle-styling');
+        button.innerText = 'Add Highlighting';
+        button.onclick = function() { addStyling(); } ;
+    }
+    catch(err) {
+        // no confidence available
+    }
+}
+
+function addStyling() {
+    var elements = document.getElementsByTagName('span');
+    var newColorBase = 'rgba(209, 72, 54, ';
+    for (var i=0; i<elements.length; i++) {
+        var currentAlpha = getBgAlpha(elements[i]);
+        var newColor = newColorBase + currentAlpha + ')';
+        elements[i].style = 'background: ' + newColor + ';';
+    }
+
+    try {
+        var button = document.getElementById('toggle-styling');
+        button.innerText = 'Remove Highlighting';
+        button.onclick = function() { removeStyling(); } ;
+    }
+    catch(err) {
+        // no confidence available
+    }
+}
+
+function enableEdit() {
+    var transcript = document.getElementById('transcript');
+    transcript.contentEditable = true;
+    transcript.classList.add("edit-mode");
+
+    var button = document.getElementById('edit-transcript');
+    button.innerText = 'Close Edit Mode';
+    button.onclick = function() { disableEdit(); } ;
+
+    RENAME_SPEAKERS = true;
+    activateRenameSpeaker();
+}
+
+function addSpeakerChangeTooltip() {
+    var elements = document.querySelectorAll('b[data-spk]');
+    for (var i=0; i<elements.length; i++) {
+        elements[i].title = 'Change speaker name to edit all speakers at once!';
+    }
+}
+
+function removeSpeakerChangeTooltip() {
+    var elements = document.querySelectorAll('b[data-spk]');
+    for (var i=0; i<elements.length; i++) {
+        elements[i].title = '';
+    }
+}
+
+function disableEdit() {
+    document.getElementById('toggle-rename-speaker').style = 'display: none;';
+
+    var transcript = document.getElementById('transcript');
+    transcript.contentEditable = false;
+    transcript.classList.remove("edit-mode");
+
+    var button = document.getElementById('edit-transcript');
+    button.innerText = 'Edit Transcript';
+    button.onclick = function() { enableEdit(); } ;
+
+    removeSpeakerChangeTooltip();
+}
+
+function removeSpans(transcript) {
+    var removeSpans = new RegExp('</?span[^>]*>','gm');
+    transcript = transcript.replace(removeSpans, '');
+    transcript = transcript.replace(/&nbsp;/g, ' ');
+    return transcript;
+}
+
+function showExportButtons() {
+    var button = document.getElementById('show-export-buttons');
+    button.innerText = '>';
+    button.title = 'Close export buttons.';
+    button.classList.add("export-buttons-shown");
+    button.onclick = function() { hideExportButtons(); } ;
+
+    document.getElementById('export-html').style = '';
+    document.getElementById('export-pdf').style = '';
+    document.getElementById('export-webvtt').style = '';
+    document.getElementById('save-changes').style = '';
+    document.getElementById('show-help').style = 'display: none;';
+}
+
+function hideExportButtons() {
+    var button = document.getElementById('show-export-buttons');
+    button.innerText = 'Export...';
+    button.title = '';
+    button.classList.remove("export-buttons-shown");
+    button.onclick = function() { showExportButtons(); } ;
+
+    document.getElementById('export-html').style = 'display: none;';
+    document.getElementById('export-pdf').style = 'display: none;';
+    document.getElementById('export-webvtt').style = 'display: none;';
+    document.getElementById('save-changes').style = 'display: none;';
+    document.getElementById('show-help').style = '';
+}
+
+function saveChanges() {
+    disableEdit();
+    hideExportButtons();
+
+    var head = document.head.innerHTML;
+    var body = document.body.innerHTML;
+
+    var pageSource = '<!DOCTYPE html><html><head>' + head + '</head><body>' + body + '</body></html>';
+    var filename = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+
+    var bl = new Blob([pageSource], {type: "text/html"});
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(bl);
+    a.download = filename;
+    a.hidden = true;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+}
+
+function exportHTML() {
+    disableEdit();
+    removeStyling();
+
+    var head = document.head.innerHTML;
+    var metadata = document.getElementById('metadata').innerHTML;
+    var transcript = document.getElementById('transcript').innerHTML;
+
+    transcript = removeSpans(transcript);
+
+    var pageSource = '<!DOCTYPE html><html><head>' + head + '</head><body>' + metadata + '<div class="transcript-base">' + transcript + '</div></body></html>';
+    var filename = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+
+    var bl = new Blob([pageSource], {type: "text/html"});
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(bl);
+    a.download = filename;
+    a.hidden = true;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+
+    hideExportButtons();
+}
+
+function exportWebVTT() {
+    disableEdit();
+
+    var pageSource = 'WEBVTT\n\n';
+
+    var segments = document.querySelectorAll('span[data-start]');
+    for (var i=0; i<segments.length; i++) {
+        pageSource += segments[i].getAttribute('data-start') + ' --> ';
+        pageSource += segments[i].getAttribute('data-end') + '\n';
+        if (segments[i].getAttribute('data-spk') !== null) {
+            pageSource += '<v ' + segments[i].getAttribute('data-label') + '>';
+        }
+        pageSource += removeSpans(segments[i].innerHTML);
+        pageSource += '\n\n';
+    }
+
+    var filename = location.pathname.substring(location.pathname.lastIndexOf('/') + 1);
+    filename = filename.substring(0, filename.lastIndexOf('.')) + '.vtt';
+
+    var bl = new Blob([pageSource], {type: 'text/vtt'});
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(bl);
+    a.download = filename;
+    a.hidden = true;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+
+    hideExportButtons();
+}
+
+function getSecondsFromString(timeString) {
+    var splitStrg = timeString.split(":");
+    var seconds = 0;
+    for (var i=0; i<splitStrg.length; i++) {
+        if (i == 0) { seconds += parseInt(splitStrg[splitStrg.length - 1]); }
+        if (i == 1) { seconds += parseInt(splitStrg[splitStrg.length - 2]) * 60; }
+        if (i == 2) { seconds += parseInt(splitStrg[splitStrg.length - 3]) * 3600; }
+    }
+    return seconds;
+}
+
+function pad(num, size) {
+    var s = num + "";
+    while (s.length < size) s = "0" + s;
+    return s;
+}
+
+function secToTimeString(seconds) {
+    var ss = Math.round(seconds);
+    var cmin = Math.floor(ss / 60);
+    var csec = ss % 60;
+
+    if (cmin < 60) {
+        return cmin + ":" + pad(csec, 2);
+    } else {
+        var ch = Math.floor(cmin / 60);
+        var cm = cmin % 60;
+        return ch + ":" + pad(cm, 2) + ":" + pad(csec, 2);
+    }
+}
+
+function removeActiveClass() {
+    var elements = document.querySelectorAll('span.active');
+    for (var i=0; i<elements.length; i++) {
+        elements[i].classList.remove("active");
+        // elements[i].classList.add("listened");
+    }
+}
+
+function addAudioFile() {
+    var txt;
+    var url = prompt(
+        'Please enter complete URL for the audio file, which should be played along the transcript\n(a local path should start with "file:///"):',
+        'https://auphonic.com/media/audio-examples/03.auphonic-demo-denoise-100.m4a'
+    );
+    if (url == null || url == "") { return; }
+
+    var audio = document.getElementById('audio-player');
+    var oldSources = document.querySelectorAll('source');
+    for (var i=0; i<oldSources.length; i++) {
+        oldSources[i].remove();
+    }
+
+    var source = document.createElement('source');
+    source.src = url;
+    audio.appendChild(source);
+
+    addAudioPlayer();
+}
+
+function addAudioPlayer() {
+    var audio = document.getElementById('audio-player');
+
+    document.getElementById('add-audio-file').style = '';
+    document.getElementById('toggle-play-on-click').style = 'display: none;';
+
+    audio.oncanplay = function() {
+        AUDIO_PLAYER = audio;
+
+        // highlight current audio segment
+        if (HAVE_TIMESTAMPS) {
+            AUDIO_PLAYER.ontimeupdate = function() {
+                if (ARE_PLAYING) {
+                    var curTime = secToTimeString(AUDIO_PLAYER.currentTime);
+                    elements = document.querySelectorAll('span[title="' + curTime + '"]');
+                    if (elements.length > 0) {
+                        removeActiveClass();
+                        for (var i=0; i<elements.length; i++) {
+                            elements[i].classList.add("active");
+                        }
+                    }
+                }
+            };
+        }
+
+        // setup click handlers to play audio on mouse click
+        if (HAVE_TIMESTAMPS) {
+            var elements = document.getElementsByTagName('span');
+            for (var i=0; i<elements.length; i++) {
+                if (elements[i].getAttribute('data-start') === null) {  // no data-start attribute
+                    try {
+                        elements[i].removeEventListener("click", clickHandlerTimestamp);
+                    } catch(err) { }
+                    elements[i].addEventListener("click", clickHandlerTimestamp);
+                }
+            }
+        } else {
+            var elements = document.querySelectorAll('span[data-start]');
+            for (var i=0; i<elements.length; i++) {
+                try {
+                    elements[i].removeEventListener("click", clickHandlerSegment);
+                } catch(err) { }
+                elements[i].addEventListener("click", clickHandlerSegment);
+            }
+        }
+
+        enableAudioClickPlayback();
+
+        var button = document.getElementById('add-audio-file');
+        button.style = "display: none;";
+    }
+
+    audio.load();
+}
+
+function clickHandlerTimestamp(e) {
+    var target = (e.target) ? e.target : e.srcElement;
+    if (PLAY_WHOLE_SEGMENT) {
+        startSeconds = getSecondsFromString(target.getAttribute("title")) - 0.4
+        playWholeSegment(target.parentElement, startSeconds);
+    } else {
+        var timeString = target.title;
+        var timeSec = getSecondsFromString(timeString);
+        playAudioSegment(timeSec -0.6, timeSec + 3.4);
+    }
+}
+
+function playWholeSegment(e, startSeconds = null) {
+    var startTimeStrg = e.getAttribute("data-start").split(".")[0];
+    var endTimeStrg = e.getAttribute("data-end").split(".")[0];
+    var startSec = (startSeconds) ? startSeconds : getSecondsFromString(startTimeStrg);
+    var endSec = getSecondsFromString(endTimeStrg) + 1;
+    playAudioSegment(startSec, endSec);
+}
+
+function clickHandlerSegment(e) {
+    if (PLAYBACK_ON_CLICK) {
+        var target = (e.target) ? e.target : e.srcElement;
+        removeActiveClass();
+        target.classList.add("active");
+        playWholeSegment(target)
+    }
+}
+
+function enableAudioClickPlayback() {
+    var button = document.getElementById('toggle-play-on-click');
+    button.innerText = 'Stop Play-on-click';
+    button.style = "";
+    button.onclick = function() { disableAudioClickPlayback(); } ;
+    PLAYBACK_ON_CLICK = true;
+}
+
+function disableAudioClickPlayback() {
+    AUDIO_PLAYER.pause();
+    ARE_PLAYING = false;
+    removeActiveClass();
+    var button = document.getElementById('toggle-play-on-click');
+    button.innerText = 'Activate Play-on-click';
+    button.style = "";
+    button.onclick = function() { enableAudioClickPlayback(); } ;
+    PLAYBACK_ON_CLICK = false;
+}
+
+function playAudioSegment(start_sec, end_sec) {
+    if (AUDIO_PLAYER !== null && PLAYBACK_ON_CLICK) {
+        if (PAUSE_TIMEOUT !== null) { clearTimeout(PAUSE_TIMEOUT); }
+
+        AUDIO_PLAYER.currentTime = start_sec;
+        AUDIO_PLAYER.play();
+        ARE_PLAYING = true;
+
+        var length_ms = (end_sec - start_sec) * 1000;
+        PAUSE_TIMEOUT= setTimeout(function(){
+            AUDIO_PLAYER.pause();
+            PAUSE_TIMEOUT = null;
+            ARE_PLAYING = false;
+            removeActiveClass();
+        }, length_ms);
+    }
+}
+
+function activateRenameSpeaker() {
+    var button = document.getElementById('toggle-rename-speaker');
+    button.style = '';
+    button.innerText = 'Edit Speaker';
+    addSpeakerChangeTooltip();
+}
+
+function toggleRenameSpeaker() {
+    RENAME_SPEAKERS = !RENAME_SPEAKERS;
+    if (RENAME_SPEAKERS) {
+        activateRenameSpeaker();
+    } else {
+        var button = document.getElementById('toggle-rename-speaker');
+        button.innerText = 'Rename Speaker';
+        removeSpeakerChangeTooltip();
+    }
+}
+
+function setupTranscriptChangeListeners() {
+    var trans = document.getElementById('transcript');
+    trans.addEventListener("keyup", function(e){
+        var editedNode = window.getSelection().anchorNode.parentNode;
+
+        // set background of already edited spans back to white
+        if (HAVE_TIMESTAMPS && HAVE_CONFIDENCE) {
+            var clearNode = editedNode;
+            if (clearNode.tagName == "SPAN") {
+                if (clearNode.getAttribute("data-start") !== null) {
+                    // if we click into the parent span, we have to get the next node!
+                    clearNode = window.getSelection().anchorNode.nextSibling;
+                }
+                if (clearNode.tagName == "SPAN" && clearNode.getAttribute("title") !== null) {
+                    clearNode.style = 'background: white;';
+                }
+            }
+        }
+
+        if (RENAME_SPEAKERS) {
+            // change all speaker names if we change one speaker
+            if (editedNode.tagName == "B" && editedNode.getAttribute("data-spk") !== null) {
+                var curSpeaker = editedNode.getAttribute("data-spk");
+
+                var elements = document.querySelectorAll('b[data-spk="' + curSpeaker + '"]');
+                for (var i=0; i<elements.length; i++) {
+                    if (elements[i] !== editedNode) {
+                        elements[i].innerText = editedNode.innerText;
+                    }
+                }
+
+                // for WebVTT export
+                var elements = document.querySelectorAll('span[data-spk="' + curSpeaker + '"]');
+                var label = editedNode.innerText;
+                if (label[label.length -1] == ":") {
+                    label = label.substring(0, label.length - 1);
+                }
+                for (var i=0; i<elements.length; i++) {
+                    elements[i].setAttribute("data-label", label);
+                }
+            }
+        } else {
+            // set data-spk of this speaker so it is not renamed if RENAME_SPEAKERS is True
+            editedNode.setAttribute("data-spk", editedNode.innerText);
+
+            // set data-spk and data-label for all texts of this speaker
+            speakerNodeName = editedNode.nodeName;
+            nextNode = editedNode.nextElementSibling;
+            while (nextNode && nextNode.nodeName != speakerNodeName) {
+                if (nextNode.hasAttribute("data-label") && nextNode.hasAttribute("data-spk")) {
+                    nextNode.setAttribute("data-spk", editedNode.innerText);
+                    nextNode.setAttribute("data-label", editedNode.innerText);
+                }
+                nextNode = nextNode.nextElementSibling;
+            }
+        }
+    });
+}
+
+HAVE_CONFIDENCE = true;
+HAVE_TIMESTAMPS = HAVE_CONFIDENCE;  // for now ...
+PLAY_WHOLE_SEGMENT = true;
+RENAME_SPEAKERS = true;
+
+AUDIO_PLAYER = null;
+PAUSE_TIMEOUT = null;
+PLAYBACK_ON_CLICK = false;
+ARE_PLAYING = false;
+
+window.addEventListener("load", function(){
+    if(!HAVE_CONFIDENCE) {
+        var button = document.getElementById('toggle-styling');
+        if (button !== null) { button.remove(); }
+    }
+
+    addAudioPlayer();
+    setupTranscriptChangeListeners();
+});
+</script>
+
+
+</body>
+</html>

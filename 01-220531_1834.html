@@ -1,0 +1,1557 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes" />
+    <title>01 220531 1834</title>
+
+    <style>
+    body { margin: 0; }
+    #title, #subtitle, #info, #summary { text-align: center; }
+    #summary { margin: 0 10%; }
+    #chapter { margin-top: 1em; }
+
+    #edit-bar {
+        margin-top: 2em; display: flex; justify-content: space-between; flex-wrap: wrap;
+        position: -webkit-sticky; position: sticky; top: 0; left: 0;
+        background: white; z-index: 999;
+        font-family: BlinkMacSystemFont,-apple-system,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Fira Sans","Droid Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
+        -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; text-size-adjust: 100%;
+    }
+    #edit-bar-spacer { flex-grow: 1; }
+    .button {
+        background-color: #f5f5f5; color: #363636;
+        border: 1px solid #dbdbdb; border-radius: 4px; box-shadow: none;
+        margin: 0.5em; padding: 5px 12px;
+        cursor:pointer;font-size: 0.9em;
+        justify-content:center; text-align:center; white-space:nowrap;
+        display: inline-flex; position: relative; vertical-align: top;
+        user-select: none; text-decoration: none;
+    }
+    .button:hover{border-color:#b5b5b5;color:#363636;background-color:#eee;}
+    .button:active{border-color:#4a4a4a;color:#363636;background-color:#e8e8e8;}
+    .button.export-option { margin: 0.5em 0.2em 0.5em auto; }
+    .button.export-buttons-shown { margin-left: 0.2em; margin-left: auto; }
+
+    span.active { font-weight: bold; }
+    span.listened { font-weight: bold; font-style: italic; }
+    #transcript.edit-mode { border-style: dashed; padding: 10px; }
+    #transcript span { cursor: pointer; }
+    #transcript.edit-mode span { cursor: text; }
+    .transcript-base { margin: 0.5em; }
+
+    @media all and (max-width: 900px) {
+      .button.export-buttons-shown { margin: 0.5em; margin-left: auto; }
+      .button.export-option { margin: 0.5em; margin-left: auto; }
+    }
+
+    @media all and (max-width: 340px) {
+      .button { margin: 0.2em; }
+    }
+
+    @media print {
+        #edit-bar { display: none; }
+        .button { display: none; }
+        span { background: white; }
+        #transcript { border-style: none !important; padding: 0px !important; }
+    }
+    </style>
+</head>
+
+<body>
+
+
+<div id="metadata">
+<h1 id="title">01 220531 1834</h1>
+<h4 id="subtitle"></h4>
+
+<p id="info">
+<br>
+<br>
+<a href="" target="_blank"></a>
+</p>
+
+<p id="summary">
+
+</p>
+
+
+</div>
+
+<div id="edit-bar">
+    <a class="button" id="edit-transcript" onclick="enableEdit();" title="Enable/disable edit mode.">Edit Transcript</a>
+    <a class="button" id="toggle-styling" onclick="removeStyling();" title="Words with low recognition confidence will be highlighted in red.">Remove Highlighting</a>
+    <a class="button" id="add-audio-file" onclick="addAudioFile();" title="Add audio file which should be played along the transcript.">Add Audio File</a>
+    <a class="button" id="toggle-play-on-click" title="Enable/disable click on word for audio playback." style="display: none;">Stop Play-on-click</a>
+
+    <div id="edit-bar-spacer"></div>
+
+    <a class="button export-option" id="save-changes" onclick="saveChanges();" style="display: none;" title="Save transcript editor with current changes for further editing or sharing.">Save Editor</a>
+    <a class="button export-option" id="export-html" onclick="exportHTML();" style="display: none;" title="Export transcript as HTML for Word, Wordpress, etc.">Export HTML</a>
+    <a class="button export-option" id="export-pdf" onclick="window.print(); hideExportButtons();" style="display: none;" title="Export transcript as PDF or to printer.">Export PDF</a>
+    <a class="button export-option" id="export-webvtt" onclick="exportWebVTT();" style="display: none;" title="Export transcript as WebVTT for web players.">Export WebVTT</a>
+    <a class="button" id="show-export-buttons" onclick="showExportButtons();">Export...</a>
+    <a class="button" id="show-help" href="https://auphonic.com/help/algorithms/speech_recognition.html#auphonic-transcript-editor" target="_blank" title="Show transcript editor help.">?</a>
+
+    <audio id="audio-player" preload="auto" style="display: none;">
+        <source src="https://auphonic.com/engine/download/audio-result/FiLqqVvRG6TwQdKDP7T9Xj/01-220531_1834.wav?ms=881064">
+    </audio>
+</div>
+
+<div id="transcript" class="transcript-base">
+
+<h2 id="chapter">Transcript</h2>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[1:47]</small> <span data-start="00:01:47.190" data-end="00:01:49.190" data-spk="2" data-label="Track 3"><span title="1:47" style="background: rgba(209, 72, 54, 0.50);">Thank you.</span></span><br>
+<br>
+<b data-spk="0">Track 1:</b><br>
+<small style="opacity: 0.5;">[1:59]</small> <span data-start="00:01:59.412" data-end="00:02:12.668" data-spk="0" data-label="Track 1"><span title="1:59" style="background: rgba(209, 72, 54, 0.12);">So thanks for coming out on the coldest day of the year so far.</span> <span title="2:05" style="background: rgba(209, 72, 54, 0.12);">It shows a level of passion and interest in what is a very important subject.</span></span><br>
+<br>
+<b data-spk="1">Track 2:</b><br>
+<small style="opacity: 0.5;">[2:00]</small> <span data-start="00:02:00.005" data-end="00:02:05.005" data-spk="1" data-label="Track 2"><span title="2:04" style="background: rgba(209, 72, 54, 0.52);">.</span></span><br>
+<br>
+<b data-spk="0">Track 1:</b><br>
+<small style="opacity: 0.5;">[2:14]</small> <span data-start="00:02:14.026" data-end="00:02:24.331" data-spk="0" data-label="Track 1"><span title="2:14" style="background: rgba(209, 72, 54, 0.12);">So thank you very much for that.</span> <span title="2:15" style="background: rgba(209, 72, 54, 0.12);">So welcome to Return to Country Repatriation and Resilience,</span> <span title="2:21" style="background: rgba(209, 72, 54, 0.12);">brought to you in partnership with the Wheeler Centre and Malthouse Theatre.</span></span><br>
+<span data-start="00:02:25.125" data-end="00:02:37.984" data-spk="0" data-label="Track 1"><span title="2:25" style="background: rgba(209, 72, 54, 0.12);">Before we start, we'd like to acknowledge that we are meeting today</span> <span title="2:27">the lands of the Wurundjeri people or the Kulin nation, the traditional custodians of this land</span> <span title="2:33">on which this event is taking place and we acknowledge any First Nations people here tonight,</span></span><br>
+<span data-start="00:02:38.897" data-end="00:02:56.606" data-spk="0" data-label="Track 1"><span title="2:39">and we pay respects to elders past and present. How to frame this let me think oh I've written</span> <span title="2:48">something um First Nations artists uh for First Nations artists so much of the craft of storytelling,</span></span><br>
+<span data-start="00:02:56.738" data-end="00:03:02.702" data-spk="0" data-label="Track 1"><span title="2:57">is listening. Listening to each other, the world in context, trying to extract meaning,</span></span><br>
+<span data-start="00:03:03.420" data-end="00:03:08.782" data-spk="0" data-label="Track 1"><span title="3:03">where it is often elusive. It involves listening for stories that faded out centuries ago,</span></span><br>
+<span data-start="00:03:09.616" data-end="00:03:14.429" data-spk="0" data-label="Track 1"><span title="3:10">during the decimation of invasion, the theft of land, the persecution of culture, and the attempted.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[3:16]</small> <span data-start="00:03:15.502" data-end="00:03:32.742" data-spk="0" data-label="Track 1"><span title="3:16">Erasure of all that was held sacred in living memory. And so that was the challenge confronting</span> <span title="3:22" style="background: rgba(209, 72, 54, 0.10);">some of the storytellers that we have here tonight. Before we get started I</span> <span title="3:28" style="background: rgba(209, 72, 54, 0.10);">should introduce myself. My name is Daniel James. I'm a Yorta Yorta man with,</span></span><br>
+<span data-start="00:03:32.883" data-end="00:03:38.952" data-spk="0" data-label="Track 1"><span title="3:33" style="background: rgba(209, 72, 54, 0.10);">connections to Gunnaakurna Island. I am a writer of sorts, a broadcaster of sorts.</span></span><br>
+<span data-start="00:03:39.811" data-end="00:03:47.226" data-spk="0" data-label="Track 1"><span title="3:40" style="background: rgba(209, 72, 54, 0.10);">Every now and then I get invited to this mighty place, this mighty institution</span> <span title="3:44" style="background: rgba(209, 72, 54, 0.10);">called the Willow Centre and so it's a pleasure to be here tonight. And so I,</span></span><br>
+<span data-start="00:03:48.266" data-end="00:03:57.466" data-spk="0" data-label="Track 1"><span title="3:48">So I thought I would introduce our guests in, just to make sure I don't get in trouble,</span> <span title="3:55">in alphabetical order.</span></span><br>
+<span data-start="00:03:58.102" data-end="00:03:59.972" data-spk="0" data-label="Track 1"><span title="3:58">And so I'll start off with Jason Tameru.</span></span><br>
+<span data-start="00:04:00.942" data-end="00:04:04.662" data-spk="0" data-label="Track 1"><span title="4:01">He's a proud Yorta Yorta man, passionate about his people and culture, that is evident</span></span><br>
+<span data-start="00:04:04.662" data-end="00:04:12.615" data-spk="0" data-label="Track 1"><span title="4:05">in all the work that you do, Jason.</span> <span title="4:07">He's worked with many of Melbourne's most iconic performing arts companies, museums</span> <span title="4:12">and festivals.</span></span><br>
+<span data-start="00:04:13.262" data-end="00:04:26.418" data-spk="0" data-label="Track 1"><span title="4:13">As a producer, he supports his people's creativity by building frameworks that complement cultural</span> <span title="4:18" style="background: rgba(209, 72, 54, 0.17);">expressions and he's also the co-director of The Return which is on now at the at the</span> <span title="4:24" style="background: rgba(209, 72, 54, 0.33);">Malthouse so please make Jason.</span></span><br>
+<br>
+<b data-spk="1">Track 2:</b><br>
+<small style="opacity: 0.5;">[4:27]</small> <span data-start="00:04:27.103" data-end="00:04:30.103" data-spk="1" data-label="Track 2"><span title="4:27" style="background: rgba(209, 72, 54, 0.39);">Thank you.</span> <span title="4:28" style="background: rgba(209, 72, 54, 0.44);">Thank you.</span></span><br>
+<br>
+<b data-spk="0">Track 1:</b><br>
+<small style="opacity: 0.5;">[4:32]</small> <span data-start="00:04:31.658" data-end="00:04:44.000" data-spk="0" data-label="Track 1"><span title="4:32">John Harvey is joining us from somewhere that is a lot, lot warmer than it is here.</span> <span title="4:37">During the sound check he said it was 30 degrees or something like that, which is</span> <span title="4:41">25 and a half degrees warmer than the feels like temperature here.</span></span><br>
+<span data-start="00:04:46.121" data-end="00:04:57.238" data-spk="0" data-label="Track 1"><span title="4:46">John is a writer, director and a producer from the Torres Strait. He has Torres Strait on</span> <span title="4:53">English descent. He's a creative director of independent theatre and a film company Brown,</span></span><br>
+<span data-start="00:04:57.828" data-end="00:05:12.628" data-spk="0" data-label="Track 1"><span title="4:58">John has created a dynamic state of film, including as a writer and director for short</span> <span title="5:03">films, Water on the ABC, Outer Range on SBS, and he's the co-director of a feature documentary</span> <span title="5:09">and docu-series, Off Country, for NITV.</span></span><br>
+<span data-start="00:05:12.628" data-end="00:05:24.828" data-spk="0" data-label="Track 1"><span title="5:13">He has works all over the place.</span> <span title="5:14">He was one of the co-producers and the director of Kutcher's Kurioki docu-series, as well</span> <span title="5:19">as several short films for documentaries and also short film screening at international,</span></span><br>
+<span data-start="00:05:24.898" data-end="00:05:32.722" data-spk="0" data-label="Track 1"><span title="5:25" style="background: rgba(209, 72, 54, 0.12);">film festivals and across the national broadcaster. He is the writer of the play The Return. Please.</span></span><br>
+<br>
+<b data-spk="1">Track 2:</b><br>
+<small style="opacity: 0.5;">[5:34]</small> <span data-start="00:05:34.435" data-end="00:05:38.435" data-spk="1" data-label="Track 2"><span title="5:35" style="background: rgba(209, 72, 54, 0.42);">Thank you.</span> <span title="5:35" style="background: rgba(209, 72, 54, 0.37);">Thank you.</span> <span title="5:36" style="background: rgba(209, 72, 54, 0.45);">Thank you.</span></span><br>
+<br>
+<b data-spk="0">Track 1:</b><br>
+<small style="opacity: 0.5;">[5:39]</small> <span data-start="00:05:38.737" data-end="00:05:33.791" data-spk="0" data-label="Track 1"><span title="5:39" style="background: rgba(209, 72, 54, 0.12);">Make him welcome.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[5:39]</small> <span data-start="00:05:38.908" data-end="00:05:48.970" data-spk="0" data-label="Track 1"><span title="5:39" style="background: rgba(209, 72, 54, 0.12);">My cousin sitting to my immediate left here is Kimberly Moulton. She is a Yorta Yorta</span> <span title="5:45" style="background: rgba(209, 72, 54, 0.12);">woman and writer and curator. She is currently senior curator, South Eastern Aboriginal Collections,</span></span><br>
+<span data-start="00:05:49.619" data-end="00:05:54.751" data-spk="0" data-label="Track 1"><span title="5:50" style="background: rgba(209, 72, 54, 0.14);">at Museum Victoria and an artistic associate for a rising festival, Melbourne.</span></span><br>
+<span data-start="00:05:55.608" data-end="00:06:05.519" data-spk="0" data-label="Track 1"><span title="5:56" style="background: rgba(209, 72, 54, 0.14);">Kimberly has researched south eastern cultural material held across the world with an interesting</span> <span title="6:00" style="background: rgba(209, 72, 54, 0.14);">connection, repatriation and relationships between the belongings and communities they</span> <span title="6:05" style="background: rgba(209, 72, 54, 0.14);">are from.</span></span><br>
+<span data-start="00:06:06.066" data-end="00:06:09.816" data-spk="0" data-label="Track 1"><span title="6:06" style="background: rgba(209, 72, 54, 0.14);">And on that note you just recently returned from London on such business.</span></span><br>
+<br>
+<b data-spk="1">Track 2:</b><br>
+<small style="opacity: 0.5;">[6:10]</small> <span data-start="00:06:09.756" data-end="00:06:11.756" data-spk="1" data-label="Track 2"><span title="6:10" style="background: rgba(209, 72, 54, 0.27);">Yes, a week ago.</span></span><br>
+<br>
+<b data-spk="0">Track 1:</b><br>
+<small style="opacity: 0.5;">[6:12]</small> <span data-start="00:06:11.660" data-end="00:06:18.397" data-spk="0" data-label="Track 1"><span title="6:12" style="background: rgba(209, 72, 54, 0.14);">Yeah.</span> <span title="6:12" style="background: rgba(209, 72, 54, 0.14);">So if she falls asleep half way through tonight it will not be because the conversation is</span> <span title="6:17" style="background: rgba(209, 72, 54, 0.14);">not interesting.</span> <span title="6:18" style="background: rgba(209, 72, 54, 0.14);">Please welcome Kimberly.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[6:23]</small> <span data-start="00:06:23.030" data-end="00:06:41.528" data-spk="0" data-label="Track 1"><span title="6:23">Okay, well, this is such a heavy subject matter, so we're going to treat it with the reverence</span> <span title="6:32">that it deserves. We're not going to take ourselves too seriously, but it's just going</span> <span title="6:35">to be a free-flowing conversation. It'd be something, repatriation, we were talking about,</span></span><br>
+<span data-start="00:06:42.096" data-end="00:06:51.608" data-spk="0" data-label="Track 1"><span title="6:42">it backstage when we were saying that it's actually an unusual term for the business</span> <span title="6:47" style="background: rgba(209, 72, 54, 0.14);">of returning our ancestors to their homelands.</span></span><br>
+<span data-start="00:06:53.694" data-end="00:07:04.036" data-spk="0" data-label="Track 1"><span title="6:54" style="background: rgba(209, 72, 54, 0.14);">I guess, Jason, I'll start with you,</span> <span title="6:55" style="background: rgba(209, 72, 54, 0.14);">because you've been involved in the business of repatriation</span> <span title="6:59" style="background: rgba(209, 72, 54, 0.14);">when you worked for Northwest Nations mob back in the day.</span></span><br>
+<span data-start="00:07:05.177" data-end="00:07:12.580" data-spk="0" data-label="Track 1"><span title="7:05" style="background: rgba(209, 72, 54, 0.14);">First of all, tell us how you got involved in that,</span> <span title="7:07" style="background: rgba(209, 72, 54, 0.14);">then tell us about what the work involved back then</span> <span title="7:11" style="background: rgba(209, 72, 54, 0.24);">and what it involves now.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[7:14]</small> <span data-start="00:07:13.842" data-end="00:07:17.694" data-spk="2" data-label="Track 3"><span title="7:14" style="background: rgba(209, 72, 54, 0.31);">Oh, wow. How do I get involved?</span> <span title="7:17" style="background: rgba(209, 72, 54, 0.31);">Um...</span></span><br>
+<span data-start="00:07:19.773" data-end="00:07:25.975" data-spk="2" data-label="Track 3"><span title="7:20" style="background: rgba(209, 72, 54, 0.31);">I guess you've got involved because it's, uh...</span> <span title="7:25" style="background: rgba(209, 72, 54, 0.31);">Sadly, it's part of our history.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[7:30]</small> <span data-start="00:07:29.598" data-end="00:07:30.445" data-spk="2" data-label="Track 3"><span title="7:30" style="background: rgba(209, 72, 54, 0.31);">As a young boy...</span></span><br>
+<span data-start="00:07:32.645" data-end="00:07:39.068" data-spk="2" data-label="Track 3"><span title="7:33" style="background: rgba(209, 72, 54, 0.31);">..I guess growing up, you play football with your mates</span> <span title="7:36" style="background: rgba(209, 72, 54, 0.31);">and play cricket and...</span></span><br>
+<span data-start="00:07:40.787" data-end="00:07:48.437" data-spk="2" data-label="Track 3"><span title="7:41" style="background: rgba(209, 72, 54, 0.31);">..you do things with your family</span> <span title="7:43" style="background: rgba(209, 72, 54, 0.17);">and friends and all that type of staff, which was normal for every kid.</span></span><br>
+<span data-start="00:07:50.768" data-end="00:07:55.052" data-spk="2" data-label="Track 3"><span title="7:51" style="background: rgba(209, 72, 54, 0.17);">But it was also this taboo darkness.</span></span><br>
+<span data-start="00:07:57.072" data-end="00:07:57.474" data-spk="2" data-label="Track 3"><span title="7:57" style="background: rgba(209, 72, 54, 0.17);">Space that.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[8:01]</small> <span data-start="00:08:00.641" data-end="00:08:12.287" data-spk="2" data-label="Track 3"><span title="8:01" style="background: rgba(209, 72, 54, 0.17);">We were in also as a family, and.</span> <span title="8:04" style="background: rgba(209, 72, 54, 0.17);">This was to do with repatriation and funerals and,</span> <span title="8:10" style="background: rgba(209, 72, 54, 0.17);">I guess, death, which sounds pretty bad,</span> <span title="8:13" style="background: rgba(209, 72, 54, 0.15);">...but...</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[8:15]</small> <span data-start="00:08:14.570" data-end="00:08:22.556" data-spk="2" data-label="Track 3"><span title="8:15" style="background: rgba(209, 72, 54, 0.15);">...and it can be...</span> <span title="8:16" style="background: rgba(209, 72, 54, 0.15);">...but it's also quite spiritual.</span> <span title="8:19" style="background: rgba(209, 72, 54, 0.15);">So...</span> <span title="8:20" style="background: rgba(209, 72, 54, 0.15);">...it wasn't unusual...</span> <span title="8:22" style="background: rgba(209, 72, 54, 0.15);">...for me...</span></span><br>
+<span data-start="00:08:23.692" data-end="00:08:25.074" data-spk="2" data-label="Track 3"><span title="8:24" style="background: rgba(209, 72, 54, 0.15);">...to be around family's house...</span></span><br>
+<span data-start="00:08:26.618" data-end="00:08:31.486" data-spk="2" data-label="Track 3"><span title="8:27" style="background: rgba(209, 72, 54, 0.15);">...and...</span> <span title="8:28" style="background: rgba(209, 72, 54, 0.15);">...knowing that...</span> <span title="8:30" style="background: rgba(209, 72, 54, 0.15);">...there were bones...</span> <span title="8:31" style="background: rgba(209, 72, 54, 0.15);">...in garages...</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[8:33]</small> <span data-start="00:08:33.258" data-end="00:08:46.092" data-spk="2" data-label="Track 3"><span title="8:33" style="background: rgba(209, 72, 54, 0.15);">...and under houses...</span> <span title="8:36" style="background: rgba(209, 72, 54, 0.15);">...under beds...</span> <span title="8:38" style="background: rgba(209, 72, 54, 0.15);">...stored in various places hidden...</span> <span title="8:40" style="background: rgba(209, 72, 54, 0.15);">...from the authority...</span> <span title="8:42">And I knew it was unusual but it became normal.</span></span><br>
+<span data-start="00:08:47.572" data-end="00:08:56.688" data-spk="2" data-label="Track 3"><span title="8:48">And I guess when we got a little bit older, as you get older you learn your own identity</span> <span title="8:55">and your history and your culture.</span></span><br>
+<span data-start="00:08:58.286" data-end="00:09:13.092" data-spk="2" data-label="Track 3"><span title="8:58">And we all got certain duties to do as we're born.</span> <span title="9:04">and when we're born and one of the duties for us was to do ceremony and culture, politics,</span></span><br>
+<span data-start="00:09:14.709" data-end="00:09:17.092" data-spk="2" data-label="Track 3"><span title="9:15">but also take our people back home and rebury them.</span></span><br>
+<span data-start="00:09:18.260" data-end="00:09:29.894" data-spk="2" data-label="Track 3"><span title="9:18">And this became a job for me a few years ago, a long time ago now,</span></span><br>
+<span data-start="00:09:31.522" data-end="00:09:39.634" data-spk="2" data-label="Track 3"><span title="9:32" style="background: rgba(209, 72, 54, 0.13);">When I was out of work, looking for work, and I remember sitting on the floor in my,</span></span><br>
+<span data-start="00:09:40.012" data-end="00:09:43.901" data-spk="2" data-label="Track 3"><span title="9:40" style="background: rgba(209, 72, 54, 0.13);">lounge room wondering what the hell I'm going to do.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[9:46]</small> <span data-start="00:09:45.986" data-end="00:09:53.503" data-spk="2" data-label="Track 3"><span title="9:46" style="background: rgba(209, 72, 54, 0.13);">Because someone like me was, and still a little bit today, can be a risk in places.</span></span><br>
+<span data-start="00:09:54.140" data-end="00:10:02.024" data-spk="2" data-label="Track 3"><span title="9:54">...just because of my identity and my spear that I carry all the time, you know?</span> <span title="10:01">Which frustrates and makes me sad.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[10:04]</small> <span data-start="00:10:04.350" data-end="00:10:13.237" data-spk="2" data-label="Track 3"><span title="10:04">But I remember sitting there on the floor wondering what the heck I'm gonna do.</span> <span title="10:10">And then my deadly cousin gave me a call.</span></span><br>
+<span data-start="00:10:14.884" data-end="00:10:15.424" data-spk="2" data-label="Track 3"><span title="10:15">And I caught up.</span></span><br>
+<span data-start="00:10:17.233" data-end="00:10:29.132" data-spk="2" data-label="Track 3"><span title="10:17">And we talked about things and he told me about...</span> <span title="10:22" style="background: rgba(209, 72, 54, 0.15);">We've got some work to do and that work was to rebury some people.</span></span><br>
+<span data-start="00:10:30.291" data-end="00:10:38.289" data-spk="2" data-label="Track 3"><span title="10:30" style="background: rgba(209, 72, 54, 0.13);">And that became my job for a few years, reburying our people back on country.</span></span><br>
+<br>
+<b data-spk="0">Track 1:</b><br>
+<small style="opacity: 0.5;">[10:41]</small> <span data-start="00:10:40.861" data-end="00:10:59.651" data-spk="0" data-label="Track 1"><span title="10:41">So John, the work of the return, being the writer for the play and a lot of it being</span> <span title="10:51">based on Jason's stories, obviously it's very difficult to articulate how you would,</span></span><br>
+<span data-start="00:11:01.087" data-end="00:11:11.080" data-spk="0" data-label="Track 1"><span title="11:01">take sitting around listening to someone like Jason and all the various stories and places</span> <span title="11:08" style="background: rgba(209, 72, 54, 0.12);">and things that he's seen around this particular subject matter.</span></span><br>
+<span data-start="00:11:11.189" data-end="00:11:17.817" data-spk="0" data-label="Track 1"><span title="11:11" style="background: rgba(209, 72, 54, 0.12);">What was the process for you as someone trying to bring this to life as a piece of writing?</span></span><br>
+<span data-start="00:11:18.327" data-end="00:11:21.224" data-spk="0" data-label="Track 1"><span title="11:18" style="background: rgba(209, 72, 54, 0.12);">Where did you start with that particular process?</span></span><br>
+<br>
+<b data-spk="3">Track 4:</b><br>
+<small style="opacity: 0.5;">[11:24]</small> <span data-start="00:11:24.198" data-end="00:11:41.568" data-spk="3" data-label="Track 4"><span title="11:24" style="background: rgba(209, 72, 54, 0.10);">Yeah, good question. I just want to start, I just want to acknowledge the Kararug</span> <span title="11:33" style="background: rgba(209, 72, 54, 0.10);">people up here on Thursday Island in the Torres Strait. I'm just actually heading up to Sagwa Island,</span></span><br>
+<span data-start="00:11:42.454" data-end="00:12:01.488" data-spk="3" data-label="Track 4"><span title="11:42" style="background: rgba(209, 72, 54, 0.10);">where all my family's from for a film. But I just want to acknowledge, you know, all of you</span> <span title="11:54">there tonight and you know thanks for coming out on a cold what I hear is a cold night in Melbourne.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[12:05]</small> <span data-start="00:12:04.711" data-end="00:12:19.824" data-spk="3" data-label="Track 4"><span title="12:05">But I think you know when I think for me really it the key thing for me was just to listen</span> <span title="12:12">really it's very a simple thing really is just to listen and so I would just listen to Jason,</span></span><br>
+<span data-start="00:12:20.089" data-end="00:12:27.498" data-spk="3" data-label="Track 4"><span title="12:20">I'd spend a lot of time with Jason. We'd just get in a room for a few hours I think, bro,</span></span><br>
+<span data-start="00:12:29.451" data-end="00:12:46.528" data-spk="3" data-label="Track 4"><span title="12:29">and just listen. So for me, like I suppose it was a very sort of, it was something I didn't</span> <span title="12:40">know a lot about, like I'd heard of, but like I was just like the first thing for me was like I'd,</span></span><br>
+<span data-start="00:12:46.608" data-end="00:12:48.259" data-spk="3" data-label="Track 4"><span title="12:47">I'd known Jason for a while,</span></span><br>
+<span data-start="00:12:48.448" data-end="00:12:50.038" data-spk="3" data-label="Track 4"><span title="12:48">but I never knew he did this work.</span></span><br>
+<span data-start="00:12:50.368" data-end="00:12:54.653" data-spk="3" data-label="Track 4"><span title="12:50">And I didn't know how this young black man,</span></span><br>
+<span data-start="00:12:57.129" data-end="00:13:00.992" data-spk="3" data-label="Track 4"><span title="12:57">carried this weight and how do you be in the world</span> <span title="13:01">carrying that weight?</span></span><br>
+<span data-start="00:13:01.419" data-end="00:13:07.698" data-spk="3" data-label="Track 4"><span title="13:01">Like I had no idea how he did that.</span> <span title="13:05">And I was really, yeah, just really interested,</span></span><br>
+<span data-start="00:13:09.648" data-end="00:13:17.379" data-spk="3" data-label="Track 4"><span title="13:10" style="background: rgba(209, 72, 54, 0.22);">really interested to learn about that and how he walked in these worlds.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[13:21]</small> <span data-start="00:13:21.495" data-end="00:13:23.610" data-spk="3" data-label="Track 4"><span title="13:22" style="background: rgba(209, 72, 54, 0.22);">Yeah, so for me, I just did a lot of listening.</span></span><br>
+<span data-start="00:13:24.518" data-end="00:13:29.553" data-spk="3" data-label="Track 4"><span title="13:25" style="background: rgba(209, 72, 54, 0.22);">We consulted with people, other people as well, working in repatriation,</span></span><br>
+<span data-start="00:13:30.112" data-end="00:13:37.648" data-spk="3" data-label="Track 4"><span title="13:30" style="background: rgba(209, 72, 54, 0.22);">and just listened and then also, you know, research and a lot of,</span></span><br>
+<span data-start="00:13:38.110" data-end="00:13:46.008" data-spk="3" data-label="Track 4"><span title="13:38" style="background: rgba(209, 72, 54, 0.14);">of research as well and read and just, so just like as a writer, just sort of, you know,</span></span><br>
+<span data-start="00:13:46.008" data-end="00:13:52.502" data-spk="3" data-label="Track 4"><span title="13:46" style="background: rgba(209, 72, 54, 0.14);">listening, listening, listening, listening and you know, the challenge with a story like,</span></span><br>
+<span data-start="00:13:52.648" data-end="00:14:01.588" data-spk="3" data-label="Track 4"><span title="13:53" style="background: rgba(209, 72, 54, 0.14);">this is, okay, all of these stories, how do you actually like tell a story for theatre?</span></span><br>
+<span data-start="00:14:02.568" data-end="00:14:07.568" data-spk="3" data-label="Track 4"><span title="14:03" style="background: rgba(209, 72, 54, 0.13);">A kind of hour and a half experience in a theatre space.</span></span><br>
+<br>
+<b data-spk="0">Track 1:</b><br>
+<small style="opacity: 0.5;">[14:11]</small> <span data-start="00:14:10.782" data-end="00:14:25.782" data-spk="0" data-label="Track 1"><span title="14:11">I remember you saying when we spoke a few weeks ago that you would do all that intensive</span> <span title="14:17">listening and then you would actually go away and just write bits of writing for yourself</span> <span title="14:23" style="background: rgba(209, 72, 54, 0.12);">to try and digest and make sense of it all.</span></span><br>
+<br>
+<b data-spk="3">Track 4:</b><br>
+<small style="opacity: 0.5;">[14:27]</small> <span data-start="00:14:27.108" data-end="00:14:50.700" data-spk="3" data-label="Track 4"><span title="14:27" style="background: rgba(209, 72, 54, 0.11);">Yeah, yeah, yeah. That was a thing for me too, I guess, because, you know, like reading research too, and, you know, it's a really dark history.</span> <span title="14:42" style="background: rgba(209, 72, 54, 0.11);">And you're reading things that it's, you know, it's all written by, you know, well-to-do white men.</span></span><br>
+<span data-start="00:14:51.109" data-end="00:15:04.166" data-spk="3" data-label="Track 4"><span title="14:51">Like a very, that was it, like you know, that was the words, that was all of these experiences</span> <span title="14:57">through that lens and you know, and you know, very difficult stories and stuff to read and,</span></span><br>
+<span data-start="00:15:04.569" data-end="00:15:11.518" data-spk="3" data-label="Track 4"><span title="15:05">I think for me too, it was just like a, there was a whole process involved in that and for me to,</span></span><br>
+<span data-start="00:15:12.771" data-end="00:15:25.168" data-spk="3" data-label="Track 4"><span title="15:13">I guess, kind of process stuff as well and just in myself because like I just had to just,</span> <span title="15:20">like I didn't even know how it was sitting with me. I was curious like how Jason had worked in,</span></span><br>
+<span data-start="00:15:25.758" data-end="00:15:39.488" data-spk="3" data-label="Track 4"><span title="15:26">this world. I didn't know like how all of these stories were sitting with me but just had to kind</span> <span title="15:32">of just let it sit and then you know would not find myself just writing responses to things just,</span></span><br>
+<span data-start="00:15:39.710" data-end="00:15:49.102" data-spk="3" data-label="Track 4"><span title="15:40">for myself not to necessarily share with the team and you know those would just be writings or they</span> <span title="15:46" style="background: rgba(209, 72, 54, 0.14);">that just might be seen as a response to something.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[15:50]</small> <span data-start="00:15:50.478" data-end="00:15:54.612" data-spk="3" data-label="Track 4"><span title="15:50" style="background: rgba(209, 72, 54, 0.14);">And not knowing, like just going here,</span> <span title="15:54" style="background: rgba(209, 72, 54, 0.14);">I don't even know.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[15:58]</small> <span data-start="00:15:57.869" data-end="00:16:08.854" data-spk="3" data-label="Track 4"><span title="15:58" style="background: rgba(209, 72, 54, 0.14);">But I think it was just sort of being able to trust</span> <span title="16:01" style="background: rgba(209, 72, 54, 0.14);">in that process and that was the incredible thing for me</span> <span title="16:04" style="background: rgba(209, 72, 54, 0.14);">is to be in this kind of creative team,</span></span><br>
+<span data-start="00:16:09.478" data-end="00:16:17.598" data-spk="3" data-label="Track 4"><span title="16:09" style="background: rgba(209, 72, 54, 0.13);">seem to allow this kind of process to just, you know, kind of have its time and allow,</span></span><br>
+<span data-start="00:16:17.886" data-end="00:16:26.010" data-spk="3" data-label="Track 4"><span title="16:18" style="background: rgba(209, 72, 54, 0.13);">it to kind of, you know, allow us all to digest it and keep coming back, keep sort of working,</span></span><br>
+<span data-start="00:16:27.158" data-end="00:16:27.478" data-spk="3" data-label="Track 4"><span title="16:27" style="background: rgba(209, 72, 54, 0.47);">on up.</span></span><br>
+<br>
+<b data-spk="0">Track 1:</b><br>
+<small style="opacity: 0.5;">[16:29]</small> <span data-start="00:16:28.504" data-end="00:16:39.320" data-spk="0" data-label="Track 1"><span title="16:28" style="background: rgba(209, 72, 54, 0.15);">Kim, before we get to your work, you came back from Europe on Sunday and then you pretty</span> <span title="16:36" style="background: rgba(209, 72, 54, 0.15);">much went and straight saw the return itself at the Malthouse.</span></span><br>
+<span data-start="00:16:39.753" data-end="00:16:48.412" data-spk="0" data-label="Track 1"><span title="16:40" style="background: rgba(209, 72, 54, 0.15);">You're someone that is intellectually, emotionally and professionally connected in this space.</span> <span title="16:46" style="background: rgba(209, 72, 54, 0.15);">What sort of reaction did you have to the play?</span></span><br>
+<br>
+<b data-spk="1">Track 2:</b><br>
+<small style="opacity: 0.5;">[16:50]</small> <span data-start="00:16:49.854" data-end="00:17:01.664" data-spk="1" data-label="Track 2"><span title="16:50" style="background: rgba(209, 72, 54, 0.11);">I was saying before it was quite a visceral kind of reaction actually because I had,</span> <span title="16:56" style="background: rgba(209, 72, 54, 0.11);">you know, yeah, literally hopped off the plane about four days before and I'd been over in</span></span><br>
+<span data-start="00:17:01.664" data-end="00:17:16.774" data-spk="1" data-label="Track 2"><span title="17:02" style="background: rgba(209, 72, 54, 0.11);">Europe researching our cultural material, southeastern cultural material in Switzerland</span> <span title="17:10" style="background: rgba(209, 72, 54, 0.11);">and London and, you know, had come across ancestors there as well.</span></span><br>
+<span data-start="00:17:17.144" data-end="00:17:32.184" data-spk="1" data-label="Track 2"><span title="17:17" style="background: rgba(209, 72, 54, 0.12);">And so, yeah, it was, you know, I felt it and I completely connected to the character,</span> <span title="17:24" style="background: rgba(209, 72, 54, 0.12);">to many of the characters because I live that work and working in a museum and working in</span></span><br>
+<span data-start="00:17:32.184" data-end="00:17:40.408" data-spk="1" data-label="Track 2"><span title="17:32" style="background: rgba(209, 72, 54, 0.12);">the space of research and repatriation as well, it felt very, very familiar to me.</span></span><br>
+<br>
+<b data-spk="0">Track 1:</b><br>
+<small style="opacity: 0.5;">[17:41]</small> <span data-start="00:17:40.576" data-end="00:17:59.906" data-spk="0" data-label="Track 1"><span title="17:41">No, I can imagine. You were saying, Jason, and as you've alluded to, Kimberley, that</span> <span title="17:53">so many of these remains, they're everywhere. Some of them may have indeed been stored in.</span></span><br>
+<br>
+<b data-spk="1">Track 2:</b><br>
+<small style="opacity: 0.5;">[17:41]</small> <span data-start="00:17:40.967" data-end="00:17:42.304" data-spk="1" data-label="Track 2"><span title="17:41" style="background: rgba(209, 72, 54, 0.31);">Yeah, very familiar.</span></span><br>
+<br>
+<b data-spk="0">Track 1:</b><br>
+<small style="opacity: 0.5;">[18:00]</small> <span data-start="00:18:00.352" data-end="00:18:13.026" data-spk="0" data-label="Track 1"><span title="18:00">This building when the museum used to be here. They are, like you said, in people's garages,</span> <span title="18:07">the people's beds but they're also in institutions, Kimberley, and there is a,</span></span><br>
+<span data-start="00:18:13.350" data-end="00:18:18.235" data-spk="0" data-label="Track 1"><span title="18:13">big movement now around this thing we call repatriation around the world,</span></span><br>
+<span data-start="00:18:19.124" data-end="00:18:27.501" data-spk="0" data-label="Track 1"><span title="18:19">domestically and overseas. Tell us about the work that you do in your day-to-day</span> <span title="18:25" style="background: rgba(209, 72, 54, 0.14);">their life to repatriate some of these items back to where they belong.</span></span><br>
+<br>
+<b data-spk="1">Track 2:</b><br>
+<small style="opacity: 0.5;">[18:29]</small> <span data-start="00:18:28.517" data-end="00:18:42.207" data-spk="1" data-label="Track 2"><span title="18:29">I should say, you know, this has been happening before me and it was really led by many people,</span> <span title="18:36">you know, Jason included, for decades and it kind of really, I think the push for,</span></span><br>
+<span data-start="00:18:43.155" data-end="00:18:53.947" data-spk="1" data-label="Track 2"><span title="18:43">Melbourne institutions like Melbourne Museums Victoria and University of Melbourne,</span> <span title="18:49">and the Freemasons, other institutions that had remains.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[18:58]</small> <span data-start="00:18:57.727" data-end="00:19:05.058" data-spk="1" data-label="Track 2"><span title="18:58">The push around 1985 really came out.</span> <span title="19:01">And so it's been happening since then.</span></span><br>
+<span data-start="00:19:05.167" data-end="00:19:10.664" data-spk="1" data-label="Track 2"><span title="19:05">And Melbourne Museum has been repatriating</span> <span title="19:08">since then as well.</span></span><br>
+<span data-start="00:19:10.887" data-end="00:19:14.101" data-spk="1" data-label="Track 2"><span title="19:11">So many people have been leading this space.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[19:16]</small> <span data-start="00:19:15.928" data-end="00:19:27.607" data-spk="1" data-label="Track 2"><span title="19:16">I'm sort of just starting to enter into this space.</span> <span title="19:19">Like I've been working as a curator in collections</span> <span title="19:23">for quite a long time now,</span> <span title="19:25">and I've been going to international collections,</span></span><br>
+<span data-start="00:19:27.868" data-end="00:19:36.005" data-spk="1" data-label="Track 2"><span title="19:28">to connect, first and foremost,</span> <span title="19:30">to connect to the cultural material of our ancestors</span> <span title="19:33">that are stored and kept in these collections overseas,</span></span><br>
+<span data-start="00:19:37.267" data-end="00:19:48.807" data-spk="1" data-label="Track 2"><span title="19:37">to understand the context of where they are,</span> <span title="19:40">how they got there, the curator or the keeper's connection</span> <span title="19:45">to them, and then to start conversations around,</span></span><br>
+<span data-start="00:19:48.807" data-end="00:19:56.363" data-spk="1" data-label="Track 2"><span title="19:49">or how we might get them home or loan them</span> <span title="19:53">or building these relationships that gets to that end point.</span></span><br>
+<span data-start="00:19:57.024" data-end="00:20:09.347" data-spk="1" data-label="Track 2"><span title="19:57">So a lot of my work is about building these relationships</span> <span title="20:01">and understanding the context of the cultural material,</span> <span title="20:04">which has been my focus, but there's obviously this ancestor,</span></span><br>
+<span data-start="00:20:09.527" data-end="00:20:15.232" data-spk="1" data-label="Track 2"><span title="20:10">and I do believe like they speak to us</span> <span title="20:12">and come to us in different ways</span> <span title="20:14">and stories come to us in different ways.</span></span><br>
+<span data-start="00:20:15.827" data-end="00:20:24.432" data-spk="1" data-label="Track 2"><span title="20:16">And these histories certainly show themselves</span> <span title="20:18" style="background: rgba(209, 72, 54, 0.11);">and collections, sometimes there's objects</span> <span title="20:20" style="background: rgba(209, 72, 54, 0.11);">that I've may have been around for years</span> <span title="20:22" style="background: rgba(209, 72, 54, 0.11);">and then all of a sudden it'll kind of come out.</span></span><br>
+<span data-start="00:20:25.347" data-end="00:20:28.227" data-spk="1" data-label="Track 2"><span title="20:25" style="background: rgba(209, 72, 54, 0.11);">And like this ancestor in Switzerland,</span></span><br>
+<span data-start="00:20:28.227" data-end="00:20:35.507" data-spk="1" data-label="Track 2"><span title="20:28" style="background: rgba(209, 72, 54, 0.11);">I'm gonna now work with Cultural Heritage Council</span> <span title="20:31" style="background: rgba(209, 72, 54, 0.11);">of Victoria and with the AATSIS</span></span><br>
+<span data-start="00:20:35.507" data-end="00:20:41.747" data-spk="1" data-label="Track 2"><span title="20:36" style="background: rgba(209, 72, 54, 0.11);">and the different kind of bodies that,</span> <span title="20:38" style="background: rgba(209, 72, 54, 0.11);">organisations I should say, that bring home the bodies.</span></span><br>
+<span data-start="00:20:42.134" data-end="00:20:44.718" data-spk="1" data-label="Track 2"><span title="20:42" style="background: rgba(209, 72, 54, 0.30);">Yeah, to get that ancestor home.</span></span><br>
+<span data-start="00:20:45.001" data-end="00:20:45.259" data-spk="1" data-label="Track 2"><span title="20:45" style="background: rgba(209, 72, 54, 0.30);">Yeah.</span></span><br>
+<br>
+<b data-spk="0">Track 1:</b><br>
+<small style="opacity: 0.5;">[20:45]</small> <span data-start="00:20:45.349" data-end="00:21:04.428" data-spk="0" data-label="Track 1"><span title="20:45" style="background: rgba(209, 72, 54, 0.10);">Let's skip back to the beginning of this very sort of macabre process, this macabre</span> <span title="20:56" style="background: rgba(209, 72, 54, 0.10);">process of collecting skulls, bones more broadly, sending them overseas, having them in private,</span></span><br>
+<span data-start="00:21:04.482" data-end="00:21:06.976" data-spk="0" data-label="Track 1"><span title="21:04" style="background: rgba(209, 72, 54, 0.10);">collections like the one in Switzerland was, am I correct?</span></span><br>
+<br>
+<b data-spk="1">Track 2:</b><br>
+<small style="opacity: 0.5;">[21:08]</small> <span data-start="00:21:07.747" data-end="00:21:10.870" data-spk="1" data-label="Track 2"><span title="21:08" style="background: rgba(209, 72, 54, 0.30);">Yeah, that was in, came from a private collection,</span> <span title="21:10" style="background: rgba(209, 72, 54, 0.37);">and see the museum now.</span></span><br>
+<br>
+<b data-spk="0">Track 1:</b><br>
+<small style="opacity: 0.5;">[21:11]</small> <span data-start="00:21:11.441" data-end="00:21:15.857" data-spk="0" data-label="Track 1"><span title="21:11" style="background: rgba(209, 72, 54, 0.17);">Maybe, maybe Jason we've spoken about this before.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[21:20]</small> <span data-start="00:21:19.919" data-end="00:21:27.279" data-spk="0" data-label="Track 1"><span title="21:20" style="background: rgba(209, 72, 54, 0.17);">What started that practice?</span> <span title="21:22" style="background: rgba(209, 72, 54, 0.17);">What was it about the colonial mindset</span> <span title="21:24" style="background: rgba(209, 72, 54, 0.17);">that saw that as a thing that needed to be done?</span></span><br>
+<span data-start="00:21:27.279" data-end="00:21:35.249" data-spk="0" data-label="Track 1"><span title="21:27" style="background: rgba(209, 72, 54, 0.17);">Or what was the value for them to start this practice</span> <span title="21:33" style="background: rgba(209, 72, 54, 0.19);">this practice of removing remains of country.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[21:37]</small> <span data-start="00:21:36.691" data-end="00:21:42.730" data-spk="2" data-label="Track 3"><span title="21:37" style="background: rgba(209, 72, 54, 0.38);">Oh, jeez.</span> <span title="21:39" style="background: rgba(209, 72, 54, 0.38);">Yeah.</span> <span title="21:42" style="background: rgba(209, 72, 54, 0.38);">They were fascinated by us.</span></span><br>
+<span data-start="00:21:43.811" data-end="00:21:46.564" data-spk="2" data-label="Track 3"><span title="21:44" style="background: rgba(209, 72, 54, 0.38);">Cos we are the oldest culture on the planet.</span></span><br>
+<span data-start="00:21:47.747" data-end="00:21:48.132" data-spk="2" data-label="Track 3"><span title="21:48" style="background: rgba(209, 72, 54, 0.38);">And...</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[21:53]</small> <span data-start="00:21:52.603" data-end="00:21:53.564" data-spk="2" data-label="Track 3"><span title="21:53" style="background: rgba(209, 72, 54, 0.38);">..crazy theories.</span></span><br>
+<span data-start="00:21:56.473" data-end="00:21:57.987" data-spk="2" data-label="Track 3"><span title="21:56" style="background: rgba(209, 72, 54, 0.38);">We're not meant to be here on stage.</span></span><br>
+<span data-start="00:22:00.252" data-end="00:22:23.261" data-spk="2" data-label="Track 3"><span title="22:00" style="background: rgba(209, 72, 54, 0.15);">The human beings at that time, they wanted to get as much evidence of us because they</span> <span title="22:15" style="background: rgba(209, 72, 54, 0.15);">believe we were the link back to the start of time.</span></span><br>
+<span data-start="00:22:24.607" data-end="00:22:26.781" data-spk="2" data-label="Track 3"><span title="22:25" style="background: rgba(209, 72, 54, 0.15);">Colonisation was brutal here.</span></span><br>
+<span data-start="00:22:29.090" data-end="00:22:39.690" data-spk="2" data-label="Track 3"><span title="22:29" style="background: rgba(209, 72, 54, 0.16);">You know, we're still carrying the trauma of that today.</span> <span title="22:36" style="background: rgba(209, 72, 54, 0.16);">And today there are laws that protect us as human beings.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[22:45]</small> <span data-start="00:22:44.828" data-end="00:22:48.541" data-spk="2" data-label="Track 3"><span title="22:45" style="background: rgba(209, 72, 54, 0.11);">But back in early colonisation, we had no one looking after us.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[22:54]</small> <span data-start="00:22:53.535" data-end="00:23:04.531" data-spk="2" data-label="Track 3"><span title="22:54">What evil people did, they went into our cemeteries and dug us up.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[23:08]</small> <span data-start="00:23:07.554" data-end="00:23:16.429" data-spk="2" data-label="Track 3"><span title="23:08">And they spread our people around this country and around the world.</span></span><br>
+<span data-start="00:23:19.345" data-end="00:23:29.553" data-spk="2" data-label="Track 3"><span title="23:19" style="background: rgba(209, 72, 54, 0.15);">We're connected through land, through spirituality, through being, you know?</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[23:33]</small> <span data-start="00:23:32.945" data-end="00:23:40.652" data-spk="2" data-label="Track 3"><span title="23:33" style="background: rgba(209, 72, 54, 0.15);">You know, our place on earth goes back so far.</span></span><br>
+<span data-start="00:23:43.285" data-end="00:23:45.760" data-spk="2" data-label="Track 3"><span title="23:43" style="background: rgba(209, 72, 54, 0.15);">We go back tens of thousands of years.</span></span><br>
+<span data-start="00:23:48.091" data-end="00:23:49.900" data-spk="2" data-label="Track 3"><span title="23:48" style="background: rgba(209, 72, 54, 0.13);">And that's part of my family.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[23:54]</small> <span data-start="00:23:53.962" data-end="00:23:58.541" data-spk="2" data-label="Track 3"><span title="23:54" style="background: rgba(209, 72, 54, 0.13);">So that blood, that memory is inside me today.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[24:02]</small> <span data-start="00:24:02.399" data-end="00:24:13.389" data-spk="2" data-label="Track 3"><span title="24:02" style="background: rgba(209, 72, 54, 0.13);">And we're told to ignore our feelings sometimes.</span> <span title="24:09" style="background: rgba(209, 72, 54, 0.13);">Ignore the past and memories which are in our blood.</span></span><br>
+<span data-start="00:24:15.991" data-end="00:24:16.526" data-spk="2" data-label="Track 3"><span title="24:16">But I wasn't taught that.</span></span><br>
+<span data-start="00:24:19.185" data-end="00:24:21.147" data-spk="2" data-label="Track 3"><span title="24:19">I was taught to connect to who I am.</span></span><br>
+<span data-start="00:24:23.875" data-end="00:24:34.511" data-spk="2" data-label="Track 3"><span title="24:24">And once you connect to that, you're awakened.</span> <span title="24:30">And you're open to see and feel and hear things, you know?</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[24:38]</small> <span data-start="00:24:37.744" data-end="00:24:49.600" data-spk="2" data-label="Track 3"><span title="24:38" style="background: rgba(209, 72, 54, 0.11);">And everything from our people has an energy.</span> <span title="24:46" style="background: rgba(209, 72, 54, 0.11);">And that energy has a connection.</span></span><br>
+<span data-start="00:24:52.394" data-end="00:24:53.905" data-spk="2" data-label="Track 3"><span title="24:52" style="background: rgba(209, 72, 54, 0.11);">And I don't speak on behalf of everyone.</span></span><br>
+<span data-start="00:24:53.905" data-end="00:24:59.269" data-spk="2" data-label="Track 3"><span title="24:54" style="background: rgba(209, 72, 54, 0.11);">I'm going to eat me, you know?</span> <span title="24:57" style="background: rgba(209, 72, 54, 0.11);">But that energy connects with me.</span></span><br>
+<span data-start="00:25:01.465" data-end="00:25:06.443" data-spk="2" data-label="Track 3"><span title="25:01">So, you know, you walk around the city,</span></span><br>
+<span data-start="00:25:07.425" data-end="00:25:09.676" data-spk="2" data-label="Track 3"><span title="25:07">go to museums or other institutions,</span></span><br>
+<span data-start="00:25:11.545" data-end="00:25:13.618" data-spk="2" data-label="Track 3"><span title="25:12">and you feel this enormous weight.</span></span><br>
+<span data-start="00:25:15.745" data-end="00:25:20.745" data-spk="2" data-label="Track 3"><span title="25:16">You feel this and hear this sound and energy.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[25:24]</small> <span data-start="00:25:23.785" data-end="00:25:26.742" data-spk="2" data-label="Track 3"><span title="25:24">And, you know, do you block it out?</span></span><br>
+<span data-start="00:25:28.345" data-end="00:25:34.770" data-spk="2" data-label="Track 3"><span title="25:28">Do you ignore it?</span> <span title="25:31" style="background: rgba(209, 72, 54, 0.15);">go crazy or you do something about it.</span></span><br>
+<span data-start="00:25:37.000" data-end="00:25:45.028" data-spk="2" data-label="Track 3"><span title="25:37" style="background: rgba(209, 72, 54, 0.15);">And all I'm doing and everybody else is doing what we do as people.</span></span><br>
+<span data-start="00:25:46.638" data-end="00:25:55.111" data-spk="2" data-label="Track 3"><span title="25:47" style="background: rgba(209, 72, 54, 0.15);">And that's connecting to our bloodline and connecting ourselves to our culture,</span></span><br>
+<span data-start="00:25:55.501" data-end="00:26:05.385" data-spk="2" data-label="Track 3"><span title="25:56">and to our land and fragments of country have been taken, our spirits have been taken,</span></span><br>
+<span data-start="00:26:06.672" data-end="00:26:17.545" data-spk="2" data-label="Track 3"><span title="26:07">and are spread all around the world and what we do like a vacuum is get all those pieces,</span></span><br>
+<span data-start="00:26:19.267" data-end="00:26:29.985" data-spk="2" data-label="Track 3"><span title="26:19">and bring them back home. And it's like us as human beings. We go through life and we get lost,</span></span><br>
+<span data-start="00:26:31.153" data-end="00:26:41.958" data-spk="2" data-label="Track 3"><span title="26:31">sometimes. We go missing. But what we're yearning for is to come back to some type of centre. Come,</span></span><br>
+<span data-start="00:26:43.778" data-end="00:26:45.286" data-spk="2" data-label="Track 3"><span title="26:44" style="background: rgba(209, 72, 54, 0.27);">back to who we are, you know?</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[26:50]</small> <span data-start="00:26:49.523" data-end="00:26:56.488" data-spk="2" data-label="Track 3"><span title="26:50" style="background: rgba(209, 72, 54, 0.26);">Our people have, we have the gift of life.</span> <span title="26:55" style="background: rgba(209, 72, 54, 0.26);">We are the key to everything.</span></span><br>
+<span data-start="00:26:57.900" data-end="00:27:10.062" data-spk="2" data-label="Track 3"><span title="26:58" style="background: rgba(209, 72, 54, 0.26);">And what we want to do in doing this work</span> <span title="27:05" style="background: rgba(209, 72, 54, 0.26);">is bring back all of us back to country</span> <span title="27:08" style="background: rgba(209, 72, 54, 0.26);">to bring us everything back to centre.</span></span><br>
+<span data-start="00:27:11.859" data-end="00:27:14.725" data-spk="2" data-label="Track 3"><span title="27:12" style="background: rgba(209, 72, 54, 0.26);">Because right now,</span></span><br>
+<span data-start="00:27:16.942" data-end="00:27:18.210" data-spk="2" data-label="Track 3"><span title="27:17" style="background: rgba(209, 72, 54, 0.10);">And it's been like this for a long time.</span></span><br>
+<span data-start="00:27:21.032" data-end="00:27:38.773" data-spk="2" data-label="Track 3"><span title="27:21" style="background: rgba(209, 72, 54, 0.10);">Things are unstable.</span> <span title="27:23" style="background: rgba(209, 72, 54, 0.10);">You feel it when you walk on the land, in your conscience, your spirit, you look at</span> <span title="27:30" style="background: rgba(209, 72, 54, 0.10);">the sky, you know, the heat, the cold, the water, you know, animals, everything.</span></span><br>
+<span data-start="00:27:40.011" data-end="00:27:42.613" data-spk="2" data-label="Track 3"><span title="27:40" style="background: rgba(209, 72, 54, 0.10);">It's all out of sync and stressed out, you know.</span></span><br>
+<span data-start="00:27:45.569" data-end="00:27:56.752" data-spk="2" data-label="Track 3"><span title="27:46" style="background: rgba(209, 72, 54, 0.13);">So what we want to do is bring everything back to centre.</span> <span title="27:50" style="background: rgba(209, 72, 54, 0.13);">And ultimately, which I don't want to sound cheesy, but it's to bring back to some type</span> <span title="27:55" style="background: rgba(209, 72, 54, 0.13);">of pace.</span></span><br>
+<span data-start="00:27:56.891" data-end="00:27:58.026" data-spk="2" data-label="Track 3"><span title="27:57" style="background: rgba(209, 72, 54, 0.22);">So we do this for you too.</span></span><br>
+<br>
+<b data-spk="0">Track 1:</b><br>
+<small style="opacity: 0.5;">[28:00]</small> <span data-start="00:28:00.154" data-end="00:28:09.305" data-spk="0" data-label="Track 1"><span title="28:00" style="background: rgba(209, 72, 54, 0.13);">So to build on what you were saying, Jason,</span> <span title="28:03" style="background: rgba(209, 72, 54, 0.13);">you were saying that, like, we're not supposed to be here on this stage</span> <span title="28:08" style="background: rgba(209, 72, 54, 0.13);">because we're not supposed to exist.</span></span><br>
+<span data-start="00:28:10.219" data-end="00:28:21.283" data-spk="0" data-label="Track 1"><span title="28:10" style="background: rgba(209, 72, 54, 0.13);">That's not just some sort of throwaway line.</span> <span title="28:13" style="background: rgba(209, 72, 54, 0.13);">That is actually something that the colonial government of Victoria did</span> <span title="28:19" style="background: rgba(209, 72, 54, 0.13);">in the day. They actually had a half-caste act.</span></span><br>
+<span data-start="00:28:21.468" data-end="00:28:28.282" data-spk="0" data-label="Track 1"><span title="28:21" style="background: rgba(209, 72, 54, 0.13);">They removed half-castes away from full-bloods</span> <span title="28:25" style="background: rgba(209, 72, 54, 0.13);">to make sure that there was no mixing between the two,</span></span><br>
+<span data-start="00:28:28.483" data-end="00:28:40.483" data-spk="0" data-label="Track 1"><span title="28:28">so people can find their culture, learn their culture, find out the old ways, the traditional</span> <span title="28:34">ways of us living our traditional lives with the idea that the old people, the full bloods,</span></span><br>
+<span data-start="00:28:40.483" data-end="00:28:45.443" data-spk="0" data-label="Track 1"><span title="28:40">would eventually die out and the half-caste would actually breed into the population.</span></span><br>
+<span data-start="00:28:45.871" data-end="00:28:54.007" data-spk="0" data-label="Track 1"><span title="28:46">And every now and then some people might tan up and it'll be better than others during</span> <span title="28:49">summer, but ostensibly the race is gone.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[28:57]</small> <span data-start="00:28:56.603" data-end="00:29:06.987" data-spk="0" data-label="Track 1"><span title="28:57">And it was also with the collection of our people,</span> <span title="29:02">and I might throw this one to you, John,</span> <span title="29:05">but by all means, anyone else chip in.</span></span><br>
+<span data-start="00:29:07.123" data-end="00:29:11.691" data-spk="0" data-label="Track 1"><span title="29:07">There was the idea and the science of eugenics around it.</span></span><br>
+<span data-start="00:29:12.763" data-end="00:29:21.222" data-spk="0" data-label="Track 1"><span title="29:13">And John, it used to be a way of collecting bones</span> <span title="29:18">and measuring the skulls and other fragments,</span></span><br>
+<span data-start="00:29:21.323" data-end="00:29:34.003" data-spk="0" data-label="Track 1"><span title="29:21">as a way of somehow embedding in the culture</span> <span title="29:25">the mindset that Europeans were somehow superior to First Nations people.</span></span><br>
+<span data-start="00:29:34.003" data-end="00:29:39.783" data-spk="0" data-label="Track 1"><span title="29:34">Through your research and listening to the people that you spoke to, what did you learn</span> <span title="29:38" style="background: rgba(209, 72, 54, 0.20);">about that element of it all.</span></span><br>
+<br>
+<b data-spk="3">Track 4:</b><br>
+<small style="opacity: 0.5;">[29:43]</small> <span data-start="00:29:43.389" data-end="00:30:00.719" data-spk="3" data-label="Track 4"><span title="29:43">Yeah, well, it was exactly that, you know, like it was, it was the white man, you know,</span> <span title="29:51">being the superior of all beings, you know, and, and, and, you know, coming up with theories</span></span><br>
+<span data-start="00:30:00.719" data-end="00:30:16.179" data-spk="3" data-label="Track 4"><span title="30:01">to reinforce this kind of vacuum of ideas that these white men were having and the conversations</span> <span title="30:10">they were having with each other about the rest of the world and where they sat.</span></span><br>
+<span data-start="00:30:16.179" data-end="00:30:29.689" data-spk="3" data-label="Track 4"><span title="30:16">And you know I think too it's interesting because it's sort of like a time where people</span> <span title="30:23">were moving away from I guess understanding of the world and the place that they're in,</span></span><br>
+<span data-start="00:30:29.797" data-end="00:30:47.891" data-spk="3" data-label="Track 4"><span title="30:30">from sort of cosmology and religion to going oh everything can be measured, everything</span> <span title="30:37">is science, you know, everything can, you can place the measurement on it, you can place a label</span> <span title="30:41">on it, you can categorise it, you can place it in a sort of hierarchy or whatever you want,</span></span><br>
+<span data-start="00:30:48.239" data-end="00:30:58.635" data-spk="3" data-label="Track 4"><span title="30:48">and that this is how you understand the world. And so these guys were, I think at the time from</span> <span title="30:53">what I was reading, were kind of like rock stars really, like they would have, you know, that they.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[30:59]</small> <span data-start="00:30:59.050" data-end="00:31:13.315" data-spk="3" data-label="Track 4"><span title="30:59">Would pack out like Melbourne town hall, town halls right across the country and talk about</span> <span title="31:05" style="background: rgba(209, 72, 54, 0.11);">their theories and particularly these guys from Melbourne, you know, and people would come in to,</span></span><br>
+<span data-start="00:31:13.423" data-end="00:31:32.496" data-spk="3" data-label="Track 4"><span title="31:13" style="background: rgba(209, 72, 54, 0.11);">listen to them and pack out the town halls and, you know, so there was, yeah, yeah, they were seen as</span> <span title="31:23" style="background: rgba(209, 72, 54, 0.11);">these, I think, guys, was just this different way of looking at the world and, you know, but,</span></span><br>
+<span data-start="00:31:34.227" data-end="00:31:36.955" data-spk="3" data-label="Track 4"><span title="31:34">But it was a very thin veil that just kind of.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[31:39]</small> <span data-start="00:31:39.019" data-end="00:31:43.270" data-spk="3" data-label="Track 4"><span title="31:39">Not even really that thin of a veil,</span> <span title="31:41">but it was highly discriminatory.</span></span><br>
+<span data-start="00:31:43.759" data-end="00:31:47.332" data-spk="3" data-label="Track 4"><span title="31:44">And the science turned out to be rubbish.</span></span><br>
+<span data-start="00:31:47.747" data-end="00:31:49.442" data-spk="3" data-label="Track 4"><span title="31:48">It was even questioned at the time.</span></span><br>
+<span data-start="00:31:51.461" data-end="00:32:00.559" data-spk="3" data-label="Track 4"><span title="31:51">But these things are facts and people like these guys,</span> <span title="31:56">they love to say facts and because it's a fact,</span></span><br>
+<span data-start="00:32:00.865" data-end="00:32:05.919" data-spk="3" data-label="Track 4"><span title="32:01">it can be measured and why is it a fact? Because I said it's a fact, because I said it's measurable,</span></span><br>
+<span data-start="00:32:05.919" data-end="00:32:13.839" data-spk="3" data-label="Track 4"><span title="32:06">because I say these things so therefore it is. And no regard to Indigenous people, where Indigenous</span></span><br>
+<span data-start="00:32:13.839" data-end="00:32:21.025" data-spk="3" data-label="Track 4"><span title="32:14">people are coming from, the knowledge, all of that. Because in their system, their very narrow,</span></span><br>
+<span data-start="00:32:21.279" data-end="00:32:28.657" data-spk="3" data-label="Track 4"><span title="32:21">science system is purely based on a physical thing, nothing about spirituality, nothing about,</span></span><br>
+<span data-start="00:32:29.678" data-end="00:32:37.359" data-spk="3" data-label="Track 4"><span title="32:30">connectedness, all about separation and breaking it into bits and measuring those bits and holding,</span></span><br>
+<span data-start="00:32:38.253" data-end="00:32:44.118" data-spk="3" data-label="Track 4"><span title="32:38">kind of dominion over those bits and you know so they're just completely,</span></span><br>
+<span data-start="00:32:46.474" data-end="00:32:55.625" data-spk="3" data-label="Track 4"><span title="32:46">different in that way and had no idea of themselves let alone others but you know but had the power,</span></span><br>
+<span data-start="00:32:55.830" data-end="00:33:01.833" data-spk="3" data-label="Track 4"><span title="32:56" style="background: rgba(209, 72, 54, 0.20);">and influence to then perpetuate some pretty horrible things.</span></span><br>
+<br>
+<b data-spk="0">Track 1:</b><br>
+<small style="opacity: 0.5;">[33:04]</small> <span data-start="00:33:03.750" data-end="00:33:19.440" data-spk="0" data-label="Track 1"><span title="33:04">Kimber, you work for and with organisations, institutions that have built their reputations</span> <span title="33:12">on some of this work, that have, you know, built, like you said, rock stars back in the day that,</span></span><br>
+<span data-start="00:33:20.810" data-end="00:33:35.165" data-spk="0" data-label="Track 1"><span title="33:21">you know, did some of this work and were lauded across the place. As a First Nations person,</span> <span title="33:27">how difficult is it for you to work hidden around that space, knowing that an institution like the</span> <span title="33:33" style="background: rgba(209, 72, 54, 0.12);">the museum at Melbourne, or Melbourne Museum,</span></span><br>
+<span data-start="00:33:35.520" data-end="00:33:39.760" data-spk="0" data-label="Track 1"><span title="33:36" style="background: rgba(209, 72, 54, 0.12);">was involved in some of this work back in the day.</span></span><br>
+<span data-start="00:33:39.930" data-end="00:33:44.606" data-spk="0" data-label="Track 1"><span title="33:40" style="background: rgba(209, 72, 54, 0.12);">How confronting is that for you,</span> <span title="33:43" style="background: rgba(209, 72, 54, 0.17);">working in spaces like that.</span></span><br>
+<br>
+<b data-spk="1">Track 2:</b><br>
+<small style="opacity: 0.5;">[33:46]</small> <span data-start="00:33:45.795" data-end="00:33:56.011" data-spk="1" data-label="Track 2"><span title="33:46" style="background: rgba(209, 72, 54, 0.10);">Yeah, it's hard.</span> <span title="33:50" style="background: rgba(209, 72, 54, 0.10);">It's definitely like a, you know, talking about heaviness, carrying a heaviness, and</span> <span title="33:55" style="background: rgba(209, 72, 54, 0.10);">I do feel that.</span></span><br>
+<span data-start="00:33:56.149" data-end="00:34:09.565" data-spk="1" data-label="Track 2"><span title="33:56" style="background: rgba(209, 72, 54, 0.10);">And I felt that coming back from Europe this time more deeply, actually, maybe because</span> <span title="34:03" style="background: rgba(209, 72, 54, 0.10);">it's sort of been three years of COVID and then heading back out there and, you know,</span></span><br>
+<span data-start="00:34:09.565" data-end="00:34:15.114" data-spk="1" data-label="Track 2"><span title="34:10" style="background: rgba(209, 72, 54, 0.10);">revisiting some of these cultural materials and ancestors that are still in these places,</span></span><br>
+<span data-start="00:34:15.445" data-end="00:34:22.499" data-spk="1" data-label="Track 2"><span title="34:15">Working for Melbourne Museum, there's a heaviness within the collection.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[34:23]</small> <span data-start="00:34:23.118" data-end="00:34:30.551" data-spk="1" data-label="Track 2"><span title="34:23">I came across a letter a few years ago, which the museum know about and it's public record,</span> <span title="34:29">so I'll talk about it.</span></span><br>
+<span data-start="00:34:30.805" data-end="00:34:45.405" data-spk="1" data-label="Track 2"><span title="34:31">But it was from the director of Melbourne Museum in 1902, Baldwin Spencer, who sent</span> <span title="34:37">out a letter to the chief commissioner of the colony at that time requesting that the</span></span><br>
+<span data-start="00:34:45.405" data-end="00:34:53.572" data-spk="1" data-label="Track 2"><span title="34:45">police, you know, that the police colony collect, quote, Aboriginal skeletons, skulls, body,</span></span><br>
+<span data-start="00:34:54.045" data-end="00:35:09.805" data-spk="1" data-label="Track 2"><span title="34:54">parts and weapons. And, you know, then from that moment on, we see a huge increase in</span> <span title="35:02">the registration of ancestral remains and cultural material for Melbourne Museum.</span></span><br>
+<span data-start="00:35:09.805" data-end="00:35:15.877" data-spk="1" data-label="Track 2"><span title="35:10">And I mean this is just one, this is the tip of the iceberg, this is common throughout</span> <span title="35:14">Australia and throughout the world.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[35:17]</small> <span data-start="00:35:16.885" data-end="00:35:34.725" data-spk="1" data-label="Track 2"><span title="35:17">So they're heavy histories, they're hard, but also I do think, I believe that I'm there</span> <span title="35:24">for a reason and I have the motivation to change that and to you know maybe not reconcile,</span></span><br>
+<span data-start="00:35:34.986" data-end="00:35:45.765" data-spk="1" data-label="Track 2"><span title="35:35">it but like be there for the ancestors that are still at the museum even though you know</span> <span title="35:41">really it's the Cultural Heritage Council that take care of that now for Victoria, for</span></span><br>
+<span data-start="00:35:45.765" data-end="00:35:51.605" data-spk="1" data-label="Track 2"><span title="35:46">Australia but be there spiritually and culturally, be there for the objects and be a conduit</span></span><br>
+<span data-start="00:35:51.605" data-end="00:35:57.358" data-spk="1" data-label="Track 2"><span title="35:52" style="background: rgba(209, 72, 54, 0.19);">but for community to be able to come in and see cultural material.</span> <span title="35:56" style="background: rgba(209, 72, 54, 0.15);">and I think that's a really important role.</span></span><br>
+<br>
+<b data-spk="0">Track 1:</b><br>
+<small style="opacity: 0.5;">[35:59]</small> <span data-start="00:35:59.125" data-end="00:36:08.090" data-spk="0" data-label="Track 1"><span title="35:59">I think we should touch on the work that you're doing as part of the Rising Festival,</span> <span title="36:04">and specifically the curation you're doing around a thing called Moving Objects,</span></span><br>
+<span data-start="00:36:09.670" data-end="00:36:15.565" data-spk="0" data-label="Track 1"><span title="36:10">where you're getting artists from all sorts of backgrounds to come in and sit with some of the</span> <span title="36:14">museum's collections. Can you just tell us about that a little bit? Because I spoke to Lou Bennett.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[36:22]</small> <span data-start="00:36:22.272" data-end="00:36:30.618" data-spk="0" data-label="Track 1"><span title="36:22">Dr. Lou Bennett a couple of weeks ago, who's got a performance coming up.</span> <span title="36:26" style="background: rgba(209, 72, 54, 0.11);">Tell us about that because when we talk about repatriation, we're not only talking about,</span></span><br>
+<span data-start="00:36:31.658" data-end="00:36:38.382" data-spk="0" data-label="Track 1"><span title="36:32" style="background: rgba(209, 72, 54, 0.11);">mortal remains, we're talking about all sorts of culturally significant things.</span></span><br>
+<span data-start="00:36:38.923" data-end="00:36:42.372" data-spk="0" data-label="Track 1"><span title="36:39">What was the challenge that you set for some of the artists to sit with some of those artefacts?</span></span><br>
+<br>
+<b data-spk="1">Track 2:</b><br>
+<small style="opacity: 0.5;">[36:44]</small> <span data-start="00:36:43.682" data-end="00:36:52.888" data-spk="1" data-label="Track 2"><span title="36:44">Yeah, I think when we talk about we consider repatriation, you know, it's, and we're saying,</span> <span title="36:48">we're talking about the word repatriation and return and restitution and it's actually about,</span></span><br>
+<span data-start="00:36:53.020" data-end="00:37:10.092" data-spk="1" data-label="Track 2"><span title="36:53">going home. It's about a journey, you know, these objects and these ancestors have been on many</span> <span title="36:59">journeys and it's sort of part of this journey is going back home. And moving objects came out of,</span></span><br>
+<span data-start="00:37:10.092" data-end="00:37:14.492" data-spk="1" data-label="Track 2"><span title="37:10">I have two hats. I work in cultural heritage and museums,</span></span><br>
+<span data-start="00:37:14.599" data-end="00:37:16.744" data-spk="1" data-label="Track 2"><span title="37:15">but I also work in contemporary Aboriginal art,</span></span><br>
+<span data-start="00:37:16.930" data-end="00:37:19.418" data-spk="1" data-label="Track 2"><span title="37:17">and it's this sort of very, you know, fluid space of culture,</span></span><br>
+<span data-start="00:37:21.052" data-end="00:37:22.963" data-spk="1" data-label="Track 2"><span title="37:21">and working with mob that I love.</span></span><br>
+<span data-start="00:37:23.047" data-end="00:37:33.864" data-spk="1" data-label="Track 2"><span title="37:23">And I'm really passionate about the way that Aboriginal artists</span> <span title="37:29">can work in museums and recontextualise and reframe cultural material.</span></span><br>
+<span data-start="00:37:34.482" data-end="00:37:46.772" data-spk="1" data-label="Track 2"><span title="37:34">And so it came out of... moving objects came out of that thinking.</span> <span title="37:38">And when I started with Rising a couple of years ago,</span> <span title="37:42">and I'm still at the museum as well,</span> <span title="37:45">I sort of brought the two together and...</span></span><br>
+<span data-start="00:37:47.420" data-end="00:37:47.772" data-spk="1" data-label="Track 2"><span title="37:47">That's smart.</span></span><br>
+<span data-start="00:37:49.007" data-end="00:37:55.304" data-spk="1" data-label="Track 2"><span title="37:49">Yeah.</span> <span title="37:49">Make it work, you know?</span> <span title="37:50">And, like, they were both really into it.</span> <span title="37:52">And it's also about, you know, contemporary, like, our objects.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[37:52]</small> <span data-start="00:37:52.053" data-end="00:37:52.708" data-spk="5" data-label="Track 6"><span title="37:52" style="background: rgba(209, 72, 54, 0.25);">Okay.</span></span><br>
+<br>
+<b data-spk="1">Track 2:</b><br>
+<small style="opacity: 0.5;">[37:56]</small> <span data-start="00:37:55.772" data-end="00:38:10.128" data-spk="1" data-label="Track 2"><span title="37:56">They might be old and the ancestors might have made them,</span> <span title="37:58">but they're just as relevant now.</span> <span title="38:01">And so, yeah, I invited eight artists and an art centre to come in</span> <span title="38:05">and to not necessarily also connect to the cultural material.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[38:11]</small> <span data-start="00:38:10.765" data-end="00:38:16.005" data-spk="1" data-label="Track 2"><span title="38:11">That's all the Aboriginal artists wanted to go into, you know,</span> <span title="38:14">that space of connecting to their ancestors' material.</span></span><br>
+<span data-start="00:38:16.162" data-end="00:38:21.052" data-spk="1" data-label="Track 2"><span title="38:16">But I also want to continue this project and open it up to the rest of the museum.</span></span><br>
+<span data-start="00:38:21.215" data-end="00:38:29.243" data-spk="1" data-label="Track 2"><span title="38:21">I'm very interested in Aboriginal artists, you know, critiquing and working</span> <span title="38:24">with colonial material or the scientific material of birds and that kind of thing.</span></span><br>
+<span data-start="00:38:29.532" data-end="00:38:33.377" data-spk="1" data-label="Track 2"><span title="38:30">We don't always have to just sort of work within that Indigenous cultural material space.</span></span><br>
+<span data-start="00:38:33.978" data-end="00:38:44.097" data-spk="1" data-label="Track 2"><span title="38:34" style="background: rgba(209, 72, 54, 0.11);">But yeah, so it was, I developed a framework where it was about regeneration, disruption and renewal.</span></span><br>
+<span data-start="00:38:44.650" data-end="00:38:53.592" data-spk="1" data-label="Track 2"><span title="38:45" style="background: rgba(209, 72, 54, 0.11);">And so looking at ways to regenerate knowledge, regenerate connection, to disrupt the coloniality of the museum, of collecting histories.</span></span><br>
+<span data-start="00:38:54.229" data-end="00:39:00.646" data-spk="1" data-label="Track 2"><span title="38:54" style="background: rgba(209, 72, 54, 0.11);">And then to renew these spaces and to renew the story of the object.</span></span><br>
+<span data-start="00:39:00.911" data-end="00:39:07.532" data-spk="1" data-label="Track 2"><span title="39:01">And yeah, I worked with lots of deadly artists and Lou was one of them and we're actually presenting her work in Bendigo Wednesday night,</span></span><br>
+<span data-start="00:39:07.532" data-end="00:39:13.332" data-spk="1" data-label="Track 2"><span title="39:08">if anyone wants to come to Bendigo and then we've sold out for the Melbourne One Friday night.</span></span><br>
+<span data-start="00:39:13.776" data-end="00:39:23.367" data-spk="1" data-label="Track 2"><span title="39:14">But Lou worked with Jar Jar Warrong material and the stone tools and has written a whole new piece of music in response to this experience.</span></span><br>
+<span data-start="00:39:23.572" data-end="00:39:30.409" data-spk="1" data-label="Track 2"><span title="39:24" style="background: rgba(209, 72, 54, 0.12);">And so it was about sustained access to the collections,</span> <span title="39:27" style="background: rgba(209, 72, 54, 0.12);">working with the artists,</span> <span title="39:29" style="background: rgba(209, 72, 54, 0.10);">and then them responding with new work.</span></span><br>
+<br>
+<b data-spk="0">Track 1:</b><br>
+<small style="opacity: 0.5;">[39:33]</small> <span data-start="00:39:32.573" data-end="00:39:41.628" data-spk="0" data-label="Track 1"><span title="39:33">Too cool, very, very, very cool.</span> <span title="39:35">So much of the work, and look, we've</span> <span title="39:37">got to take some questions from the audience,</span> <span title="39:39">at least we can do for you.</span></span><br>
+<span data-start="00:39:43.810" data-end="00:39:56.849" data-spk="0" data-label="Track 1"><span title="39:44">Probably after this little discussion that we have now,</span> <span title="39:45">everyone on this stage is a storyteller.</span> <span title="39:49">Everyone that is also involved in repatriation</span> <span title="39:54">are also storytellers.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[39:57]</small> <span data-start="00:39:57.120" data-end="00:37:52.768" data-spk="5" data-label="Track 6"><span title="39:57" style="background: rgba(209, 72, 54, 0.25);">Break.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[39:57]</small> <span data-start="00:39:57.120" data-end="00:40:04.445" data-spk="5" data-label="Track 6"><span title="39:57" style="background: rgba(209, 72, 54, 0.23);">Jason, let's start with you.</span> <span title="40:02" style="background: rgba(209, 72, 54, 0.23);">You say you believe in a moment that you're in right now.</span></span><br>
+<br>
+<b data-spk="0">Track 1:</b><br>
+<small style="opacity: 0.5;">[40:02]</small> <span data-start="00:40:02.354" data-end="00:39:56.849" data-spk="0" data-label="Track 1"><span title="40:02">Jason, let's start with you.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[40:02]</small> <span data-start="00:40:02.372" data-end="00:40:16.187" data-spk="0" data-label="Track 1"><span title="40:02">We seem to be living in a moment in history now where there seems to be a wider and greater audience</span> <span title="40:10">for hearing the truth and the hard stories that are behind some of the issues that First Nations people confront every day.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[40:08]</small> <span data-start="00:40:07.582" data-end="00:40:08.801" data-spk="5" data-label="Track 6"><span title="40:08" style="background: rgba(209, 72, 54, 0.23);">There seems to be a wider and greater audience for hearing the truth.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[40:20]</small> <span data-start="00:40:19.714" data-end="00:40:19.972" data-spk="5" data-label="Track 6"><span title="40:20" style="background: rgba(209, 72, 54, 0.23);">And the truth that you can confront every day.</span> <span title="40:20" style="background: rgba(209, 72, 54, 0.23);">As a storyteller, what's your sense of where we are at this particular moment?</span></span><br>
+<br>
+<b data-spk="0">Track 1:</b><br>
+<small style="opacity: 0.5;">[40:20]</small> <span data-start="00:40:19.972" data-end="00:40:26.030" data-spk="0" data-label="Track 1"><span title="40:20">As a storyteller, what's your sense of where we are at this particular point in time in terms of changing things through story?</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[40:29]</small> <span data-start="00:40:29.371" data-end="00:40:36.918" data-spk="0" data-label="Track 1"><span title="40:29" style="background: rgba(209, 72, 54, 0.16);">Because I'm a firm believer that the way we change things is through story.</span> <span title="40:32" style="background: rgba(209, 72, 54, 0.16);">Where do you think we sit right now in terms of having an audience but also having stories to tell?</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[40:37]</small> <span data-start="00:40:36.936" data-end="00:40:37.224" data-spk="5" data-label="Track 6"><span title="40:37" style="background: rgba(209, 72, 54, 0.20);">Having an audience, but also having stories to tell.</span></span><br>
+<br>
+<b data-spk="0">Track 1:</b><br>
+<small style="opacity: 0.5;">[40:40]</small> <span data-start="00:40:39.802" data-end="00:40:40.157" data-spk="0" data-label="Track 1"><span title="40:40" style="background: rgba(209, 72, 54, 0.26);">Is there an equilibrium there?</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[40:41]</small> <span data-start="00:40:41.329" data-end="00:40:41.611" data-spk="5" data-label="Track 6"><span title="40:41" style="background: rgba(209, 72, 54, 0.50);">I guess, see yourselves in the...</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[40:46]</small> <span data-start="00:40:46.184" data-end="00:40:46.460" data-spk="2" data-label="Track 3"><span title="40:46" style="background: rgba(209, 72, 54, 0.27);">You know? Storytellers, peacemakers.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[40:54]</small> <span data-start="00:40:54.254" data-end="00:40:55.083" data-spk="2" data-label="Track 3"><span title="40:54" style="background: rgba(209, 72, 54, 0.27);">Where we're at...</span></span><br>
+<span data-start="00:40:57.187" data-end="00:40:57.511" data-spk="2" data-label="Track 3"><span title="40:57" style="background: rgba(209, 72, 54, 0.27);">Well, the world wants a... You can feel it.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[41:01]</small> <span data-start="00:41:01.387" data-end="00:41:01.922" data-spk="2" data-label="Track 3"><span title="41:01" style="background: rgba(209, 72, 54, 0.27);">This country and the world...</span></span><br>
+<span data-start="00:41:03.947" data-end="00:41:06.170" data-spk="2" data-label="Track 3"><span title="41:04" style="background: rgba(209, 72, 54, 0.27);">It's strange, like, in a way, like...</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[41:20]</small> <span data-start="00:41:19.973" data-end="00:41:12.408" data-spk="2" data-label="Track 3"><span title="41:20">And you think of everyone else, you know, so many thousands of years, you know?</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[41:20]</small> <span data-start="00:41:20.382" data-end="00:41:22.231" data-spk="5" data-label="Track 6"><span title="41:20" style="background: rgba(209, 72, 54, 0.21);">So many thousands of years.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[41:27]</small> <span data-start="00:41:26.631" data-end="00:41:29.708" data-spk="5" data-label="Track 6"><span title="41:27" style="background: rgba(209, 72, 54, 0.21);">As, I guess, as we are today, you know, we just started using the computer a few years ago, right?</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[41:29]</small> <span data-start="00:41:29.083" data-end="00:41:34.635" data-spk="2" data-label="Track 3"><span title="41:29">But as, I guess, as we are today, you know, we just started using the computer a few years ago, right?</span> <span title="41:34">And telephones and modern cars and, you know, what I'm trying to say is.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[41:36]</small> <span data-start="00:41:36.149" data-end="00:41:35.975" data-spk="5" data-label="Track 6"><span title="41:36" style="background: rgba(209, 72, 54, 0.37);">Music out right? And telephones and modern cars and you know what I just want to say is.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[41:43]</small> <span data-start="00:41:43.300" data-end="00:41:43.847" data-spk="2" data-label="Track 3"><span title="41:43" style="background: rgba(209, 72, 54, 0.14);">It's like we're still learning, you know what I mean?</span></span><br>
+<span data-start="00:41:46.593" data-end="00:41:44.466" data-spk="2" data-label="Track 3"><span title="41:47" style="background: rgba(209, 72, 54, 0.14);">And I realise how immature sometimes human beings are, you know?</span> <span title="41:55" style="background: rgba(209, 72, 54, 0.14);">And I think the world has got to a time where they want to grow up.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[42:08]</small> <span data-start="00:42:08.406" data-end="00:42:25.412" data-spk="2" data-label="Track 3"><span title="42:08" style="background: rgba(209, 72, 54, 0.20);">Turn a page in life and there seems to be an appetite to connect with a long history.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[42:29]</small> <span data-start="00:42:28.536" data-end="00:42:32.767" data-spk="2" data-label="Track 3"><span title="42:29" style="background: rgba(209, 72, 54, 0.19);">Because of a wanting and connecting with our people.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[42:36]</small> <span data-start="00:42:35.807" data-end="00:42:37.556" data-spk="5" data-label="Track 6"><span title="42:36" style="background: rgba(209, 72, 54, 0.31);">Because here's an opportunity.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[42:39]</small> <span data-start="00:42:38.836" data-end="00:42:44.314" data-spk="2" data-label="Track 3"><span title="42:39" style="background: rgba(209, 72, 54, 0.19);">Because here's an opportunity to turn the page.</span></span><br>
+<span data-start="00:42:45.776" data-end="00:42:49.929" data-spk="2" data-label="Track 3"><span title="42:46" style="background: rgba(209, 72, 54, 0.19);">And some old, older, traditional...</span> <span title="42:50" style="background: rgba(209, 72, 54, 0.19);">Oh, I don't know how to use that word.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[42:54]</small> <span data-start="00:42:54.081" data-end="00:42:59.634" data-spk="2" data-label="Track 3"><span title="42:54">Ways they're locked into old policy and legislation and it's outdated you know.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[42:56]</small> <span data-start="00:42:56.340" data-end="00:42:50.657" data-spk="5" data-label="Track 6"><span title="42:56" style="background: rgba(209, 72, 54, 0.31);">Old ways, they're locked into old policy and legislation.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[42:59]</small> <span data-start="00:42:58.690" data-end="00:42:58.657" data-spk="5" data-label="Track 6"><span title="42:59" style="background: rgba(209, 72, 54, 0.34);">That's airtight.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[43:00]</small> <span data-start="00:43:00.409" data-end="00:43:06.303" data-spk="2" data-label="Track 3"><span title="43:00">It's really outdated so what the world and this country I feel that not.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[43:10]</small> <span data-start="00:43:09.754" data-end="00:43:19.019" data-spk="2" data-label="Track 3"><span title="43:10" style="background: rgba(209, 72, 54, 0.17);">Everywhere but there is a change. People are wanting to grow and repatriation.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[43:29]</small> <span data-start="00:43:29.186" data-end="00:43:29.553" data-spk="2" data-label="Track 3"><span title="43:29" style="background: rgba(209, 72, 54, 0.17);">Coming back to home, centre is what people are wanting to do. They want to.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[43:34]</small> <span data-start="00:43:34.083" data-end="00:43:34.600" data-spk="2" data-label="Track 3"><span title="43:34" style="background: rgba(209, 72, 54, 0.16);">Move on but to move on we've got to address some things which is a past.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[43:37]</small> <span data-start="00:43:36.799" data-end="00:43:40.170" data-spk="5" data-label="Track 6"><span title="43:37" style="background: rgba(209, 72, 54, 0.34);">Address some things which is a past that's with us now.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[43:44]</small> <span data-start="00:43:43.704" data-end="00:43:44.160" data-spk="2" data-label="Track 3"><span title="43:44" style="background: rgba(209, 72, 54, 0.24);">But it's with us now. So many people are willing to...</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[43:50]</small> <span data-start="00:43:50.242" data-end="00:43:44.611" data-spk="5" data-label="Track 6"><span title="43:50" style="background: rgba(209, 72, 54, 0.34);">So many people are willing to have those.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[43:51]</small> <span data-start="00:43:50.656" data-end="00:43:50.494" data-spk="5" data-label="Track 6"><span title="43:51" style="background: rgba(209, 72, 54, 0.34);">Difficult discussions now, which is a good thing, right?</span> <span title="43:51" style="background: rgba(209, 72, 54, 0.34);">Jarrod, what's...</span></span><br>
+<br>
+<b data-spk="0">Track 1:</b><br>
+<small style="opacity: 0.5;">[43:52]</small> <span data-start="00:43:52.477" data-end="00:43:56.912" data-spk="0" data-label="Track 1"><span title="43:52">Sense of it? Do you feel like we're at a particular point in time now where we can really start.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[44:01]</small> <span data-start="00:44:01.232" data-end="00:44:06.754" data-spk="0" data-label="Track 1"><span title="44:01">Opening up to open ears for one of the better term telling people about our stories and</span> <span title="44:06">there's an appetite for not only hearing them but also doing something about the trauma.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[44:10]</small> <span data-start="00:44:09.946" data-end="00:44:16.039" data-spk="0" data-label="Track 1"><span title="44:10">And the awful things that have been done in the name of colonial governments and in the.</span></span><br>
+<br>
+<b data-spk="3">Track 4:</b><br>
+<small style="opacity: 0.5;">[44:22]</small> <span data-start="00:44:21.657" data-end="00:44:33.351" data-spk="3" data-label="Track 4"><span title="44:22" style="background: rgba(209, 72, 54, 0.11);">Yeah, definitely. I think there's a growing awareness of we're all robbed as a country.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[44:30]</small> <span data-start="00:44:30.280" data-end="00:44:33.651" data-spk="5" data-label="Track 6"><span title="44:30" style="background: rgba(209, 72, 54, 0.15);">Growing awareness of we're all robbed as a country for not knowing these stories.</span></span><br>
+<br>
+<b data-spk="3">Track 4:</b><br>
+<small style="opacity: 0.5;">[44:36]</small> <span data-start="00:44:36.151" data-end="00:44:42.785" data-spk="3" data-label="Track 4"><span title="44:36" style="background: rgba(209, 72, 54, 0.11);">For not knowing these stories and we all need this healing whether we know it in the front of our.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[44:48]</small> <span data-start="00:44:48.253" data-end="00:44:51.732" data-spk="3" data-label="Track 4"><span title="44:48">Minds or deep in our spirit. And you know I did a show with an old shirah,</span></span><br>
+<span data-start="00:44:54.647" data-end="00:44:56.564" data-spk="3" data-label="Track 4"><span title="44:55">old Aboriginal shirah up in Narramine in western New South Wales,</span></span><br>
+<span data-start="00:44:58.907" data-end="00:45:01.028" data-spk="3" data-label="Track 4"><span title="44:59">and he spoke about his story of shearing out through.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[44:59]</small> <span data-start="00:44:59.256" data-end="00:44:51.444" data-spk="5" data-label="Track 6"><span title="44:59">And he spoke about his story of shearing out.</span></span><br>
+<br>
+<b data-spk="3">Track 4:</b><br>
+<small style="opacity: 0.5;">[45:04]</small> <span data-start="00:45:04.363" data-end="00:45:04.862" data-spk="3" data-label="Track 4"><span title="45:04">That river country out west and he remembers being told about the.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[45:07]</small> <span data-start="00:45:07.242" data-end="00:45:07.518" data-spk="5" data-label="Track 6"><span title="45:07">And he remembers being told about the rivers.</span></span><br>
+<br>
+<b data-spk="3">Track 4:</b><br>
+<small style="opacity: 0.5;">[45:08]</small> <span data-start="00:45:08.402" data-end="00:45:19.711" data-spk="3" data-label="Track 4"><span title="45:08">Rivers running red out there and he worked for a</span> <span title="45:13">lot of farmers in that region, shearing sheep with his brothers. And we did a show at an RSL.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[45:13]</small> <span data-start="00:45:12.554" data-end="00:45:09.904" data-spk="5" data-label="Track 6"><span title="45:13">And he worked for a lot of farmers in that region.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[45:16]</small> <span data-start="00:45:16.327" data-end="00:45:17.529" data-spk="5" data-label="Track 6"><span title="45:16">Shearing sheep with his brothers.</span></span><br>
+<br>
+<b data-spk="3">Track 4:</b><br>
+<small style="opacity: 0.5;">[45:23]</small> <span data-start="00:45:23.046" data-end="00:45:24.704" data-spk="3" data-label="Track 4"><span title="45:23">It was packed out on a Friday night in the middle of a drought in western New South Wales. It was.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[45:24]</small> <span data-start="00:45:23.929" data-end="00:45:24.428" data-spk="5" data-label="Track 6"><span title="45:24">It was packed out on a Friday night</span> <span title="45:24">in the middle of a drought in western New South Wales.</span></span><br>
+<span data-start="00:45:26.964" data-end="00:45:27.805" data-spk="5" data-label="Track 6"><span title="45:27">Was packed out with funds.</span></span><br>
+<br>
+<b data-spk="3">Track 4:</b><br>
+<small style="opacity: 0.5;">[45:29]</small> <span data-start="00:45:28.640" data-end="00:45:31.266" data-spk="3" data-label="Track 4"><span title="45:29">Packed out with farmers. And all these guys who'd never been to the theatre before, never seen.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[45:34]</small> <span data-start="00:45:33.844" data-end="00:45:30.930" data-spk="5" data-label="Track 6"><span title="45:34">Never seen, never didn't know what theater was.</span></span><br>
+<br>
+<b data-spk="3">Track 4:</b><br>
+<small style="opacity: 0.5;">[45:37]</small> <span data-start="00:45:37.474" data-end="00:45:39.691" data-spk="3" data-label="Track 4"><span title="45:37">Never didn't know what theatre was and came to hear the show. And I watched this old man</span> <span title="45:39">and step into the light and speak his truth.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[45:41]</small> <span data-start="00:45:40.604" data-end="00:45:35.917" data-spk="5" data-label="Track 6"><span title="45:41">And I watched this old man step into the light</span> <span title="45:41">and speak his truth.</span></span><br>
+<br>
+<b data-spk="3">Track 4:</b><br>
+<small style="opacity: 0.5;">[45:43]</small> <span data-start="00:45:42.785" data-end="00:45:45.940" data-spk="3" data-label="Track 4"><span title="45:43">And everyone there, I was watching the audience</span> <span title="45:46">because he was telling it how it was.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[45:46]</small> <span data-start="00:45:46.499" data-end="00:45:47.893" data-spk="5" data-label="Track 6"><span title="45:46">Because he was telling them how it was.</span> <span title="45:48">And he was there with his peers saying,</span></span><br>
+<span data-start="00:45:50.753" data-end="00:45:51.865" data-spk="5" data-label="Track 6"><span title="45:51">what his experience was as a black man living there.</span></span><br>
+<br>
+<b data-spk="3">Track 4:</b><br>
+<small style="opacity: 0.5;">[45:56]</small> <span data-start="00:45:55.915" data-end="00:45:53.554" data-spk="3" data-label="Track 4"><span title="45:56">And people like old white farmers.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[45:59]</small> <span data-start="00:45:58.679" data-end="00:45:58.938" data-spk="5" data-label="Track 6"><span title="45:59" style="background: rgba(209, 72, 54, 0.12);">And people like old white farmers were coming up in tears afterwards.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[46:04]</small> <span data-start="00:46:04.100" data-end="00:46:07.206" data-spk="5" data-label="Track 6"><span title="46:04" style="background: rgba(209, 72, 54, 0.12);">And they felt that people had felt a deep sense of shame, had heard things that had happened.</span></span><br>
+<br>
+<b data-spk="3">Track 4:</b><br>
+<small style="opacity: 0.5;">[46:11]</small> <span data-start="00:46:11.058" data-end="00:46:11.353" data-spk="3" data-label="Track 4"><span title="46:11">And we're living in these communities parallel.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[46:12]</small> <span data-start="00:46:11.947" data-end="00:46:13.053" data-spk="5" data-label="Track 6"><span title="46:12" style="background: rgba(209, 72, 54, 0.12);">And, you know, we're living in these communities, parallel, but in separate worlds.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[46:18]</small> <span data-start="00:46:17.530" data-end="00:46:21.652" data-spk="5" data-label="Track 6"><span title="46:18" style="background: rgba(209, 72, 54, 0.12);">And, you know, it struck me that we keep getting pushed apart.</span></span><br>
+<br>
+<b data-spk="3">Track 4:</b><br>
+<small style="opacity: 0.5;">[46:19]</small> <span data-start="00:46:18.876" data-end="00:46:19.128" data-spk="3" data-label="Track 4"><span title="46:19">And it struck me that we keep getting pushed apart.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[46:25]</small> <span data-start="00:46:24.729" data-end="00:46:22.872" data-spk="3" data-label="Track 4"><span title="46:25">People wanna push us apart.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[46:28]</small> <span data-start="00:46:27.595" data-end="00:46:27.920" data-spk="3" data-label="Track 4"><span title="46:28">And people have a need for a conversation.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[46:28]</small> <span data-start="00:46:27.950" data-end="00:46:29.284" data-spk="5" data-label="Track 6"><span title="46:28">And people have a need for a conversation.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[46:32]</small> <span data-start="00:46:32.475" data-end="00:46:32.817" data-spk="5" data-label="Track 6"><span title="46:32">And that's what filled that place,</span></span><br>
+<span data-start="00:46:34.373" data-end="00:46:36.308" data-spk="5" data-label="Track 6"><span title="46:34">and was this need to have conversations.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[46:42]</small> <span data-start="00:46:42.360" data-end="00:46:42.708" data-spk="5" data-label="Track 6"><span title="46:42">And to have truthful conversations that have politics</span> <span title="46:42">separated out of it.</span></span><br>
+<span data-start="00:46:44.697" data-end="00:46:46.656" data-spk="5" data-label="Track 6"><span title="46:45">Because when politics is in it, it just gets kicked around.</span></span><br>
+<br>
+<b data-spk="3">Track 4:</b><br>
+<small style="opacity: 0.5;">[46:47]</small> <span data-start="00:46:46.728" data-end="00:46:27.920" data-spk="3" data-label="Track 4"><span title="46:47">And to have truthful conversations.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[46:48]</small> <span data-start="00:46:47.719" data-end="00:46:46.998" data-spk="3" data-label="Track 4"><span title="46:48">Because when politics is in it,</span> <span title="46:48">it just gets kicked around.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[46:52]</small> <span data-start="00:46:51.529" data-end="00:46:55.117" data-spk="5" data-label="Track 6"><span title="46:52">And there's many competing forces</span> <span title="46:52" style="background: rgba(209, 72, 54, 0.22);">and money which drives all of those kind of thoughts,</span></span><br>
+<span data-start="00:46:57.713" data-end="00:46:58.848" data-spk="5" data-label="Track 6"><span title="46:58" style="background: rgba(209, 72, 54, 0.22);">and things like that.</span> <span title="46:58" style="background: rgba(209, 72, 54, 0.22);">But people just wanna sit with each other.</span></span><br>
+<br>
+<b data-spk="3">Track 4:</b><br>
+<small style="opacity: 0.5;">[47:08]</small> <span data-start="00:47:07.525" data-end="00:46:48.254" data-spk="3" data-label="Track 4"><span title="47:08" style="background: rgba(209, 72, 54, 0.23);">And I think that's kind of, you know, I can feel that more.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[47:11]</small> <span data-start="00:47:11.161" data-end="00:47:13.793" data-spk="5" data-label="Track 6"><span title="47:11" style="background: rgba(209, 72, 54, 0.22);">And I think that that's,</span> <span title="47:13" style="background: rgba(209, 72, 54, 0.22);">that's, people feel that.</span></span><br>
+<br>
+<b data-spk="0">Track 1:</b><br>
+<small style="opacity: 0.5;">[47:18]</small> <span data-start="00:47:17.849" data-end="00:47:27.289" data-spk="0" data-label="Track 1"><span title="47:18">Kimberly, what do you make of it all? What do you think we are in terms of people being willing to hear these stories and to do something about rectifying some of the past wrongs?</span></span><br>
+<span data-start="00:47:17.999" data-end="00:44:18.226" data-spk="0" data-label="Track 1"><span title="47:18" style="background: rgba(209, 72, 54, 0.35);">Name of individuals.</span></span><br>
+<br>
+<b data-spk="1">Track 2:</b><br>
+<small style="opacity: 0.5;">[47:29]</small> <span data-start="00:47:28.605" data-end="00:47:38.055" data-spk="1" data-label="Track 2"><span title="47:29">Yeah, I think there is a more of a consciousness around colonial histories, around.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[47:41]</small> <span data-start="00:47:41.175" data-end="00:47:58.885" data-spk="1" data-label="Track 2"><span title="47:41">Maybe in the museum context, you know, repatriation and that it's not right for museums to keep</span> <span title="47:48">cultural material, to keep ancestral remains. I think what John, you know, was talking about then</span> <span title="47:54">and Jason, you know, what they've done with the return and the power of art,</span></span><br>
+<span data-start="00:47:59.432" data-end="00:48:03.236" data-spk="1" data-label="Track 2"><span title="47:59">the power of contemporary practice engaging with these historical,</span></span><br>
+<span data-start="00:48:05.309" data-end="00:48:20.055" data-spk="1" data-label="Track 2"><span title="48:05">either cultural materials or histories or museum spaces is so important because it is about sharing</span> <span title="48:13">these histories. No one, you know, not many people know about the fact that museums robbed graves,</span></span><br>
+<span data-start="00:48:20.650" data-end="00:48:25.030" data-spk="1" data-label="Track 2"><span title="48:21">or employed people to go out and collect bones,</span></span><br>
+<span data-start="00:48:26.695" data-end="00:48:30.679" data-spk="1" data-label="Track 2"><span title="48:27">or even collect, you know, alive people and kill them.</span></span><br>
+<span data-start="00:48:31.598" data-end="00:48:41.790" data-spk="1" data-label="Track 2"><span title="48:32">And these are real histories.</span> <span title="48:34">And the historical material that we have in these museums</span> <span title="48:38">are often associated, you know,</span> <span title="48:39">intrinsically to these histories as well.</span></span><br>
+<span data-start="00:48:43.895" data-end="00:48:49.451" data-spk="1" data-label="Track 2"><span title="48:44">And these are the burdens to bear, you know,</span> <span title="48:46">of our community and these institutions.</span></span><br>
+<span data-start="00:48:50.022" data-end="00:49:01.716" data-spk="1" data-label="Track 2"><span title="48:50">So it's really, you know, it's so important</span> <span title="48:52">for these stories to come out and for, you know,</span> <span title="48:55">the return is just such an incredible example</span> <span title="48:57">of the power of this storytelling</span> <span title="48:59">that's also held in a quite a appropriate.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[49:04]</small> <span data-start="00:49:04.355" data-end="00:49:11.276" data-spk="1" data-label="Track 2"><span title="49:04">And, you know, safe sort of way</span> <span title="49:07">because they are very hard histories,</span> <span title="49:08">they're very hard stories to hear,</span> <span title="49:10">they're traumatic, they're violent.</span></span><br>
+<span data-start="00:49:13.403" data-end="00:49:19.655" data-spk="1" data-label="Track 2"><span title="49:13">And it's really important that people</span> <span title="49:16">start to understand this and what these spaces mean</span></span><br>
+<span data-start="00:49:19.655" data-end="00:49:28.895" data-spk="1" data-label="Track 2"><span title="49:20">for our people and why it's so important for, you know,</span> <span title="49:24">Aboriginal people to be working in these spaces,</span> <span title="49:27">to have agency in these spaces,</span></span><br>
+<span data-start="00:49:29.093" data-end="00:49:34.982" data-spk="1" data-label="Track 2"><span title="49:29">for the objects to have agency as well with community</span> <span title="49:33" style="background: rgba(209, 72, 54, 0.22);">and for that to be supported.</span></span><br>
+<br>
+<b data-spk="0">Track 1:</b><br>
+<small style="opacity: 0.5;">[49:36]</small> <span data-start="00:49:36.028" data-end="00:49:44.867" data-spk="0" data-label="Track 1"><span title="49:36">Well we have about 12 minutes left for any questions from the floor so the</span> <span title="49:43">roving staff here from the wonderful Wheeler Centre if you have a question,</span></span><br>
+<span data-start="00:49:47.060" data-end="00:49:52.961" data-spk="0" data-label="Track 1"><span title="49:47">just put your hand up and they'll hand you a microphone and you can ask this</span> <span title="49:51" style="background: rgba(209, 72, 54, 0.19);">esteemed panel any questions that you like within reason.</span></span><br>
+<br>
+<b data-spk="4">Track 5:</b><br>
+<small style="opacity: 0.5;">[49:57]</small> <span data-start="00:49:56.500" data-end="00:50:14.005" data-spk="4" data-label="Track 5"><span title="49:56">Hello. I have a question relating to the show. I saw it a week or so back and, you know, very,</span> <span title="50:05">very powerful piece and very impressive to be able to present such heavy work in so coherent a fashion.</span></span><br>
+<span data-start="00:50:15.104" data-end="00:50:18.464" data-spk="4" data-label="Track 5"><span title="50:15">There was a bit towards the end where, and I'll try to say this without spoilers,</span></span><br>
+<span data-start="00:50:20.615" data-end="00:50:29.190" data-spk="4" data-label="Track 5"><span title="50:21">a couple of the actors were talking with remains and I remember thinking it was odd that they were</span> <span title="50:25">were speaking English because surely that wouldn't make sense.</span></span><br>
+<span data-start="00:50:29.910" data-end="00:50:39.417" data-spk="4" data-label="Track 5"><span title="50:30">And then I remember thinking later on,</span> <span title="50:32">maybe the implication is that they had lost the language</span> <span title="50:36">that those people who are those remains would have spoken.</span></span><br>
+<span data-start="00:50:41.030" data-end="00:50:46.784" data-spk="4" data-label="Track 5"><span title="50:41">And I remember thinking that was a powerful thing.</span> <span title="50:44">And it might have been more powerful</span> <span title="50:46">to have been said directly.</span></span><br>
+<span data-start="00:50:47.283" data-end="00:50:56.369" data-spk="4" data-label="Track 5"><span title="50:47">But then in considering that, in realizing</span> <span title="50:50">that, that actual time spent in empathy</span> <span title="50:55">was what was needed to really let it sink.</span></span><br>
+<span data-start="00:50:57.590" data-end="00:51:06.999" data-spk="4" data-label="Track 5"><span title="50:58">So I guess I wanted to ask,</span> <span title="51:00">what was the process around what you directly explain</span> <span title="51:03">to a white fella audience to be direct.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[51:10]</small> <span data-start="00:51:10.376" data-end="00:51:23.891" data-spk="4" data-label="Track 5"><span title="51:10">When it comes to such really powerful material?</span> <span title="51:15">What did the process deciding</span> <span title="51:16">what to explain to them directly</span> <span title="51:18">and what to leave out for those who do the work</span> <span title="51:23" style="background: rgba(209, 72, 54, 0.14);">to consider the implications.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[51:27]</small> <span data-start="00:51:27.424" data-end="00:51:28.229" data-spk="2" data-label="Track 3"><span title="51:27" style="background: rgba(209, 72, 54, 0.32);">Do you want to go, John? Or I can respond to this.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[51:31]</small> <span data-start="00:51:31.378" data-end="00:51:34.748" data-spk="5" data-label="Track 6"><span title="51:31" style="background: rgba(209, 72, 54, 0.24);">Yeah, simply spirits.</span></span><br>
+<span data-start="00:51:36.942" data-end="00:51:37.207" data-spk="5" data-label="Track 6"><span title="51:37" style="background: rgba(209, 72, 54, 0.24);">We've got a responsibility to the old people.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[51:38]</small> <span data-start="00:51:37.507" data-end="00:51:37.898" data-spk="2" data-label="Track 3"><span title="51:38" style="background: rgba(209, 72, 54, 0.32);">You know, we've got a responsibility to the old people.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[51:44]</small> <span data-start="00:51:44.183" data-end="00:51:45.000" data-spk="2" data-label="Track 3"><span title="51:44" style="background: rgba(209, 72, 54, 0.32);">And there's protocols when communicating with culture.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[51:47]</small> <span data-start="00:51:46.935" data-end="00:51:42.500" data-spk="5" data-label="Track 6"><span title="51:47" style="background: rgba(209, 72, 54, 0.24);">There's protocols.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[51:49]</small> <span data-start="00:51:48.612" data-end="00:51:48.942" data-spk="2" data-label="Track 3"><span title="51:49" style="background: rgba(209, 72, 54, 0.32);">And...</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[51:53]</small> <span data-start="00:51:52.698" data-end="00:51:56.820" data-spk="2" data-label="Track 3"><span title="51:53" style="background: rgba(209, 72, 54, 0.14);">We didn't want to tie this story to one mob, to one language group.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[51:54]</small> <span data-start="00:51:53.641" data-end="00:51:54.891" data-spk="5" data-label="Track 6"><span title="51:54" style="background: rgba(209, 72, 54, 0.24);">We we do want to tie this story.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[52:02]</small> <span data-start="00:52:01.988" data-end="00:52:08.574" data-spk="2" data-label="Track 3"><span title="52:02" style="background: rgba(209, 72, 54, 0.14);">Because in doing so, there is a huge amount of protocols that we must follow to do that.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[52:02]</small> <span data-start="00:52:02.396" data-end="00:51:54.891" data-spk="5" data-label="Track 6"><span title="52:02" style="background: rgba(209, 72, 54, 0.31);">Because in doing so, there is a huge amount of protocols.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[52:10]</small> <span data-start="00:52:10.287" data-end="00:52:09.148" data-spk="5" data-label="Track 6"><span title="52:10" style="background: rgba(209, 72, 54, 0.31);">That we must follow to do that.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[52:13]</small> <span data-start="00:52:12.786" data-end="00:52:13.189" data-spk="5" data-label="Track 6"><span title="52:13" style="background: rgba(209, 72, 54, 0.31);">We were conscious when it come to language.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[52:19]</small> <span data-start="00:52:18.501" data-end="00:52:08.574" data-spk="2" data-label="Track 3"><span title="52:18" style="background: rgba(209, 72, 54, 0.14);">We were conscious.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[52:19]</small> <span data-start="00:52:18.507" data-end="00:52:19.595" data-spk="2" data-label="Track 3"><span title="52:19" style="background: rgba(209, 72, 54, 0.11);">When it comes to language, song and so on.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[52:22]</small> <span data-start="00:52:22.112" data-end="00:52:28.734" data-spk="5" data-label="Track 6"><span title="52:22" style="background: rgba(209, 72, 54, 0.25);">So on and so on that we didn't want to connect it to one particular group because one there's.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[52:25]</small> <span data-start="00:52:25.117" data-end="00:52:25.447" data-spk="2" data-label="Track 3"><span title="52:25" style="background: rgba(209, 72, 54, 0.11);">That we didn't wanna connect it to one particular group.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[52:32]</small> <span data-start="00:52:31.529" data-end="00:52:31.817" data-spk="5" data-label="Track 6"><span title="52:32" style="background: rgba(209, 72, 54, 0.25);">A lot of protocols involved but also the power of language.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[52:37]</small> <span data-start="00:52:37.496" data-end="00:52:31.529" data-spk="2" data-label="Track 3"><span title="52:38" style="background: rgba(209, 72, 54, 0.11);">Because one, there's a lot of protocols involved.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[52:38]</small> <span data-start="00:52:37.508" data-end="00:52:39.647" data-spk="2" data-label="Track 3"><span title="52:38" style="background: rgba(209, 72, 54, 0.11);">But also the power of language.</span> <span title="52:38" style="background: rgba(209, 72, 54, 0.11);">If we use our language in an environment.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[52:53]</small> <span data-start="00:52:52.506" data-end="00:52:49.069" data-spk="5" data-label="Track 6"><span title="52:53" style="background: rgba(209, 72, 54, 0.20);">There could be consequences to that.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[52:58]</small> <span data-start="00:52:58.119" data-end="00:53:00.877" data-spk="5" data-label="Track 6"><span title="52:58" style="background: rgba(209, 72, 54, 0.20);">As a cultural person, spiritual person,</span> <span title="53:01" style="background: rgba(209, 72, 54, 0.20);">I definitely don't want to get into none of that.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[53:05]</small> <span data-start="00:53:05.071" data-end="00:52:48.540" data-spk="2" data-label="Track 3"><span title="53:05" style="background: rgba(209, 72, 54, 0.24);">I definitely don't want to get none of that bad consequence, you know?</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[53:07]</small> <span data-start="00:53:06.886" data-end="00:53:08.196" data-spk="5" data-label="Track 6"><span title="53:07" style="background: rgba(209, 72, 54, 0.21);">Caused bad, bad consequence, you know.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[53:11]</small> <span data-start="00:53:10.996" data-end="00:53:17.095" data-spk="2" data-label="Track 3"><span title="53:11">So that was a reason why we didn't use lingo in a lot of moments within the story.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[53:16]</small> <span data-start="00:53:16.164" data-end="00:53:16.416" data-spk="5" data-label="Track 6"><span title="53:16" style="background: rgba(209, 72, 54, 0.21);">...</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[53:23]</small> <span data-start="00:53:22.624" data-end="00:53:23.363" data-spk="5" data-label="Track 6"><span title="53:23" style="background: rgba(209, 72, 54, 0.21);">Yeah, and I guess just to say too, like.</span></span><br>
+<br>
+<b data-spk="3">Track 4:</b><br>
+<small style="opacity: 0.5;">[53:24]</small> <span data-start="00:53:23.699" data-end="00:47:10.488" data-spk="3" data-label="Track 4"><span title="53:24" style="background: rgba(209, 72, 54, 0.39);">And, you know, I...</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[53:24]</small> <span data-start="00:53:23.699" data-end="00:53:27.113" data-spk="3" data-label="Track 4"><span title="53:24">And I guess just to say too like because it wasn't a single story and we're quite.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[53:27]</small> <span data-start="00:53:27.335" data-end="00:53:30.003" data-spk="5" data-label="Track 6"><span title="53:27" style="background: rgba(209, 72, 54, 0.21);">It wasn't a single story and we're quite conscious about</span> <span title="53:29" style="background: rgba(209, 72, 54, 0.21);">this too. Like it's a story that's happened, you know, like Kibbali's.</span></span><br>
+<br>
+<b data-spk="3">Track 4:</b><br>
+<small style="opacity: 0.5;">[53:30]</small> <span data-start="00:53:30.015" data-end="00:53:32.220" data-spk="3" data-label="Track 4"><span title="53:30">Conscious about this too like it's a story that's happened you know like Kimberley's spoken about.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[53:33]</small> <span data-start="00:53:32.827" data-end="00:53:34.486" data-spk="5" data-label="Track 6"><span title="53:33" style="background: rgba(209, 72, 54, 0.32);">About the justice movement.</span> <span title="53:34" style="background: rgba(209, 72, 54, 0.32);">It's a story that's happened across the country.</span></span><br>
+<br>
+<b data-spk="3">Track 4:</b><br>
+<small style="opacity: 0.5;">[53:37]</small> <span data-start="00:53:37.003" data-end="00:53:45.500" data-spk="3" data-label="Track 4"><span title="53:37">What Jason's spoken about you know it's a story that's happened across the country and so we</span> <span title="53:39" style="background: rgba(209, 72, 54, 0.17);">we wanted audiences to understand that it's not one story with just one mob.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[53:54]</small> <span data-start="00:53:54.285" data-end="00:53:40.056" data-spk="5" data-label="Track 6"><span title="53:54" style="background: rgba(209, 72, 54, 0.32);">And so we wanted audiences to understand that.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[53:54]</small> <span data-start="00:53:54.298" data-end="00:53:45.708" data-spk="5" data-label="Track 6"><span title="53:54" style="background: rgba(209, 72, 54, 0.32);">Like I said, people might be wondering.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[53:57]</small> <span data-start="00:53:56.641" data-end="00:53:57.043" data-spk="2" data-label="Track 3"><span title="53:57" style="background: rgba(209, 72, 54, 0.15);">People might be wondering, you know, why bring them back home?</span></span><br>
+<span data-start="00:53:59.489" data-end="00:54:00.186" data-spk="2" data-label="Track 3"><span title="53:59" style="background: rgba(209, 72, 54, 0.15);">You know, why do it, you know, apart from coming back to the centre and so on?</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[54:01]</small> <span data-start="00:54:00.547" data-end="00:54:00.884" data-spk="5" data-label="Track 6"><span title="54:01" style="background: rgba(209, 72, 54, 0.23);">Why do it, you know?</span></span><br>
+<span data-start="00:54:03.780" data-end="00:54:04.651" data-spk="5" data-label="Track 6"><span title="54:04" style="background: rgba(209, 72, 54, 0.23);">Apart from coming back to center and so on.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[54:06]</small> <span data-start="00:54:06.238" data-end="00:54:06.490" data-spk="2" data-label="Track 3"><span title="54:06" style="background: rgba(209, 72, 54, 0.15);">You know, right across this country, we are connected to country everywhere.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[54:16]</small> <span data-start="00:54:15.606" data-end="00:54:15.972" data-spk="2" data-label="Track 3"><span title="54:16" style="background: rgba(209, 72, 54, 0.15);">Every centimetre of this country.</span></span><br>
+<span data-start="00:54:18.394" data-end="00:54:20.257" data-spk="2" data-label="Track 3"><span title="54:18">And within those centimetres or within those areas.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[54:20]</small> <span data-start="00:54:20.257" data-end="00:54:13.749" data-spk="5" data-label="Track 6"><span title="54:20" style="background: rgba(209, 72, 54, 0.23);">Within those centimeters or within those areas,</span> <span title="54:24" style="background: rgba(209, 72, 54, 0.25);">We've got tribes and clans and nations and so on.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[54:24]</small> <span data-start="00:54:24.475" data-end="00:54:26.139" data-spk="2" data-label="Track 3"><span title="54:24">We've got tribes and clans and nations and so on, you know?</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[54:31]</small> <span data-start="00:54:30.532" data-end="00:54:38.764" data-spk="2" data-label="Track 3"><span title="54:31">And everything in our country is alive.</span> <span title="54:36">Everything in this country of ours has a song.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[54:42]</small> <span data-start="00:54:42.166" data-end="00:54:42.424" data-spk="2" data-label="Track 3"><span title="54:42">You know, it's a language.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[54:45]</small> <span data-start="00:54:45.453" data-end="00:54:50.633" data-spk="2" data-label="Track 3"><span title="54:45">And we have, in ceremony, we connect our song line.</span></span><br>
+<span data-start="00:54:53.162" data-end="00:54:54.298" data-spk="2" data-label="Track 3"><span title="54:53">And when we do that in the right place, there's a magic about it.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[54:59]</small> <span data-start="00:54:58.961" data-end="00:54:59.442" data-spk="2" data-label="Track 3"><span title="54:59">You know what I mean?</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[55:05]</small> <span data-start="00:55:04.688" data-end="00:55:06.382" data-spk="2" data-label="Track 3"><span title="55:05">And what has happened through history, a lot of colonial history,</span></span><br>
+<span data-start="00:55:08.918" data-end="00:55:25.335" data-spk="2" data-label="Track 3"><span title="55:09">that was taken away from us, which has left us hollow.</span> <span title="55:15">So we get our things back to our country wherever we are to make us whole.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[55:12]</small> <span data-start="00:55:12.451" data-end="00:55:12.734" data-spk="5" data-label="Track 6"><span title="55:12" style="background: rgba(209, 72, 54, 0.22);">Which has left us hollow.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[55:33]</small> <span data-start="00:55:32.570" data-end="00:55:12.734" data-spk="5" data-label="Track 6"><span title="55:33" style="background: rgba(209, 72, 54, 0.22);">To make us whole.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[55:33]</small> <span data-start="00:55:32.924" data-end="00:55:36.037" data-spk="2" data-label="Track 3"><span title="55:33">To make us stronger mentally and spiritually and physically so we can continue as who we are.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[55:37]</small> <span data-start="00:55:37.233" data-end="00:55:39.991" data-spk="5" data-label="Track 6"><span title="55:37" style="background: rgba(209, 72, 54, 0.20);">Because the studies and everything was shaped before.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[55:42]</small> <span data-start="00:55:41.956" data-end="00:55:43.963" data-spk="2" data-label="Track 3"><span title="55:42">Because the studies and everything was shaped before, you know, people had superior motives.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[55:43]</small> <span data-start="00:55:42.773" data-end="00:55:43.061" data-spk="5" data-label="Track 6"><span title="55:43" style="background: rgba(209, 72, 54, 0.20);">People have superior motives here.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[55:48]</small> <span data-start="00:55:48.145" data-end="00:55:48.428" data-spk="2" data-label="Track 3"><span title="55:48" style="background: rgba(209, 72, 54, 0.15);">And seeing things as inferior.</span></span><br>
+<span data-start="00:55:51.144" data-end="00:55:56.233" data-spk="2" data-label="Track 3"><span title="55:51" style="background: rgba(209, 72, 54, 0.15);">And they wanted to use this position to determine who we are.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[55:53]</small> <span data-start="00:55:52.652" data-end="00:55:52.952" data-spk="5" data-label="Track 6"><span title="55:53" style="background: rgba(209, 72, 54, 0.20);">And they wanted to use this position.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[55:57]</small> <span data-start="00:55:57.345" data-end="00:55:57.658" data-spk="5" data-label="Track 6"><span title="55:57" style="background: rgba(209, 72, 54, 0.20);">To determine who we are.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[56:00]</small> <span data-start="00:56:00.241" data-end="00:56:05.421" data-spk="2" data-label="Track 3"><span title="56:00" style="background: rgba(209, 72, 54, 0.15);">And, you know, imagine everyone in the world being determined,</span> <span title="56:05" style="background: rgba(209, 72, 54, 0.24);">determined their identity by mad scientists.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[56:01]</small> <span data-start="00:56:00.836" data-end="00:56:02.399" data-spk="5" data-label="Track 6"><span title="56:01" style="background: rgba(209, 72, 54, 0.44);">And, you know, imagine, imagine if...</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[56:16]</small> <span data-start="00:56:15.847" data-end="00:56:16.544" data-spk="2" data-label="Track 3"><span title="56:16" style="background: rgba(209, 72, 54, 0.24);">We've been, that human right of us.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[56:22]</small> <span data-start="00:56:21.862" data-end="00:56:22.187" data-spk="2" data-label="Track 3"><span title="56:22" style="background: rgba(209, 72, 54, 0.24);">Wasn't given to us.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[56:23]</small> <span data-start="00:56:22.511" data-end="00:56:36.783" data-spk="5" data-label="Track 6"><span title="56:23" style="background: rgba(209, 72, 54, 0.22);">Us. And it's left us in a pretty vulnerable state. What we've done, we hold on to and.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[56:29]</small> <span data-start="00:56:29.337" data-end="00:56:25.810" data-spk="2" data-label="Track 3"><span title="56:29" style="background: rgba(209, 72, 54, 0.24);">Others done that.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[56:33]</small> <span data-start="00:56:33.033" data-end="00:56:41.302" data-spk="2" data-label="Track 3"><span title="56:33" style="background: rgba(209, 72, 54, 0.24);">And it's left us in a pretty vulnerable state.</span> <span title="56:33" style="background: rgba(209, 72, 54, 0.13);">So what we've done, we hold on to and grab culture and sometimes our culture that we.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[56:39]</small> <span data-start="00:56:39.072" data-end="00:56:39.499" data-spk="5" data-label="Track 6"><span title="56:39" style="background: rgba(209, 72, 54, 0.22);">Grab culture and sometimes our culture that we've grabbed on and the early, wrong one.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[56:44]</small> <span data-start="00:56:44.426" data-end="00:56:48.464" data-spk="2" data-label="Track 3"><span title="56:44" style="background: rgba(209, 72, 54, 0.13);">Grabbed on in the early, long, you know, so many years ago, we'll be connecting to different.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[56:50]</small> <span data-start="00:56:50.489" data-end="00:56:50.760" data-spk="5" data-label="Track 6"><span title="56:50" style="background: rgba(209, 72, 54, 0.22);">We've done. So many years ago, we'll be connected to different culture that wasn't ours and.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[56:51]</small> <span data-start="00:56:51.385" data-end="00:56:52.623" data-spk="2" data-label="Track 3"><span title="56:51" style="background: rgba(209, 72, 54, 0.13);">Culture that wasn't ours on our land.</span></span><br>
+<span data-start="00:56:54.924" data-end="00:56:58.397" data-spk="2" data-label="Track 3"><span title="56:55" style="background: rgba(209, 72, 54, 0.13);">You feel what I'm saying?</span> <span title="56:55" style="background: rgba(209, 72, 54, 0.13);">We might be connected to Northern Territory, should be Murray River mob, you know?</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[57:00]</small> <span data-start="00:57:00.488" data-end="00:56:51.294" data-spk="5" data-label="Track 6"><span title="57:00" style="background: rgba(209, 72, 54, 0.16);">Which, you know,</span> <span title="57:02" style="background: rgba(209, 72, 54, 0.16);">we've got ramifications of that.</span> <span title="57:04" style="background: rgba(209, 72, 54, 0.16);">So, it's important.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[57:02]</small> <span data-start="00:57:01.690" data-end="00:57:02.003" data-spk="2" data-label="Track 3"><span title="57:02" style="background: rgba(209, 72, 54, 0.13);">So we're connected in different places, which, you know, has ramifications of that.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[57:08]</small> <span data-start="00:57:07.579" data-end="00:57:15.205" data-spk="2" data-label="Track 3"><span title="57:08" style="background: rgba(209, 72, 54, 0.13);">So it's important that we get not only our people, but also our artifacts, back to country.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[57:21]</small> <span data-start="00:57:20.805" data-end="00:57:22.265" data-spk="2" data-label="Track 3"><span title="57:21" style="background: rgba(209, 72, 54, 0.13);">Because this is what it does, it makes not only our country whole, but it makes us whole.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[57:30]</small> <span data-start="00:57:29.524" data-end="00:57:21.887" data-spk="5" data-label="Track 6"><span title="57:30" style="background: rgba(209, 72, 54, 0.22);">I remember the box, these box come from Britain.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[57:32]</small> <span data-start="00:57:31.874" data-end="00:57:29.025" data-spk="2" data-label="Track 3"><span title="57:32" style="background: rgba(209, 72, 54, 0.40);">And I remember that.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[57:37]</small> <span data-start="00:57:36.651" data-end="00:57:37.925" data-spk="5" data-label="Track 6"><span title="57:37" style="background: rgba(209, 72, 54, 0.22);">And they went back after a fight,</span></span><br>
+<span data-start="00:57:40.713" data-end="00:57:41.008" data-spk="5" data-label="Track 6"><span title="57:41" style="background: rgba(209, 72, 54, 0.22);">which was quite sad and frustrating.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[57:46]</small> <span data-start="00:57:45.911" data-end="00:57:46.206" data-spk="2" data-label="Track 3"><span title="57:46">Seen the barks, they were connected to my country. And as soon as I seen those barks.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[57:46]</small> <span data-start="00:57:46.416" data-end="00:57:46.686" data-spk="5" data-label="Track 6"><span title="57:46" style="background: rgba(209, 72, 54, 0.22);">They were connected to my country.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[57:50]</small> <span data-start="00:57:50.406" data-end="00:57:59.184" data-spk="2" data-label="Track 3"><span title="57:50">Me and our family, we watched it and studied it. And then that following weekend, we went.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[57:56]</small> <span data-start="00:57:55.574" data-end="00:58:03.081" data-spk="5" data-label="Track 6"><span title="57:56">And then that following weekend, we went out in the bush, cut down the barks and started etching what we seen.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[58:02]</small> <span data-start="00:58:02.304" data-end="00:58:03.860" data-spk="2" data-label="Track 3"><span title="58:02">Out in the bush, cut down the barks and started etching what we'd seen. You know what I mean?</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[58:06]</small> <span data-start="00:58:06.029" data-end="00:58:06.408" data-spk="5" data-label="Track 6"><span title="58:06">So these are the reasons why it's important that we get things from all around the world.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[58:07]</small> <span data-start="00:58:06.859" data-end="00:58:12.627" data-spk="2" data-label="Track 3"><span title="58:07">So these are the reasons why it's important that we get things from all around the world.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[58:23]</small> <span data-start="00:58:23.468" data-end="00:58:20.066" data-spk="5" data-label="Track 6"><span title="58:23" style="background: rgba(209, 72, 54, 0.51);">I think that's the biggest reason why we do it.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[58:24]</small> <span data-start="00:58:23.516" data-end="00:58:33.989" data-spk="5" data-label="Track 6"><span title="58:24" style="background: rgba(209, 72, 54, 0.51);">Because also in our culture, I say, is that full stop in our story?</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[58:24]</small> <span data-start="00:58:24.261" data-end="00:58:15.758" data-spk="2" data-label="Track 3"><span title="58:24">To make us whole again, you know?</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[58:30]</small> <span data-start="00:58:29.735" data-end="00:58:29.008" data-spk="2" data-label="Track 3"><span title="58:30">And that's a big reason why we do it.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[58:35]</small> <span data-start="00:58:35.264" data-end="00:58:33.264" data-spk="2" data-label="Track 3"><span title="58:35">Because also in our culture.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[58:41]</small> <span data-start="00:58:40.521" data-end="00:58:36.249" data-spk="5" data-label="Track 6"><span title="58:41" style="background: rgba(209, 72, 54, 0.18);">In our story.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[58:47]</small> <span data-start="00:58:46.897" data-end="00:58:38.202" data-spk="2" data-label="Track 3"><span title="58:47">Like I say, there's no full stop in our story.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[58:48]</small> <span data-start="00:58:48.369" data-end="00:58:33.431" data-spk="2" data-label="Track 3"><span title="58:48">We keep going.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[58:48]</small> <span data-start="00:58:48.399" data-end="00:58:48.670" data-spk="2" data-label="Track 3"><span title="58:48" style="background: rgba(209, 72, 54, 0.17);">And in our country, we go back to our place, and then we go into a cultural place.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[58:55]</small> <span data-start="00:58:54.877" data-end="00:58:43.340" data-spk="5" data-label="Track 6"><span title="58:55" style="background: rgba(209, 72, 54, 0.18);">Come back in a different way.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[59:01]</small> <span data-start="00:59:00.538" data-end="00:59:00.850" data-spk="5" data-label="Track 6"><span title="59:01" style="background: rgba(209, 72, 54, 0.18);">And I know that I'm in my own country,</span></span><br>
+<span data-start="00:59:02.340" data-end="00:59:15.686" data-spk="5" data-label="Track 6"><span title="59:02" style="background: rgba(209, 72, 54, 0.18);">oh it's electric.</span> <span title="59:05" style="background: rgba(209, 72, 54, 0.18);">It's really electric.</span> <span title="59:06" style="background: rgba(209, 72, 54, 0.19);">I sit there and let myself go, and let myself go, you go into so many different places of history.</span></span><br>
+<br>
+<b data-spk="2">Track 3:</b><br>
+<small style="opacity: 0.5;">[59:04]</small> <span data-start="00:59:03.512" data-end="00:58:59.697" data-spk="2" data-label="Track 3"><span title="59:04" style="background: rgba(209, 72, 54, 0.23);">Or not when I'm on my.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[59:20]</small> <span data-start="00:59:20.253" data-end="00:59:20.512" data-spk="5" data-label="Track 6"><span title="59:20" style="background: rgba(209, 72, 54, 0.19);">And this is what, the reasons why we've got to bring those voices, and we've got to bring out things.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[59:30]</small> <span data-start="00:59:30.042" data-end="00:59:30.980" data-spk="5" data-label="Track 6"><span title="59:30" style="background: rgba(209, 72, 54, 0.24);">I guess just from a purely visceral sense.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[59:35]</small> <span data-start="00:59:34.885" data-end="00:59:39.747" data-spk="5" data-label="Track 6"><span title="59:35" style="background: rgba(209, 72, 54, 0.24);">Sorry, I probably went on a bit too much. Sorry.</span> <span title="59:35" style="background: rgba(209, 72, 54, 0.24);">No, no, you're right.</span> <span title="59:37" style="background: rgba(209, 72, 54, 0.24);">Just in closing, just from a purely visceral sense.</span></span><br>
+<br>
+<b data-spk="0">Track 1:</b><br>
+<small style="opacity: 0.5;">[59:42]</small> <span data-start="00:59:41.916" data-end="00:59:49.986" data-spk="0" data-label="Track 1"><span title="59:42">Just in closing, just from a purely visceral sense, Kimberly, the fact that there is one</span> <span title="59:46">of our ancestors locked away somewhere in a place like Switzerland, so far, far away.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[59:53]</small> <span data-start="00:59:53.448" data-end="01:00:02.089" data-spk="0" data-label="Track 1"><span title="59:53">From home, that by itself is a tremendously, tremendously sad state of affairs.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[1:00:04]</small> <span data-start="01:00:04.294" data-end="00:59:47.583" data-spk="5" data-label="Track 6"><span title="1:00:04" style="background: rgba(209, 72, 54, 0.32);">The fact that there is one of Aaron's sisters locked away so...</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[1:00:04]</small> <span data-start="01:00:04.294" data-end="01:00:04.582" data-spk="5" data-label="Track 6"><span title="1:00:04" style="background: rgba(209, 72, 54, 0.36);">Just saying from a basic...</span></span><br>
+<br>
+<b data-spk="0">Track 1:</b><br>
+<small style="opacity: 0.5;">[1:00:06]</small> <span data-start="01:00:06.301" data-end="01:00:10.928" data-spk="0" data-label="Track 1"><span title="1:00:06">And just so from a basic principles of what is right and what is wrong, that's why we</span> <span title="1:00:09" style="background: rgba(209, 72, 54, 0.13);">we must continue to do this, not only for our ancestors.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[1:00:15]</small> <span data-start="01:00:14.732" data-end="01:00:21.504" data-spk="0" data-label="Track 1"><span title="1:00:15" style="background: rgba(209, 72, 54, 0.13);">But for ourselves and for the wider community.</span> <span title="1:00:16" style="background: rgba(209, 72, 54, 0.13);">Because all we're trying to do as people here</span> <span title="1:00:19" style="background: rgba(209, 72, 54, 0.13);">is add value to our community,</span> <span title="1:00:21" style="background: rgba(209, 72, 54, 0.13);">whether it's black, white or brindle.</span></span><br>
+<br>
+<b data-spk="5">Track 6:</b><br>
+<small style="opacity: 0.5;">[1:00:26]</small> <span data-start="01:00:26.227" data-end="01:00:13.770" data-spk="5" data-label="Track 6"><span title="1:00:26" style="background: rgba(209, 72, 54, 0.36);">Our ancestors before ourselves and for...</span></span><br>
+<br>
+<b data-spk="0">Track 1:</b><br>
+<small style="opacity: 0.5;">[1:00:27]</small> <span data-start="01:00:26.816" data-end="01:00:28.445" data-spk="0" data-label="Track 1"><span title="1:00:27" style="background: rgba(209, 72, 54, 0.24);">But I mean, they must have been so moving.</span></span><br>
+<br>
+<b data-spk="1">Track 2:</b><br>
+<small style="opacity: 0.5;">[1:00:30]</small> <span data-start="01:00:29.580" data-end="01:00:31.671" data-spk="1" data-label="Track 2"><span title="1:00:30" style="background: rgba(209, 72, 54, 0.14);">Yeah, yeah, it was.</span></span><br>
+<span data-start="01:00:33.690" data-end="01:00:40.973" data-spk="1" data-label="Track 2"><span title="1:00:34" style="background: rgba(209, 72, 54, 0.14);">And it's hard, like it's still with me,</span> <span title="1:00:37" style="background: rgba(209, 72, 54, 0.14);">it will always be with me until I can get them home.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[1:00:46]</small> <span data-start="01:00:45.925" data-end="01:00:58.045" data-spk="1" data-label="Track 2"><span title="1:00:46" style="background: rgba(209, 72, 54, 0.14);">But I think, you know, what you just said, Jason,</span> <span title="1:00:49" style="background: rgba(209, 72, 54, 0.14);">around coming back and being whole and being centred</span> <span title="1:00:55" style="background: rgba(209, 72, 54, 0.14);">and the strengthening, the cultural strengthening,</span></span><br>
+<span data-start="01:00:58.700" data-end="01:01:10.520" data-spk="1" data-label="Track 2"><span title="1:00:59">that is, you know, that happens for our people when not only our ancestors are returned and</span> <span title="1:01:04">reburied on country to where they're, you know, they should be, but also for our cultural material,</span></span><br>
+<span data-start="01:01:10.748" data-end="01:01:19.430" data-spk="1" data-label="Track 2"><span title="1:01:11">our ancestral belongings, you know, to be returned. And there's, you know, repatriation and return is,</span></span><br>
+<span data-start="01:01:20.639" data-end="01:01:30.795" data-spk="1" data-label="Track 2"><span title="1:01:21">complex. Some communities actually want some of their objects to stay in the museum because that's</span> <span title="1:01:26">where they feel like they're going to be cared for until they get their own keeping place.</span></span><br>
+<span data-start="01:01:31.263" data-end="01:01:33.907" data-spk="1" data-label="Track 2"><span title="1:01:31">Some communities want them returned to their keeping place.</span></span><br>
+<span data-start="01:01:35.430" data-end="01:01:41.350" data-spk="1" data-label="Track 2"><span title="1:01:35">Some communities don't want some of their ceremonial material back because, you know, around.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[1:01:44]</small> <span data-start="01:01:44.003" data-end="01:01:52.740" data-spk="1" data-label="Track 2"><span title="1:01:44">Different protocols and different things have been broken and it's not safe for the community</span> <span title="1:01:48">to have them back, you know, if they're sacred materials.</span></span><br>
+<span data-start="01:01:53.371" data-end="01:01:55.534" data-spk="1" data-label="Track 2"><span title="1:01:53">So it's complex, it's nuanced.</span></span><br>
+<span data-start="01:01:57.553" data-end="01:02:08.315" data-spk="1" data-label="Track 2"><span title="1:01:58">But, you know, I think that the benefit</span> <span title="1:02:00">of having our cultural material home outweighs the benefit</span> <span title="1:02:04">of them being in those museums for, you know,</span> <span title="1:02:07">our history to be told.</span></span><br>
+<span data-start="01:02:08.772" data-end="01:02:10.424" data-spk="1" data-label="Track 2"><span title="1:02:09">And that's where art comes in.</span></span><br>
+<span data-start="01:02:10.989" data-end="01:02:16.620" data-spk="1" data-label="Track 2"><span title="1:02:11">And that's where, you know, like this play</span> <span title="1:02:13">and the work that I do with artists</span> <span title="1:02:15">and the work that, you know, many other people,</span></span><br>
+<span data-start="01:02:16.790" data-end="01:02:30.182" data-spk="1" data-label="Track 2"><span title="1:02:17">have been working with artists and museums for a long time.</span> <span title="1:02:20">It's not something I've invented or, you know,</span> <span title="1:02:22">it's been going on for a really long time,</span> <span title="1:02:24">but the power of community access</span> <span title="1:02:27">and the power of artists and contemporary practice,</span></span><br>
+<span data-start="01:02:31.048" data-end="01:02:35.975" data-spk="1" data-label="Track 2"><span title="1:02:31">in speaking to these histories and these objects</span> <span title="1:02:34" style="background: rgba(209, 72, 54, 0.24);">is so important as well.</span></span><br>
+<br>
+<b data-spk="0">Track 1:</b><br>
+<small style="opacity: 0.5;">[1:02:38]</small> <span data-start="01:02:37.772" data-end="01:02:39.971" data-spk="0" data-label="Track 1"><span title="1:02:38">Well, the return is playing at the partner for tonight's event, the Malthouse, until.</span></span><br>
+<br>
+
+<small style="opacity: 0.5;">[1:02:44]</small> <span data-start="01:02:43.823" data-end="01:02:55.342" data-spk="0" data-label="Track 1"><span title="1:02:44">The 4th of June. So if you want to get along and have a look at that, I'd thoroughly recommend it.</span> <span title="1:02:50">Please thank tonight's guests, Jason Tamaru, John Harvey and Kimberley Moulton.</span></span><br>
+<span data-start="01:02:55.703" data-end="01:03:00.510" data-spk="0" data-label="Track 1"><span title="1:02:56" style="background: rgba(209, 72, 54, 0.19);">And thanks very much for coming out, very brave, conscientious people.</span></span><br>
+<br>
+<b data-spk="1">Track 2:</b><br>
+<small style="opacity: 0.5;">[1:02:56]</small> <span data-start="01:02:56.352" data-end="01:02:57.270" data-spk="1" data-label="Track 2"><span title="1:02:56" style="background: rgba(209, 72, 54, 0.24);">Thank you.</span></span><br>
+<span data-start="01:02:57.439" data-end="01:02:58.004" data-spk="1" data-label="Track 2"><span title="1:02:57" style="background: rgba(209, 72, 54, 0.46);">Thank you.</span></span><br>
+<br>
+<b data-spk="4">Track 5:</b><br>
+<small style="opacity: 0.5;">[1:03:04]</small> <span data-start="01:03:04.494" data-end="01:03:06.494" data-spk="4" data-label="Track 5"><span title="1:03:05" style="background: rgba(209, 72, 54, 0.45);">Thank you.</span></span><br>
+<br>
+<b data-spk="0">Track 1:</b><br>
+<small style="opacity: 0.5;">[1:03:11]</small> <span data-start="01:03:10.749" data-end="01:03:01.976" data-spk="0" data-label="Track 1"><span title="1:03:11" style="background: rgba(209, 72, 54, 0.27);">Thank you.</span></span><br>
+
+<br>
+</div>
+
+
+<script type="text/javascript">
+
+function getBgAlpha(element) {
+    var currentColor = getComputedStyle(element).getPropertyValue('background-color');
+    var parts = currentColor.match(/[\d.]+/g);
+    var alpha = "0"
+
+    try {
+        alpha = parts[3];
+    }
+    catch(err) {
+        // on edge we don't get a color if RGBA is completely 0
+    }
+
+    return alpha;
+}
+
+function removeStyling() {
+    var elements = document.getElementsByTagName('span');
+    var newColorBase = 'rgba(255, 255, 255, ';
+    for (var i=0; i<elements.length; i++) {
+        var currentAlpha = getBgAlpha(elements[i]);
+        var newColor = newColorBase + currentAlpha + ')';
+        elements[i].style = 'background: ' + newColor + ';';
+    }
+
+    try {
+        var button = document.getElementById('toggle-styling');
+        button.innerText = 'Add Highlighting';
+        button.onclick = function() { addStyling(); } ;
+    }
+    catch(err) {
+        // no confidence available
+    }
+}
+
+function addStyling() {
+    var elements = document.getElementsByTagName('span');
+    var newColorBase = 'rgba(209, 72, 54, ';
+    for (var i=0; i<elements.length; i++) {
+        var currentAlpha = getBgAlpha(elements[i]);
+        var newColor = newColorBase + currentAlpha + ')';
+        elements[i].style = 'background: ' + newColor + ';';
+    }
+
+    try {
+        var button = document.getElementById('toggle-styling');
+        button.innerText = 'Remove Highlighting';
+        button.onclick = function() { removeStyling(); } ;
+    }
+    catch(err) {
+        // no confidence available
+    }
+}
+
+function enableEdit() {
+    var transcript = document.getElementById('transcript');
+    transcript.contentEditable = true;
+    transcript.classList.add("edit-mode");
+
+    var button = document.getElementById('edit-transcript');
+    button.innerText = 'Close Edit Mode';
+    button.onclick = function() { disableEdit(); } ;
+
+    var elements = document.querySelectorAll('b[data-spk]');
+    for (var i=0; i<elements.length; i++) {
+        elements[i].title = 'Change speaker name to edit all speakers at once!';
+    }
+}
+
+function disableEdit() {
+    var transcript = document.getElementById('transcript');
+    transcript.contentEditable = false;
+    transcript.classList.remove("edit-mode");
+
+    var button = document.getElementById('edit-transcript');
+    button.innerText = 'Edit Transcript';
+    button.onclick = function() { enableEdit(); } ;
+
+    var elements = document.querySelectorAll('b[data-spk]');
+    for (var i=0; i<elements.length; i++) {
+        elements[i].title = '';
+    }
+}
+
+function removeSpans(transcript) {
+    var removeSpans = new RegExp('</?span[^>]*>','gm');
+    transcript = transcript.replace(removeSpans, '');
+    transcript = transcript.replace(/&nbsp;/g, ' ');
+    return transcript;
+}
+
+function showExportButtons() {
+    var button = document.getElementById('show-export-buttons');
+    button.innerText = '>';
+    button.title = 'Close export buttons.';
+    button.classList.add("export-buttons-shown");
+    button.onclick = function() { hideExportButtons(); } ;
+
+    document.getElementById('export-html').style = '';
+    document.getElementById('export-pdf').style = '';
+    document.getElementById('export-webvtt').style = '';
+    document.getElementById('save-changes').style = '';
+    document.getElementById('show-help').style = 'display: none;';
+}
+
+function hideExportButtons() {
+    var button = document.getElementById('show-export-buttons');
+    button.innerText = 'Export...';
+    button.title = '';
+    button.classList.remove("export-buttons-shown");
+    button.onclick = function() { showExportButtons(); } ;
+
+    document.getElementById('export-html').style = 'display: none;';
+    document.getElementById('export-pdf').style = 'display: none;';
+    document.getElementById('export-webvtt').style = 'display: none;';
+    document.getElementById('save-changes').style = 'display: none;';
+    document.getElementById('show-help').style = '';
+}
+
+function saveChanges() {
+    disableEdit();
+    hideExportButtons();
+
+    var head = document.head.innerHTML;
+    var body = document.body.innerHTML;
+
+    var pageSource = '<!DOCTYPE html><html><head>' + head + '</head><body>' + body + '</body></html>';
+    var filename = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+
+    var bl = new Blob([pageSource], {type: "text/html"});
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(bl);
+    a.download = filename;
+    a.hidden = true;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+}
+
+function exportHTML() {
+    disableEdit();
+    removeStyling();
+
+    var head = document.head.innerHTML;
+    var metadata = document.getElementById('metadata').innerHTML;
+    var transcript = document.getElementById('transcript').innerHTML;
+
+    transcript = removeSpans(transcript);
+
+    var pageSource = '<!DOCTYPE html><html><head>' + head + '</head><body>' + metadata + '<div class="transcript-base">' + transcript + '</div></body></html>';
+    var filename = location.pathname.substring(location.pathname.lastIndexOf("/") + 1);
+
+    var bl = new Blob([pageSource], {type: "text/html"});
+    var a = document.createElement("a");
+    a.href = URL.createObjectURL(bl);
+    a.download = filename;
+    a.hidden = true;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+
+    hideExportButtons();
+}
+
+function exportWebVTT() {
+    disableEdit();
+
+    var pageSource = 'WEBVTT\n\n';
+
+    var segments = document.querySelectorAll('span[data-start]');
+    for (var i=0; i<segments.length; i++) {
+        pageSource += segments[i].getAttribute('data-start') + ' --> ';
+        pageSource += segments[i].getAttribute('data-end') + '\n';
+        if (segments[i].getAttribute('data-spk') !== null) {
+            pageSource += '<v ' + segments[i].getAttribute('data-label') + '>';
+        }
+        pageSource += removeSpans(segments[i].innerHTML);
+        pageSource += '\n\n';
+    }
+
+    var filename = location.pathname.substring(location.pathname.lastIndexOf('/') + 1);
+    filename = filename.substring(0, filename.lastIndexOf('.')) + '.vtt';
+
+    var bl = new Blob([pageSource], {type: 'text/vtt'});
+    var a = document.createElement('a');
+    a.href = URL.createObjectURL(bl);
+    a.download = filename;
+    a.hidden = true;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+
+    hideExportButtons();
+}
+
+function getSecondsFromString(timeString) {
+    var splitStrg = timeString.split(":");
+    var seconds = 0;
+    for (var i=0; i<splitStrg.length; i++) {
+        if (i == 0) { seconds += parseInt(splitStrg[splitStrg.length - 1]); }
+        if (i == 1) { seconds += parseInt(splitStrg[splitStrg.length - 2]) * 60; }
+        if (i == 2) { seconds += parseInt(splitStrg[splitStrg.length - 3]) * 3600; }
+    }
+    return seconds;
+}
+
+function pad(num, size) {
+    var s = num + "";
+    while (s.length < size) s = "0" + s;
+    return s;
+}
+
+function secToTimeString(seconds) {
+    var ss = Math.round(seconds);
+    var cmin = Math.floor(ss / 60);
+    var csec = ss % 60;
+
+    if (cmin < 60) {
+        return cmin + ":" + pad(csec, 2);
+    } else {
+        var ch = Math.floor(cmin / 60);
+        var cm = cmin % 60;
+        return ch + ":" + pad(cm, 2) + ":" + pad(csec, 2);
+    }
+}
+
+function removeActiveClass() {
+    var elements = document.querySelectorAll('span.active');
+    for (var i=0; i<elements.length; i++) {
+        elements[i].classList.remove("active");
+        // elements[i].classList.add("listened");
+    }
+}
+
+function addAudioFile() {
+    var txt;
+    var url = prompt(
+        'Please enter complete URL for the audio file, which should be played along the transcript\n(a local path should start with "file:///"):',
+        'https://auphonic.com/media/audio-examples/03.auphonic-demo-denoise-100.m4a'
+    );
+    if (url == null || url == "") { return; }
+
+    var audio = document.getElementById('audio-player');
+    var oldSources = document.querySelectorAll('source');
+    for (var i=0; i<oldSources.length; i++) {
+        oldSources[i].remove();
+    }
+
+    var source = document.createElement('source');
+    source.src = url;
+    audio.appendChild(source);
+
+    addAudioPlayer();
+}
+
+function addAudioPlayer() {
+    var audio = document.getElementById('audio-player');
+
+    document.getElementById('add-audio-file').style = '';
+    document.getElementById('toggle-play-on-click').style = 'display: none;';
+
+    audio.oncanplay = function() {
+        AUDIO_PLAYER = audio;
+
+        // highlight current audio segment
+        if (HAVE_TIMESTAMPS) {
+            AUDIO_PLAYER.ontimeupdate = function() {
+                if (ARE_PLAYING) {
+                    var curTime = secToTimeString(AUDIO_PLAYER.currentTime);
+                    elements = document.querySelectorAll('span[title="' + curTime + '"]');
+                    if (elements.length > 0) {
+                        removeActiveClass();
+                        for (var i=0; i<elements.length; i++) {
+                            elements[i].classList.add("active");
+                        }
+                    }
+                }
+            };
+        }
+
+        // setup click handlers to play audio on mouse click
+        if (HAVE_TIMESTAMPS) {
+            var elements = document.getElementsByTagName('span');
+            for (var i=0; i<elements.length; i++) {
+                if (elements[i].getAttribute('data-start') === null) {  // no data-start attribute
+                    try {
+                        elements[i].removeEventListener("click", clickHandlerTimestamp);
+                    } catch(err) { }
+                    elements[i].addEventListener("click", clickHandlerTimestamp);
+                }
+            }
+        } else {
+            var elements = document.querySelectorAll('span[data-start]');
+            for (var i=0; i<elements.length; i++) {
+                try {
+                    elements[i].removeEventListener("click", clickHandlerSegment);
+                } catch(err) { }
+                elements[i].addEventListener("click", clickHandlerSegment);
+            }
+        }
+
+        enableAudioClickPlayback();
+
+        var button = document.getElementById('add-audio-file');
+        button.style = "display: none;";
+    }
+
+    audio.load();
+}
+
+function clickHandlerTimestamp(e) {
+    var target = (e.target) ? e.target : e.srcElement;
+    if (PLAY_WHOLE_SEGMENT) {
+        startSeconds = getSecondsFromString(target.getAttribute("title"))
+        playWholeSegment(target.parentElement, startSeconds);
+    } else {
+        var timeString = target.title;
+        var timeSec = getSecondsFromString(timeString);
+        playAudioSegment(timeSec -0.6, timeSec + 3.4);
+    }
+}
+
+function playWholeSegment(e, startSeconds = null) {
+    var startTimeStrg = e.getAttribute("data-start").split(".")[0];
+    var endTimeStrg = e.getAttribute("data-end").split(".")[0];
+    var startSec = (startSeconds) ? startSeconds : getSecondsFromString(startTimeStrg);
+    var endSec = getSecondsFromString(endTimeStrg) + 1;
+    playAudioSegment(startSec, endSec);
+}
+
+function clickHandlerSegment(e) {
+    if (PLAYBACK_ON_CLICK) {
+        var target = (e.target) ? e.target : e.srcElement;
+        removeActiveClass();
+        target.classList.add("active");
+        playWholeSegment(target)
+    }
+}
+
+function enableAudioClickPlayback() {
+    var button = document.getElementById('toggle-play-on-click');
+    button.innerText = 'Stop Play-on-click';
+    button.style = "";
+    button.onclick = function() { disableAudioClickPlayback(); } ;
+    PLAYBACK_ON_CLICK = true;
+}
+
+function disableAudioClickPlayback() {
+    AUDIO_PLAYER.pause();
+    ARE_PLAYING = false;
+    removeActiveClass();
+    var button = document.getElementById('toggle-play-on-click');
+    button.innerText = 'Activate Play-on-click';
+    button.style = "";
+    button.onclick = function() { enableAudioClickPlayback(); } ;
+    PLAYBACK_ON_CLICK = false;
+}
+
+function playAudioSegment(start_sec, end_sec) {
+    if (AUDIO_PLAYER !== null && PLAYBACK_ON_CLICK) {
+        if (PAUSE_TIMEOUT !== null) { clearTimeout(PAUSE_TIMEOUT); }
+
+        AUDIO_PLAYER.currentTime = start_sec;
+        AUDIO_PLAYER.play();
+        ARE_PLAYING = true;
+
+        var length_ms = (end_sec - start_sec) * 1000;
+        PAUSE_TIMEOUT= setTimeout(function(){
+            AUDIO_PLAYER.pause();
+            PAUSE_TIMEOUT = null;
+            ARE_PLAYING = false;
+            removeActiveClass();
+        }, length_ms);
+    }
+}
+
+function setupTranscriptChangeListeners() {
+    var trans = document.getElementById('transcript');
+    trans.addEventListener("keyup", function(e){
+        var editedNode = window.getSelection().anchorNode.parentNode;
+
+        // set background of already edited spans back to white
+        if (HAVE_TIMESTAMPS && HAVE_CONFIDENCE) {
+            var clearNode = editedNode;
+            if (clearNode.tagName == "SPAN") {
+                if (clearNode.getAttribute("data-start") !== null) {
+                    // if we click into the parent span, we have to get the next node!
+                    clearNode = window.getSelection().anchorNode.nextSibling;
+                }
+                if (clearNode.tagName == "SPAN" && clearNode.getAttribute("title") !== null) {
+                    clearNode.style = 'background: white;';
+                }
+            }
+        }
+
+        // change all speaker names if we change one speaker
+        if (editedNode.tagName == "B" && editedNode.getAttribute("data-spk") !== null) {
+            var curSpeaker = editedNode.getAttribute("data-spk");
+
+            var elements = document.querySelectorAll('b[data-spk="' + curSpeaker + '"]');
+            for (var i=0; i<elements.length; i++) {
+                if (elements[i] !== editedNode) {
+                    elements[i].innerText = editedNode.innerText;
+                }
+            }
+
+            // for WebVTT export
+            var elements = document.querySelectorAll('span[data-spk="' + curSpeaker + '"]');
+            var label = editedNode.innerText;
+            if (label[label.length -1] == ":") {
+                label = label.substring(0, label.length - 1);
+            }
+            for (var i=0; i<elements.length; i++) {
+                elements[i].setAttribute("data-label", label);
+            }
+        }
+    });
+}
+
+HAVE_CONFIDENCE = true;
+HAVE_TIMESTAMPS = HAVE_CONFIDENCE;  // for now ...
+PLAY_WHOLE_SEGMENT = true;
+
+AUDIO_PLAYER = null;
+PAUSE_TIMEOUT = null;
+PLAYBACK_ON_CLICK = false;
+ARE_PLAYING = false;
+
+window.addEventListener("load", function(){
+    if(!HAVE_CONFIDENCE) {
+        var button = document.getElementById('toggle-styling');
+        if (button !== null) { button.remove(); }
+    }
+
+    addAudioPlayer();
+    setupTranscriptChangeListeners();
+});
+</script>
+
+
+</body>
+</html>
